@@ -78,3 +78,9 @@ class ManagerBasedRLEnvCfg(ManagerBasedEnvCfg):
 
     Please refer to the :class:`isaaclab.managers.CommandManager` class for more details.
     """
+    extrinsics_obs : object | None = None
+    """Extrinsics observation settings. Defaults to None, in which case no extrinsics observation is used.
+
+    Please refer to the :class:`isaaclab.managers.ExtrinsicsObservationManager` class for more details.
+    """
+

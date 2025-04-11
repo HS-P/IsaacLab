@@ -73,7 +73,7 @@ class MySceneCfg(InteractiveSceneCfg):
     # )
     contact_forces = ContactSensorCfg(prim_path="{ENV_REGEX_NS}/Robot/.*", history_length=3,
                                                 track_air_time=True, track_pose=True)
-    # lights
+    # lights 
     sky_light = AssetBaseCfg(
         prim_path="/World/skyLight",
         spawn=sim_utils.DomeLightCfg(
@@ -140,9 +140,8 @@ class ObservationsCfg:
         # wheel_pos = ObsTerm(func=mdp.joint_pos_rel, noise=Unoise(n_min=-0.08, n_max=0.08),
         #                  params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*wheel"])})
         # joint_vel = ObsTerm(func=mdp.joint_vel_rel, noise=Unoise(n_min=-1.5, n_max=1.5))
-        
-        extrinsics_obs = ObsTerm(func=mdp.extrinsics_info, noise=Unoise(n_min=-0.05, n_max=0.05))
-        
+
+        # extrinsics_obs = ObsTerm(func=mdp.extrinsics_info, noise=Unoise(n_min=-0.05, n_max=0.05))
         actions = ObsTerm(func=mdp.last_action)
 
         # height_scan = ObsTerm(
@@ -418,7 +417,6 @@ class LocomotionVelocityRoughEnvCfg(ManagerBasedRLEnvCfg):
     terminations: TerminationsCfg = TerminationsCfg()
     events: RandomizationCfg = RandomizationCfg()
     curriculum: CurriculumCfg = CurriculumCfg()
-    
     def __post_init__(self):
         """Post initialization."""
         # general settings

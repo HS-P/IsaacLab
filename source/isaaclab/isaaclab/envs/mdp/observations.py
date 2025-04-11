@@ -24,6 +24,30 @@ from isaaclab.sensors import Camera, Imu, RayCaster, RayCasterCamera, TiledCamer
 if TYPE_CHECKING:
     from isaaclab.envs import ManagerBasedEnv, ManagerBasedRLEnv
 
+from isaaclab.envs.mdp.env_encoder import EnvEncoderMLP
+from collections import namedtuple
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+class ExtrinsicsMLP(EnvEncoderMLP):
+    def __init__(self):
+        super().__init__()
+        # 특징 추출 MLP
+        self.feature_extractor = nn.Sequential(
+            nn.Linear(9, 256)
+        )
+
+    def process(self, observation_dict):
+        # observation_dict에서 extrinsics_obs를 가져옵니다.
+        obs = observation_dict["extrinsics_obs"]   # shape: (B, obs_dim)
+
+        x = torch.cat([obs], dim=-1)     # shape: (B, obs_dim + env_input_dim)
+        # MLP를 통과하여 특징 벡터를 얻습니다.
+        features = self.feature_extractor(x)         # shape: (B, 256)
+        print(f"[DEBUG] Extrinsics feature shape: {features.shape}")
+        return {"extrinsics_feature": features}
+
+from isaaclab.managers import SceneEntityCfg
 
 """
 Root state.
@@ -40,7 +64,6 @@ def extrinsics_info(env, asset_cfg=None) -> torch.Tensor:
       - motor input (예: 평균 액션 값): 1d
       - Center of Mass (COM): 3d
     """
-    from isaaclab.managers import SceneEntityCfg
     if asset_cfg is None:
         asset_cfg = SceneEntityCfg("robot")
     device = env.device if hasattr(env, "device") else "cpu"
@@ -123,7 +146,12 @@ def extrinsics_info(env, asset_cfg=None) -> torch.Tensor:
         friction, damping_upper, damping_wheel,
         stiffness_upper, stiffness_wheel, motor_input, com
     ], dim=1)
-    print("[DEBUG] Final extrinsics vector shape:", extrinsics.shape)
+    observation = {"extrinsics_obs": extrinsics}
+    # ExtrinsicsMLP를 통해 특징 벡터로 변환
+    mlp = ExtrinsicsMLP().to(device)
+    features_dict = mlp.process(observation)
+    features = features_dict["extrinsics_feature"]
+    print(f"[DEBUG] Final extrinsics feature shape: {features.shape}")
     return extrinsics
 
 def base_pos_z(env: ManagerBasedEnv, asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")) -> torch.Tensor:
@@ -216,7 +244,6 @@ def joint_leg_pos(env: ManagerBasedEnv, asset_cfg: SceneEntityCfg = SceneEntityC
         raise ValueError("No Upper Leg joints found. Check joint_names in the configuration.")
 
     return asset.data.joint_pos[:, upper_leg_joint_ids]
-
 
 def joint_pos_rel(env: ManagerBasedEnv, asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")) -> torch.Tensor:
     """The joint positions of the asset w.r.t. the default joint positions.

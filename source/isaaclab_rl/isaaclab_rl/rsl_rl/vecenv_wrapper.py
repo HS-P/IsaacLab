@@ -172,21 +172,13 @@ class RslRlVecEnvWrapper(VecEnv):
         # return observations
         return obs_dict["policy"], {"observations": obs_dict}
 
-    def step(self, actions: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, dict]:
-        # record step information
-        obs_dict, rew, terminated, truncated, extras = self.env.step(actions)
-        # compute dones for compatibility with RSL-RL
-        dones = (terminated | truncated).to(dtype=torch.long)
-        # move extra observations to the extras dict
-        obs = obs_dict["policy"]
-        extras["observations"] = obs_dict
-        # move time out information to the extras dict
-        # this is only needed for infinite horizon tasks
-        if not self.unwrapped.cfg.is_finite_horizon:
-            extras["time_outs"] = truncated
+    def step(self, action):
+        raw_obs, reward, done, info = super().step(action)  # raw_obs는 dictionary 형태
+        # raw_obs에는 'base_position', 'extrinsics_obs', 'env_info' 등이 포함되어 있어야 함.
+        processed_obs = self._cfg.observations.policy.process(raw_obs)
+        combined_obs = processed_obs["combined_obs"]
+        return combined_obs, reward, done, info
 
-        # return the step information
-        return obs, rew, dones, extras
 
     def close(self):  # noqa: D102
         return self.env.close()

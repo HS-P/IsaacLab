@@ -1,0 +1,71 @@
+2025-04-12 02:57:21,377 INFO    MainThread:31736 [internal.py:wandb_internal():90] W&B internal server running at pid: 31736, started at: 2025-04-12 02:57:21.377447
+2025-04-12 02:57:21,378 INFO    WriterThread:31736 [datastore.py:open_for_write():75] open: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\run-g7v4m8q4.wandb
+2025-04-12 02:57:21,382 DEBUG   SenderThread:31736 [sender.py:send():236] send: header
+2025-04-12 02:57:21,382 DEBUG   SenderThread:31736 [sender.py:send():236] send: run
+2025-04-12 02:57:21,818 DEBUG   HandlerThread:31736 [handler.py:handle_request():140] handle_request: check_version
+2025-04-12 02:57:21,824 INFO    SenderThread:31736 [dir_watcher.py:__init__():216] watching files in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files
+2025-04-12 02:57:21,824 INFO    SenderThread:31736 [sender.py:_start_run_threads():815] run started: g7v4m8q4 with start time 1744394240
+2025-04-12 02:57:21,824 DEBUG   SenderThread:31736 [sender.py:send():236] send: summary
+2025-04-12 02:57:21,825 INFO    SenderThread:31736 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-04-12 02:57:21,825 DEBUG   SenderThread:31736 [sender.py:send_request():250] send_request: check_version
+2025-04-12 02:57:21,884 DEBUG   HandlerThread:31736 [handler.py:handle_request():140] handle_request: run_start
+2025-04-12 02:57:21,910 DEBUG   HandlerThread:31736 [meta.py:__init__():35] meta init
+2025-04-12 02:57:21,910 DEBUG   HandlerThread:31736 [meta.py:__init__():49] meta init done
+2025-04-12 02:57:21,910 DEBUG   HandlerThread:31736 [meta.py:probe():209] probe
+2025-04-12 02:57:21,918 DEBUG   HandlerThread:31736 [meta.py:_setup_git():199] setup git
+2025-04-12 02:57:22,078 DEBUG   HandlerThread:31736 [meta.py:_setup_git():206] setup git done
+2025-04-12 02:57:22,079 DEBUG   HandlerThread:31736 [meta.py:_save_pip():53] save pip
+2025-04-12 02:57:22,079 DEBUG   HandlerThread:31736 [meta.py:_save_pip():67] save pip done
+2025-04-12 02:57:22,080 DEBUG   HandlerThread:31736 [meta.py:_save_conda():74] save conda
+2025-04-12 02:57:22,084 ERROR   HandlerThread:31736 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "S:\anaconda3\envs\IsaacLab_2\lib\site-packages\wandb\sdk\internal\meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-04-12 02:57:22,085 DEBUG   HandlerThread:31736 [meta.py:_save_conda():84] save conda done
+2025-04-12 02:57:22,085 DEBUG   HandlerThread:31736 [meta.py:probe():247] probe done
+2025-04-12 02:57:22,365 DEBUG   SenderThread:31736 [sender.py:send():236] send: files
+2025-04-12 02:57:22,365 INFO    SenderThread:31736 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2025-04-12 02:57:22,365 DEBUG   HandlerThread:31736 [handler.py:handle_request():140] handle_request: stop_status
+2025-04-12 02:57:22,366 DEBUG   SenderThread:31736 [sender.py:send_request():250] send_request: stop_status
+2025-04-12 02:57:22,660 DEBUG   SenderThread:31736 [sender.py:send():236] send: telemetry
+2025-04-12 02:57:22,828 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\output.log
+2025-04-12 02:57:22,828 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\wandb-summary.json
+2025-04-12 02:57:22,829 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\conda-environment.yaml
+2025-04-12 02:57:22,829 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\requirements.txt
+2025-04-12 02:57:22,829 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\wandb-metadata.json
+2025-04-12 02:57:23,023 INFO    Thread-17 :31736 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\AppData\Local\Temp\tmpxinlljvewandb\r7sz4fzj-wandb-metadata.json
+2025-04-12 02:57:24,827 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\output.log
+2025-04-12 02:57:28,831 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\output.log
+2025-04-12 02:57:30,847 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\output.log
+2025-04-12 02:57:37,661 DEBUG   HandlerThread:31736 [handler.py:handle_request():140] handle_request: stop_status
+2025-04-12 02:57:37,661 DEBUG   SenderThread:31736 [sender.py:send_request():250] send_request: stop_status
+2025-04-12 02:57:49,348 WARNING MainThread:31736 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2025-04-12 02:57:52,718 DEBUG   SenderThread:31736 [sender.py:send():236] send: stats
+2025-04-12 02:57:53,038 INFO    Thread-11 :31736 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\config.yaml
+2025-04-12 02:57:54,427 WARNING MainThread:31736 [internal.py:is_dead():387] Internal process exiting, parent pid 58192 disappeared
+2025-04-12 02:57:54,427 ERROR   MainThread:31736 [internal.py:wandb_internal():149] Internal process shutdown.
+2025-04-12 02:57:54,734 INFO    WriterThread:31736 [datastore.py:close():279] close: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\run-g7v4m8q4.wandb
+2025-04-12 02:57:54,734 INFO    SenderThread:31736 [sender.py:finish():1114] shutting down sender
+2025-04-12 02:57:54,734 INFO    HandlerThread:31736 [handler.py:finish():806] shutting down handler
+2025-04-12 02:57:54,734 INFO    SenderThread:31736 [dir_watcher.py:finish():353] shutting down directory watcher
+2025-04-12 02:57:55,057 INFO    SenderThread:31736 [dir_watcher.py:finish():383] scan: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files
+2025-04-12 02:57:55,058 INFO    SenderThread:31736 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\conda-environment.yaml conda-environment.yaml
+2025-04-12 02:57:55,058 INFO    SenderThread:31736 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\config.yaml config.yaml
+2025-04-12 02:57:55,058 INFO    SenderThread:31736 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\output.log output.log
+2025-04-12 02:57:55,058 INFO    SenderThread:31736 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\requirements.txt requirements.txt
+2025-04-12 02:57:55,062 INFO    SenderThread:31736 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\wandb-metadata.json wandb-metadata.json
+2025-04-12 02:57:55,062 INFO    SenderThread:31736 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\wandb-summary.json wandb-summary.json
+2025-04-12 02:57:55,064 INFO    SenderThread:31736 [file_pusher.py:finish():171] shutting down file pusher
+2025-04-12 02:57:55,064 INFO    SenderThread:31736 [file_pusher.py:join():176] waiting for file pusher
+2025-04-12 02:57:55,792 INFO    Thread-18 :31736 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\config.yaml
+2025-04-12 02:57:55,798 INFO    Thread-20 :31736 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\requirements.txt
+2025-04-12 02:57:55,800 INFO    Thread-21 :31736 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\wandb-summary.json
+2025-04-12 02:57:55,815 INFO    Thread-19 :31736 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250412_025720-g7v4m8q4\files\output.log
+2025-04-12 02:57:56,329 INFO    MainThread:31736 [internal.py:handle_exit():80] Internal process exited
