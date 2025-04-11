@@ -1,0 +1,6 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005

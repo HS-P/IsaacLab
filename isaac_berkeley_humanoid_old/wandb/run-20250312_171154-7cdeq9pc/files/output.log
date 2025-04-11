@@ -1,0 +1,1016 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 1.724738 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 8192
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.177304 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++--------------------------------------------+
+|            Active Command Terms            |
++-------+---------------+--------------------+
+| Index | Name          |        Type        |
++-------+---------------+--------------------+
+|   0   | base_position | UniformPoseCommand |
++-------+---------------+--------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 4)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          3 |
+|   1    | wheel_vel  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (4,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | base_position              |    (4,)    |
++------------+----------------------------+------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | scale_all_joint_armature       |
+|   4   | add_all_joint_default_pos      |
+|   5   | scale_all_joint_friction_model |
++-------+--------------------------------+
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | base_external_force_torque   |
+|   1    | reset_base                   |
+|   2    | reset_robot_joints           |
++--------+------------------------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++--------------------------------------+
+|         Active Reward Terms          |
++-------+---------------------+--------+
+| Index | Name                | Weight |
++-------+---------------------+--------+
+|   0   | action_rate_l2      |  -0.01 |
+|   1   | undesired_contacts  |  -10.0 |
+|   2   | joint_pos_pitch_exp |    1.0 |
++-------+---------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 1 active terms.
++---------------------------+
+|  Active Curriculum Terms  |
++-------+-------------------+
+| Index | Name              |
++-------+-------------------+
+|   0   | command_leg_pitch |
++-------+-------------------+
+[INFO]: Completed setting up the environment...
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+Actor MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=4, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 64387 steps/s (collection: 2.848s, learning 0.205s)
+               Value function loss: 0.0057
+                    Surrogate loss: -0.0000
+             Mean action noise std: 0.50
+                 Mean total reward: -0.18
+               Mean episode length: 18.87
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: -0.0048
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5288
+      Episode_Termination/time_out: 8.1667
+  Episode_Termination/base_contact: 4.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 196608
+                    Iteration time: 3.05s
+                        Total time: 3.05s
+                               ETA: 45802.5s
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 64387 steps/s (collection: 2.848s, learning 0.205s)
+               Value function loss: 0.0057
+                    Surrogate loss: -0.0000
+             Mean action noise std: 0.50
+                 Mean total reward: -0.18
+               Mean episode length: 18.87
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: -0.0048
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5288
+      Episode_Termination/time_out: 8.1667
+  Episode_Termination/base_contact: 4.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 393216
+                    Iteration time: 3.05s
+                        Total time: 6.11s
+                               ETA: 91604.9s
+Could not find git repository in S:\anaconda3\envs\IsaacLab_2\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-03-12_17-11-55\git\isaac_berkeley_humanoid.diff
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 194951 steps/s (collection: 0.878s, learning 0.130s)
+               Value function loss: 0.0022
+                    Surrogate loss: -0.0078
+             Mean action noise std: 0.50
+                 Mean total reward: -0.39
+               Mean episode length: 41.88
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0013
+Episode_Reward/joint_pos_pitch_exp: -0.0152
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5921
+      Episode_Termination/time_out: 7.0417
+  Episode_Termination/base_contact: 0.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 589824
+                    Iteration time: 1.01s
+                        Total time: 7.12s
+                               ETA: 53362.6s
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 194951 steps/s (collection: 0.878s, learning 0.130s)
+               Value function loss: 0.0022
+                    Surrogate loss: -0.0078
+             Mean action noise std: 0.50
+                 Mean total reward: -0.39
+               Mean episode length: 41.88
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0013
+Episode_Reward/joint_pos_pitch_exp: -0.0152
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5921
+      Episode_Termination/time_out: 7.0417
+  Episode_Termination/base_contact: 0.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 786432
+                    Iteration time: 1.01s
+                        Total time: 8.12s
+                               ETA: 60925.9s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 195727 steps/s (collection: 0.884s, learning 0.120s)
+               Value function loss: 0.0023
+                    Surrogate loss: -0.0090
+             Mean action noise std: 0.50
+                 Mean total reward: -0.63
+               Mean episode length: 65.38
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0016
+Episode_Reward/joint_pos_pitch_exp: -0.0254
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5900
+      Episode_Termination/time_out: 9.0417
+  Episode_Termination/base_contact: 0.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 983040
+                    Iteration time: 1.00s
+                        Total time: 9.13s
+                               ETA: 45636.4s
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 195727 steps/s (collection: 0.884s, learning 0.120s)
+               Value function loss: 0.0023
+                    Surrogate loss: -0.0090
+             Mean action noise std: 0.50
+                 Mean total reward: -0.63
+               Mean episode length: 65.38
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0016
+Episode_Reward/joint_pos_pitch_exp: -0.0254
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5900
+      Episode_Termination/time_out: 9.0417
+  Episode_Termination/base_contact: 0.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 1179648
+                    Iteration time: 1.00s
+                        Total time: 10.13s
+                               ETA: 50658.2s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 198694 steps/s (collection: 0.869s, learning 0.120s)
+               Value function loss: 0.0018
+                    Surrogate loss: -0.0088
+             Mean action noise std: 0.49
+                 Mean total reward: -0.84
+               Mean episode length: 87.83
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: -0.0343
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5996
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 1.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 1376256
+                    Iteration time: 0.99s
+                        Total time: 11.12s
+                               ETA: 41701.0s
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 198694 steps/s (collection: 0.869s, learning 0.120s)
+               Value function loss: 0.0018
+                    Surrogate loss: -0.0088
+             Mean action noise std: 0.49
+                 Mean total reward: -0.84
+               Mean episode length: 87.83
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: -0.0343
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5996
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 1.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 1572864
+                    Iteration time: 0.99s
+                        Total time: 12.11s
+                               ETA: 45410.9s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 196117 steps/s (collection: 0.880s, learning 0.122s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0115
+             Mean action noise std: 0.49
+                 Mean total reward: -1.01
+               Mean episode length: 103.79
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0057
+Episode_Reward/joint_pos_pitch_exp: -0.0415
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6094
+      Episode_Termination/time_out: 7.8750
+  Episode_Termination/base_contact: 3.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 1769472
+                    Iteration time: 1.00s
+                        Total time: 13.11s
+                               ETA: 39333.0s
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 196117 steps/s (collection: 0.880s, learning 0.122s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0115
+             Mean action noise std: 0.49
+                 Mean total reward: -1.01
+               Mean episode length: 103.79
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0057
+Episode_Reward/joint_pos_pitch_exp: -0.0415
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6094
+      Episode_Termination/time_out: 7.8750
+  Episode_Termination/base_contact: 3.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 1966080
+                    Iteration time: 1.00s
+                        Total time: 14.12s
+                               ETA: 42339.7s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 197994 steps/s (collection: 0.871s, learning 0.122s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0200
+             Mean action noise std: 0.49
+                 Mean total reward: -1.21
+               Mean episode length: 119.38
+     Episode_Reward/action_rate_l2: -0.0023
+ Episode_Reward/undesired_contacts: -0.0084
+Episode_Reward/joint_pos_pitch_exp: -0.0469
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6183
+      Episode_Termination/time_out: 8.5417
+  Episode_Termination/base_contact: 6.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 2162688
+                    Iteration time: 0.99s
+                        Total time: 15.11s
+                               ETA: 37762.4s
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 197994 steps/s (collection: 0.871s, learning 0.122s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0200
+             Mean action noise std: 0.49
+                 Mean total reward: -1.21
+               Mean episode length: 119.38
+     Episode_Reward/action_rate_l2: -0.0023
+ Episode_Reward/undesired_contacts: -0.0084
+Episode_Reward/joint_pos_pitch_exp: -0.0469
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6183
+      Episode_Termination/time_out: 8.5417
+  Episode_Termination/base_contact: 6.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 2359296
+                    Iteration time: 0.99s
+                        Total time: 16.10s
+                               ETA: 40244.0s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 198895 steps/s (collection: 0.867s, learning 0.121s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0213
+             Mean action noise std: 0.49
+                 Mean total reward: -1.29
+               Mean episode length: 130.82
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0111
+Episode_Reward/joint_pos_pitch_exp: -0.0477
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6281
+      Episode_Termination/time_out: 7.4167
+  Episode_Termination/base_contact: 9.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 2555904
+                    Iteration time: 0.99s
+                        Total time: 17.09s
+                               ETA: 36610.0s
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 198895 steps/s (collection: 0.867s, learning 0.121s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0213
+             Mean action noise std: 0.49
+                 Mean total reward: -1.29
+               Mean episode length: 130.82
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0111
+Episode_Reward/joint_pos_pitch_exp: -0.0477
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6281
+      Episode_Termination/time_out: 7.4167
+  Episode_Termination/base_contact: 9.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 2752512
+                    Iteration time: 0.99s
+                        Total time: 18.08s
+                               ETA: 38727.3s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 199197 steps/s (collection: 0.864s, learning 0.122s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0188
+             Mean action noise std: 0.48
+                 Mean total reward: -1.10
+               Mean episode length: 105.93
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0147
+Episode_Reward/joint_pos_pitch_exp: -0.0453
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6388
+      Episode_Termination/time_out: 7.5833
+  Episode_Termination/base_contact: 22.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2949120
+                    Iteration time: 0.99s
+                        Total time: 19.07s
+                               ETA: 35733.9s
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 199197 steps/s (collection: 0.864s, learning 0.122s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0188
+             Mean action noise std: 0.48
+                 Mean total reward: -1.10
+               Mean episode length: 105.93
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0147
+Episode_Reward/joint_pos_pitch_exp: -0.0453
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6388
+      Episode_Termination/time_out: 7.5833
+  Episode_Termination/base_contact: 22.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3145728
+                    Iteration time: 0.99s
+                        Total time: 20.05s
+                               ETA: 37583.7s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 191719 steps/s (collection: 0.907s, learning 0.118s)
+               Value function loss: 0.0020
+                    Surrogate loss: -0.0087
+             Mean action noise std: 0.48
+                 Mean total reward: -0.82
+               Mean episode length: 68.84
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0178
+Episode_Reward/joint_pos_pitch_exp: -0.0358
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6458
+      Episode_Termination/time_out: 7.3333
+  Episode_Termination/base_contact: 69.5833
+--------------------------------------------------------------------------------
+                   Total timesteps: 3342336
+                    Iteration time: 1.03s
+                        Total time: 21.08s
+                               ETA: 35113.7s
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 191719 steps/s (collection: 0.907s, learning 0.118s)
+               Value function loss: 0.0020
+                    Surrogate loss: -0.0087
+             Mean action noise std: 0.48
+                 Mean total reward: -0.82
+               Mean episode length: 68.84
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0178
+Episode_Reward/joint_pos_pitch_exp: -0.0358
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6458
+      Episode_Termination/time_out: 7.3333
+  Episode_Termination/base_contact: 69.5833
+--------------------------------------------------------------------------------
+                   Total timesteps: 3538944
+                    Iteration time: 1.03s
+                        Total time: 22.10s
+                               ETA: 36822.0s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 190789 steps/s (collection: 0.906s, learning 0.124s)
+               Value function loss: 0.0042
+                    Surrogate loss: -0.0036
+             Mean action noise std: 0.48
+                 Mean total reward: -0.69
+               Mean episode length: 57.15
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0192
+Episode_Reward/joint_pos_pitch_exp: -0.0248
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 5.4167
+  Episode_Termination/base_contact: 150.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 3735552
+                    Iteration time: 1.03s
+                        Total time: 23.14s
+                               ETA: 34682.4s
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 190789 steps/s (collection: 0.906s, learning 0.124s)
+               Value function loss: 0.0042
+                    Surrogate loss: -0.0036
+             Mean action noise std: 0.48
+                 Mean total reward: -0.69
+               Mean episode length: 57.15
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0192
+Episode_Reward/joint_pos_pitch_exp: -0.0248
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 5.4167
+  Episode_Termination/base_contact: 150.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 3932160
+                    Iteration time: 1.03s
+                        Total time: 24.17s
+                               ETA: 36227.2s
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)
+tensor(False, device='cuda:0')
+(-0.28, -0.28)

@@ -1,0 +1,1238 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 1.055531 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.278137 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------------+
+|              Active Command Terms              |
++-------+---------------+------------------------+
+| Index | Name          |          Type          |
++-------+---------------+------------------------+
+|   0   | base_velocity | UniformVelocityCommand |
++-------+---------------+------------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 4)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          3 |
+|   1    | wheel_vel  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++-------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (3,)) |
++-------------+---------------------------+-------------+
+|    Index    | Name                      |    Shape    |
++-------------+---------------------------+-------------+
+|      0      | base_lin_vel              |     (3,)    |
++-------------+---------------------------+-------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | scale_all_joint_armature       |
+|   4   | add_all_joint_default_pos      |
+|   5   | scale_all_joint_friction_model |
++-------+--------------------------------+
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | base_external_force_torque   |
+|   1    | reset_base                   |
+|   2    | reset_robot_joints           |
++--------+------------------------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++-------------------------------------+
+|         Active Reward Terms         |
++-------+--------------------+--------+
+| Index | Name               | Weight |
++-------+--------------------+--------+
+|   0   | action_rate_l2     |  -0.01 |
+|   1   | track_velocity     |    1.0 |
+|   2   | undesired_contacts |  -10.0 |
++-------+--------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 1 active terms.
++----------------------------+
+|  Active Curriculum Terms   |
++-------+--------------------+
+| Index | Name               |
++-------+--------------------+
+|   0   | command_velocity_x |
++-------+--------------------+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Actor MLP: Sequential(
+  (0): Linear(in_features=3, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=4, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=3, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 5 steps/s (collection: 4.171s, learning 0.190s)
+               Value function loss: 0.0078
+                    Surrogate loss: 0.0804
+             Mean action noise std: 0.50
+                 Mean total reward: -0.21
+               Mean episode length: 11.50
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: -0.0000
+ Episode_Reward/undesired_contacts: -0.0017
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0008
+Metrics/base_velocity/error_vel_yaw: 0.0002
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 24
+                    Iteration time: 4.36s
+                        Total time: 4.36s
+                               ETA: 65422.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 5 steps/s (collection: 4.171s, learning 0.190s)
+               Value function loss: 0.0078
+                    Surrogate loss: 0.0804
+             Mean action noise std: 0.50
+                 Mean total reward: -0.21
+               Mean episode length: 11.50
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: -0.0000
+ Episode_Reward/undesired_contacts: -0.0017
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0008
+Metrics/base_velocity/error_vel_yaw: 0.0002
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 48
+                    Iteration time: 4.36s
+                        Total time: 8.72s
+                               ETA: 130844.9s
+Could not find git repository in S:\anaconda3\envs\IsaacLab_2\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-03-11_21-29-47\git\isaac_berkeley_humanoid.diff
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 7 steps/s (collection: 2.887s, learning 0.120s)
+               Value function loss: 283.6327
+                    Surrogate loss: -0.0173
+             Mean action noise std: 0.50
+                 Mean total reward: -10.51
+               Mean episode length: 4.75
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: -0.5163
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0030
+Metrics/base_velocity/error_vel_yaw: 0.0006
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 72
+                    Iteration time: 3.01s
+                        Total time: 11.73s
+                               ETA: 87972.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 7 steps/s (collection: 2.887s, learning 0.120s)
+               Value function loss: 283.6327
+                    Surrogate loss: -0.0173
+             Mean action noise std: 0.50
+                 Mean total reward: -10.51
+               Mean episode length: 4.75
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: -0.5163
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0030
+Metrics/base_velocity/error_vel_yaw: 0.0006
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 96
+                    Iteration time: 3.01s
+                        Total time: 14.74s
+                               ETA: 110527.5s
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 7 steps/s (collection: 3.042s, learning 0.127s)
+               Value function loss: 0.0155
+                    Surrogate loss: -0.0507
+             Mean action noise std: 0.50
+                 Mean total reward: -6.55
+               Mean episode length: 5.54
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0003
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0302
+Metrics/base_velocity/error_vel_yaw: 0.0666
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 120
+                    Iteration time: 3.17s
+                        Total time: 17.91s
+                               ETA: 89523.0s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 7 steps/s (collection: 3.042s, learning 0.127s)
+               Value function loss: 0.0155
+                    Surrogate loss: -0.0507
+             Mean action noise std: 0.50
+                 Mean total reward: -6.55
+               Mean episode length: 5.54
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0003
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0302
+Metrics/base_velocity/error_vel_yaw: 0.0666
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 144
+                    Iteration time: 3.17s
+                        Total time: 21.08s
+                               ETA: 105365.9s
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 7 steps/s (collection: 3.009s, learning 0.126s)
+               Value function loss: 0.0063
+                    Surrogate loss: -0.0512
+             Mean action noise std: 0.50
+                 Mean total reward: -4.56
+               Mean episode length: 4.89
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0004
+ Episode_Reward/undesired_contacts: -0.0108
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0082
+Metrics/base_velocity/error_vel_yaw: 0.0015
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 168
+                    Iteration time: 3.13s
+                        Total time: 24.21s
+                               ETA: 90773.0s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 7 steps/s (collection: 3.009s, learning 0.126s)
+               Value function loss: 0.0063
+                    Surrogate loss: -0.0512
+             Mean action noise std: 0.50
+                 Mean total reward: -4.56
+               Mean episode length: 4.89
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0004
+ Episode_Reward/undesired_contacts: -0.0108
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0082
+Metrics/base_velocity/error_vel_yaw: 0.0015
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 192
+                    Iteration time: 3.13s
+                        Total time: 27.35s
+                               ETA: 102526.9s
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 7 steps/s (collection: 3.015s, learning 0.137s)
+               Value function loss: 21579280189034070016.0000
+                    Surrogate loss: -0.0391
+             Mean action noise std: 0.50
+                 Mean total reward: -613984638.53
+               Mean episode length: 4.30
+     Episode_Reward/action_rate_l2: -543.6799
+     Episode_Reward/track_velocity: -34536096.0000
+ Episode_Reward/undesired_contacts: -0.0125
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 26.9202
+Metrics/base_velocity/error_vel_yaw: 16.4697
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 216
+                    Iteration time: 3.15s
+                        Total time: 30.50s
+                               ETA: 91469.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 7 steps/s (collection: 3.015s, learning 0.137s)
+               Value function loss: 21579280189034070016.0000
+                    Surrogate loss: -0.0391
+             Mean action noise std: 0.50
+                 Mean total reward: -613984638.53
+               Mean episode length: 4.30
+     Episode_Reward/action_rate_l2: -543.6799
+     Episode_Reward/track_velocity: -34536096.0000
+ Episode_Reward/undesired_contacts: -0.0125
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 26.9202
+Metrics/base_velocity/error_vel_yaw: 16.4697
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 240
+                    Iteration time: 3.15s
+                        Total time: 33.65s
+                               ETA: 100923.0s
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 8 steps/s (collection: 2.864s, learning 0.111s)
+               Value function loss: 154349468.8121
+                    Surrogate loss: -0.0331
+             Mean action noise std: 0.50
+                 Mean total reward: -552587691.83
+               Mean episode length: 4.80
+     Episode_Reward/action_rate_l2: -25.1728
+     Episode_Reward/track_velocity: -69.6477
+ Episode_Reward/undesired_contacts: -0.0104
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 7.9510
+Metrics/base_velocity/error_vel_yaw: 1.5894
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 264
+                    Iteration time: 2.98s
+                        Total time: 36.63s
+                               ETA: 91533.1s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 8 steps/s (collection: 2.864s, learning 0.111s)
+               Value function loss: 154349468.8121
+                    Surrogate loss: -0.0331
+             Mean action noise std: 0.50
+                 Mean total reward: -552587691.83
+               Mean episode length: 4.80
+     Episode_Reward/action_rate_l2: -25.1728
+     Episode_Reward/track_velocity: -69.6477
+ Episode_Reward/undesired_contacts: -0.0104
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 7.9510
+Metrics/base_velocity/error_vel_yaw: 1.5894
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 288
+                    Iteration time: 2.98s
+                        Total time: 39.60s
+                               ETA: 98969.4s
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 8 steps/s (collection: 2.772s, learning 0.115s)
+               Value function loss: 4613958815278903.0000
+                    Surrogate loss: -0.0102
+             Mean action noise std: 0.50
+                 Mean total reward: -509698247.21
+               Mean episode length: 4.97
+     Episode_Reward/action_rate_l2: -451.2667
+     Episode_Reward/track_velocity: -1011060.6250
+ Episode_Reward/undesired_contacts: -0.0192
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 144.8987
+Metrics/base_velocity/error_vel_yaw: 709.4100
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 312
+                    Iteration time: 2.89s
+                        Total time: 42.49s
+                               ETA: 91009.2s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 8 steps/s (collection: 2.772s, learning 0.115s)
+               Value function loss: 4613958815278903.0000
+                    Surrogate loss: -0.0102
+             Mean action noise std: 0.50
+                 Mean total reward: -509698247.21
+               Mean episode length: 4.97
+     Episode_Reward/action_rate_l2: -451.2667
+     Episode_Reward/track_velocity: -1011060.6250
+ Episode_Reward/undesired_contacts: -0.0192
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 144.8987
+Metrics/base_velocity/error_vel_yaw: 709.4100
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 336
+                    Iteration time: 2.89s
+                        Total time: 45.37s
+                               ETA: 97193.2s
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 7 steps/s (collection: 3.067s, learning 0.123s)
+               Value function loss: 531845476673126.3750
+                    Surrogate loss: -0.0075
+             Mean action noise std: 0.50
+                 Mean total reward: -401850043.72
+               Mean episode length: 4.48
+     Episode_Reward/action_rate_l2: -100.8286
+     Episode_Reward/track_velocity: -691547.2500
+ Episode_Reward/undesired_contacts: -0.0162
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 39.6075
+Metrics/base_velocity/error_vel_yaw: 973.3036
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 360
+                    Iteration time: 3.19s
+                        Total time: 48.57s
+                               ETA: 91018.7s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 7 steps/s (collection: 3.067s, learning 0.123s)
+               Value function loss: 531845476673126.3750
+                    Surrogate loss: -0.0075
+             Mean action noise std: 0.50
+                 Mean total reward: -401850043.72
+               Mean episode length: 4.48
+     Episode_Reward/action_rate_l2: -100.8286
+     Episode_Reward/track_velocity: -691547.2500
+ Episode_Reward/undesired_contacts: -0.0162
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 39.6075
+Metrics/base_velocity/error_vel_yaw: 973.3036
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 384
+                    Iteration time: 3.19s
+                        Total time: 51.76s
+                               ETA: 96999.0s
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 7 steps/s (collection: 3.289s, learning 0.127s)
+               Value function loss: 0.0108
+                    Surrogate loss: -0.0350
+             Mean action noise std: 0.50
+                 Mean total reward: -375060040.82
+               Mean episode length: 4.80
+     Episode_Reward/action_rate_l2: -0.3418
+     Episode_Reward/track_velocity: -142856.1250
+ Episode_Reward/undesired_contacts: -0.0104
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.9320
+Metrics/base_velocity/error_vel_yaw: 0.1118
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 408
+                    Iteration time: 3.42s
+                        Total time: 55.17s
+                               ETA: 91907.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 7 steps/s (collection: 3.289s, learning 0.127s)
+               Value function loss: 0.0108
+                    Surrogate loss: -0.0350
+             Mean action noise std: 0.50
+                 Mean total reward: -375060040.82
+               Mean episode length: 4.80
+     Episode_Reward/action_rate_l2: -0.3418
+     Episode_Reward/track_velocity: -142856.1250
+ Episode_Reward/undesired_contacts: -0.0104
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.9320
+Metrics/base_velocity/error_vel_yaw: 0.1118
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 432
+                    Iteration time: 3.42s
+                        Total time: 58.59s
+                               ETA: 97599.5s
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 6 steps/s (collection: 3.344s, learning 0.132s)
+               Value function loss: 20056122439000854193888034816.0000
+                    Surrogate loss: -0.0269
+             Mean action noise std: 0.50
+                 Mean total reward: -8330458168622.00
+               Mean episode length: 4.71
+     Episode_Reward/action_rate_l2: -10620743188480.0000
+     Episode_Reward/track_velocity: -169098976.0000
+ Episode_Reward/undesired_contacts: -0.0162
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 12557259.0000
+Metrics/base_velocity/error_vel_yaw: 1236667904.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 456
+                    Iteration time: 3.48s
+                        Total time: 62.07s
+                               ETA: 93044.6s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 6 steps/s (collection: 3.344s, learning 0.132s)
+               Value function loss: 20056122439000854193888034816.0000
+                    Surrogate loss: -0.0269
+             Mean action noise std: 0.50
+                 Mean total reward: -8330458168622.00
+               Mean episode length: 4.71
+     Episode_Reward/action_rate_l2: -10620743188480.0000
+     Episode_Reward/track_velocity: -169098976.0000
+ Episode_Reward/undesired_contacts: -0.0162
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 12557259.0000
+Metrics/base_velocity/error_vel_yaw: 1236667904.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 480
+                    Iteration time: 3.48s
+                        Total time: 65.54s
+                               ETA: 98255.4s
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 6 steps/s (collection: 3.317s, learning 0.136s)
+               Value function loss: 26536341681771431067648.0000
+                    Surrogate loss: 0.1090
+             Mean action noise std: 0.50
+                 Mean total reward: -7191051735757.26
+               Mean episode length: 4.46
+     Episode_Reward/action_rate_l2: -1321.8063
+     Episode_Reward/track_velocity: 3633214976.0000
+ Episode_Reward/undesired_contacts: -0.0133
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 79.2112
+Metrics/base_velocity/error_vel_yaw: 37.0010
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 504
+                    Iteration time: 3.45s
+                        Total time: 69.00s
+                               ETA: 94024.0s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 6 steps/s (collection: 3.317s, learning 0.136s)
+               Value function loss: 26536341681771431067648.0000
+                    Surrogate loss: 0.1090
+             Mean action noise std: 0.50
+                 Mean total reward: -7191051735757.26
+               Mean episode length: 4.46
+     Episode_Reward/action_rate_l2: -1321.8063
+     Episode_Reward/track_velocity: 3633214976.0000
+ Episode_Reward/undesired_contacts: -0.0133
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 79.2112
+Metrics/base_velocity/error_vel_yaw: 37.0010
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 528
+                    Iteration time: 3.45s
+                        Total time: 72.45s
+                               ETA: 98730.9s
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 6 steps/s (collection: 3.707s, learning 0.135s)
+               Value function loss: 4641930009894715392.0000
+                    Surrogate loss: 0.1300
+             Mean action noise std: 0.50
+                 Mean total reward: -6428247935198.31
+               Mean episode length: 4.24
+     Episode_Reward/action_rate_l2: -288.1426
+     Episode_Reward/track_velocity: 144163168.0000
+ Episode_Reward/undesired_contacts: -0.0142
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 50.1024
+Metrics/base_velocity/error_vel_yaw: 24.3307
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 552
+                    Iteration time: 3.84s
+                        Total time: 76.29s
+                               ETA: 95296.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 6 steps/s (collection: 3.707s, learning 0.135s)
+               Value function loss: 4641930009894715392.0000
+                    Surrogate loss: 0.1300
+             Mean action noise std: 0.50
+                 Mean total reward: -6428247935198.31
+               Mean episode length: 4.24
+     Episode_Reward/action_rate_l2: -288.1426
+     Episode_Reward/track_velocity: 144163168.0000
+ Episode_Reward/undesired_contacts: -0.0142
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 50.1024
+Metrics/base_velocity/error_vel_yaw: 24.3307
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 576
+                    Iteration time: 3.84s
+                        Total time: 80.14s
+                               ETA: 100096.4s
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 6 steps/s (collection: 3.468s, learning 0.147s)
+               Value function loss: 0.0044
+                    Surrogate loss: -0.0322
+             Mean action noise std: 0.50
+                 Mean total reward: -6239181819457.18
+               Mean episode length: 4.32
+     Episode_Reward/action_rate_l2: -128.0634
+     Episode_Reward/track_velocity: 64072520.0000
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 22.2673
+Metrics/base_velocity/error_vel_yaw: 10.8091
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 600
+                    Iteration time: 3.61s
+                        Total time: 83.75s
+                               ETA: 96558.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 6 steps/s (collection: 3.468s, learning 0.147s)
+               Value function loss: 0.0044
+                    Surrogate loss: -0.0322
+             Mean action noise std: 0.50
+                 Mean total reward: -6239181819457.18
+               Mean episode length: 4.32
+     Episode_Reward/action_rate_l2: -128.0634
+     Episode_Reward/track_velocity: 64072520.0000
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 22.2673
+Metrics/base_velocity/error_vel_yaw: 10.8091
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 624
+                    Iteration time: 3.61s
+                        Total time: 87.37s
+                               ETA: 100726.2s
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 6 steps/s (collection: 3.843s, learning 0.141s)
+               Value function loss: 365268223032662400.0000
+                    Surrogate loss: 0.1321
+             Mean action noise std: 0.50
+                 Mean total reward: -5237801428121.32
+               Mean episode length: 4.15
+     Episode_Reward/action_rate_l2: -28383.2949
+     Episode_Reward/track_velocity: 9553652.0000
+ Episode_Reward/undesired_contacts: -0.0137
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 267.2878
+Metrics/base_velocity/error_vel_yaw: 1349.9886
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 648
+                    Iteration time: 3.98s
+                        Total time: 91.35s
+                               ETA: 97790.1s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 6 steps/s (collection: 3.843s, learning 0.141s)
+               Value function loss: 365268223032662400.0000
+                    Surrogate loss: 0.1321
+             Mean action noise std: 0.50
+                 Mean total reward: -5237801428121.32
+               Mean episode length: 4.15
+     Episode_Reward/action_rate_l2: -28383.2949
+     Episode_Reward/track_velocity: 9553652.0000
+ Episode_Reward/undesired_contacts: -0.0137
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 267.2878
+Metrics/base_velocity/error_vel_yaw: 1349.9886
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 672
+                    Iteration time: 3.98s
+                        Total time: 95.33s
+                               ETA: 102054.9s
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 6 steps/s (collection: 3.303s, learning 0.131s)
+               Value function loss: 0.0200
+                    Surrogate loss: -0.0309
+             Mean action noise std: 0.50
+                 Mean total reward: -4821158132702.60
+               Mean episode length: 4.09
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: 0.0027
+ Episode_Reward/undesired_contacts: -0.0112
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0059
+Metrics/base_velocity/error_vel_yaw: 0.0019
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 696
+                    Iteration time: 3.43s
+                        Total time: 98.77s
+                               ETA: 98675.2s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 6 steps/s (collection: 3.303s, learning 0.131s)
+               Value function loss: 0.0200
+                    Surrogate loss: -0.0309
+             Mean action noise std: 0.50
+                 Mean total reward: -4821158132702.60
+               Mean episode length: 4.09
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: 0.0027
+ Episode_Reward/undesired_contacts: -0.0112
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0059
+Metrics/base_velocity/error_vel_yaw: 0.0019
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 720
+                    Iteration time: 3.43s
+                        Total time: 102.20s
+                               ETA: 102105.5s
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 7 steps/s (collection: 3.231s, learning 0.122s)
+               Value function loss: 2747317229148490432512.0000
+                    Surrogate loss: -0.0182
+             Mean action noise std: 0.50
+                 Mean total reward: -4331111892781.54
+               Mean episode length: 3.90
+     Episode_Reward/action_rate_l2: -276.4811
+     Episode_Reward/track_velocity: -389686880.0000
+ Episode_Reward/undesired_contacts: -0.0112
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 51.5881
+Metrics/base_velocity/error_vel_yaw: 67.3454
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 744
+                    Iteration time: 3.35s
+                        Total time: 105.55s
+                               ETA: 98858.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 7 steps/s (collection: 3.231s, learning 0.122s)
+               Value function loss: 2747317229148490432512.0000
+                    Surrogate loss: -0.0182
+             Mean action noise std: 0.50
+                 Mean total reward: -4331111892781.54
+               Mean episode length: 3.90
+     Episode_Reward/action_rate_l2: -276.4811
+     Episode_Reward/track_velocity: -389686880.0000
+ Episode_Reward/undesired_contacts: -0.0112
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 51.5881
+Metrics/base_velocity/error_vel_yaw: 67.3454
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 768
+                    Iteration time: 3.35s
+                        Total time: 108.91s
+                               ETA: 102000.0s
+################################################################################
+                     [1m Learning iteration 16/15000 
+                       Computation: 6 steps/s (collection: 3.348s, learning 0.127s)
+               Value function loss: 0.0083
+                    Surrogate loss: -0.0284
+             Mean action noise std: 0.50
+                 Mean total reward: -4244489654925.92
+               Mean episode length: 3.81
+     Episode_Reward/action_rate_l2: -0.0002
+     Episode_Reward/track_velocity: 0.0004
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0209
+Metrics/base_velocity/error_vel_yaw: 0.0129
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 792
+                    Iteration time: 3.47s
+                        Total time: 112.38s
+                               ETA: 99056.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 16/15000 
+                       Computation: 6 steps/s (collection: 3.348s, learning 0.127s)
+               Value function loss: 0.0083
+                    Surrogate loss: -0.0284
+             Mean action noise std: 0.50
+                 Mean total reward: -4244489654925.92
+               Mean episode length: 3.81
+     Episode_Reward/action_rate_l2: -0.0002
+     Episode_Reward/track_velocity: 0.0004
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0209
+Metrics/base_velocity/error_vel_yaw: 0.0129
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 816
+                    Iteration time: 3.47s
+                        Total time: 115.86s
+                               ETA: 102119.4s
+################################################################################
+                     [1m Learning iteration 17/15000 
+                       Computation: 6 steps/s (collection: 3.434s, learning 0.141s)
+               Value function loss: 0.2845
+                    Surrogate loss: -0.0318
+             Mean action noise std: 0.50
+                 Mean total reward: -4244489654925.07
+               Mean episode length: 3.94
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0354
+ Episode_Reward/undesired_contacts: -0.0125
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0038
+Metrics/base_velocity/error_vel_yaw: 0.0010
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 840
+                    Iteration time: 3.57s
+                        Total time: 119.43s
+                               ETA: 99415.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 17/15000 
+                       Computation: 6 steps/s (collection: 3.434s, learning 0.141s)
+               Value function loss: 0.2845
+                    Surrogate loss: -0.0318
+             Mean action noise std: 0.50
+                 Mean total reward: -4244489654925.07
+               Mean episode length: 3.94
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0354
+ Episode_Reward/undesired_contacts: -0.0125
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0038
+Metrics/base_velocity/error_vel_yaw: 0.0010
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 864
+                    Iteration time: 3.57s
+                        Total time: 123.01s
+                               ETA: 102391.2s
+################################################################################
+                     [1m Learning iteration 18/15000 
+                       Computation: 7 steps/s (collection: 3.285s, learning 0.130s)
+               Value function loss: 2514152876090.2393
+                    Surrogate loss: -0.0397
+             Mean action noise std: 0.49
+                 Mean total reward: -4244489711555.50
+               Mean episode length: 3.85
+     Episode_Reward/action_rate_l2: -293.0828
+     Episode_Reward/track_velocity: -23302.9297
+ Episode_Reward/undesired_contacts: -0.0108
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 28.3151
+Metrics/base_velocity/error_vel_yaw: 720.6267
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 888
+                    Iteration time: 3.42s
+                        Total time: 126.42s
+                               ETA: 99689.3s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 18/15000 
+                       Computation: 7 steps/s (collection: 3.285s, learning 0.130s)
+               Value function loss: 2514152876090.2393
+                    Surrogate loss: -0.0397
+             Mean action noise std: 0.49
+                 Mean total reward: -4244489711555.50
+               Mean episode length: 3.85
+     Episode_Reward/action_rate_l2: -293.0828
+     Episode_Reward/track_velocity: -23302.9297
+ Episode_Reward/undesired_contacts: -0.0108
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 28.3151
+Metrics/base_velocity/error_vel_yaw: 720.6267
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 912
+                    Iteration time: 3.42s
+                        Total time: 129.84s
+                               ETA: 102382.9s
+################################################################################
+                     [1m Learning iteration 19/15000 
+                       Computation: 0 steps/s (collection: 112.565s, learning 0.132s)
+               Value function loss: 288120379801.6115
+                    Surrogate loss: 0.1647
+             Mean action noise std: 0.49
+                 Mean total reward: -4244489685260.37
+               Mean episode length: 3.75
+     Episode_Reward/action_rate_l2: -0.0813
+     Episode_Reward/track_velocity: 16434.5371
+ Episode_Reward/undesired_contacts: -0.0112
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.7397
+Metrics/base_velocity/error_vel_yaw: 5.2903
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 936
+                    Iteration time: 112.70s
+                        Total time: 242.54s
+                               ETA: 181673.3s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 19/15000 
+                       Computation: 0 steps/s (collection: 112.565s, learning 0.132s)
+               Value function loss: 288120379801.6115
+                    Surrogate loss: 0.1647
+             Mean action noise std: 0.49
+                 Mean total reward: -4244489685260.37
+               Mean episode length: 3.75
+     Episode_Reward/action_rate_l2: -0.0813
+     Episode_Reward/track_velocity: 16434.5371
+ Episode_Reward/undesired_contacts: -0.0112
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.7397
+Metrics/base_velocity/error_vel_yaw: 5.2903
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 960
+                    Iteration time: 112.70s
+                        Total time: 355.24s
+                               ETA: 266089.3s
+################################################################################
+                     [1m Learning iteration 20/15000 
+                       Computation: 6 steps/s (collection: 3.440s, learning 0.121s)
+               Value function loss: 0.0056
+                    Surrogate loss: -0.0636
+             Mean action noise std: 0.49
+                 Mean total reward: -4244489685260.37
+               Mean episode length: 3.89
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0001
+ Episode_Reward/undesired_contacts: -0.0104
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0053
+Metrics/base_velocity/error_vel_yaw: 0.0004
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 984
+                    Iteration time: 3.56s
+                        Total time: 358.80s
+                               ETA: 255942.3s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 20/15000 
+                       Computation: 6 steps/s (collection: 3.440s, learning 0.121s)
+               Value function loss: 0.0056
+                    Surrogate loss: -0.0636
+             Mean action noise std: 0.49
+                 Mean total reward: -4244489685260.37
+               Mean episode length: 3.89
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0001
+ Episode_Reward/undesired_contacts: -0.0104
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0053
+Metrics/base_velocity/error_vel_yaw: 0.0004
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1008
+                    Iteration time: 3.56s
+                        Total time: 362.36s
+                               ETA: 258483.2s
+################################################################################
+                     [1m Learning iteration 21/15000 
+                       Computation: 6 steps/s (collection: 3.388s, learning 0.129s)
+               Value function loss: 966640310291455897409102544896.0000
+                    Surrogate loss: -0.0069
+             Mean action noise std: 0.49
+                 Mean total reward: -33714834217346.67
+               Mean episode length: 3.65
+     Episode_Reward/action_rate_l2: -61445358223360.0000
+     Episode_Reward/track_velocity: 14538102784.0000
+ Episode_Reward/undesired_contacts: -0.0154
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 37411324.0000
+Metrics/base_velocity/error_vel_yaw: 876008064.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1032
+                    Iteration time: 3.52s
+                        Total time: 365.88s
+                               ETA: 249112.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 21/15000 
+                       Computation: 6 steps/s (collection: 3.388s, learning 0.129s)
+               Value function loss: 966640310291455897409102544896.0000
+                    Surrogate loss: -0.0069
+             Mean action noise std: 0.49
+                 Mean total reward: -33714834217346.67
+               Mean episode length: 3.65
+     Episode_Reward/action_rate_l2: -61445358223360.0000
+     Episode_Reward/track_velocity: 14538102784.0000
+ Episode_Reward/undesired_contacts: -0.0154
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 37411324.0000
+Metrics/base_velocity/error_vel_yaw: 876008064.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1056
+                    Iteration time: 3.52s
+                        Total time: 369.39s
+                               ETA: 251507.4s
+################################################################################
+                     [1m Learning iteration 22/15000 
+                       Computation: 6 steps/s (collection: 3.333s, learning 0.159s)
+               Value function loss: 0.0058
+                    Surrogate loss: -0.0418
+             Mean action noise std: 0.49
+                 Mean total reward: -33714831902346.84
+               Mean episode length: 3.66
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0002
+ Episode_Reward/undesired_contacts: -0.0108
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0030
+Metrics/base_velocity/error_vel_yaw: 0.0010
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1080
+                    Iteration time: 3.49s
+                        Total time: 372.89s
+                               ETA: 242830.3s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 22/15000 
+                       Computation: 6 steps/s (collection: 3.333s, learning 0.159s)
+               Value function loss: 0.0058
+                    Surrogate loss: -0.0418
+             Mean action noise std: 0.49
+                 Mean total reward: -33714831902346.84
+               Mean episode length: 3.66
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: -0.0002
+ Episode_Reward/undesired_contacts: -0.0108
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0030
+Metrics/base_velocity/error_vel_yaw: 0.0010
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1104
+                    Iteration time: 3.49s
+                        Total time: 376.38s
+                               ETA: 245104.3s
+################################################################################
+                     [1m Learning iteration 23/15000 
+                       Computation: 6 steps/s (collection: 3.455s, learning 0.120s)
+               Value function loss: 3.9393
+                    Surrogate loss: -0.0380
+             Mean action noise std: 0.49
+                 Mean total reward: -33714831216635.80
+               Mean episode length: 3.59
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: 0.0470
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0192
+Metrics/base_velocity/error_vel_yaw: 0.0892
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1128
+                    Iteration time: 3.58s
+                        Total time: 379.95s
+                               ETA: 237107.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 23/15000 
+                       Computation: 6 steps/s (collection: 3.455s, learning 0.120s)
+               Value function loss: 3.9393
+                    Surrogate loss: -0.0380
+             Mean action noise std: 0.49
+                 Mean total reward: -33714831216635.80
+               Mean episode length: 3.59
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: 0.0470
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0192
+Metrics/base_velocity/error_vel_yaw: 0.0892
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1152
+                    Iteration time: 3.58s
+                        Total time: 383.53s
+                               ETA: 239339.1s
+################################################################################
+                     [1m Learning iteration 24/15000 
+                       Computation: 7 steps/s (collection: 3.275s, learning 0.134s)
+               Value function loss: 3.4345
+                    Surrogate loss: -0.0277
+             Mean action noise std: 0.49
+                 Mean total reward: -33714831216635.73
+               Mean episode length: 3.66
+     Episode_Reward/action_rate_l2: -0.0026
+     Episode_Reward/track_velocity: 0.2389
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.4205
+Metrics/base_velocity/error_vel_yaw: 1.1412
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1176
+                    Iteration time: 3.41s
+                        Total time: 386.94s
+                               ETA: 231792.6s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 24/15000 
+                       Computation: 7 steps/s (collection: 3.275s, learning 0.134s)
+               Value function loss: 3.4345
+                    Surrogate loss: -0.0277
+             Mean action noise std: 0.49
+                 Mean total reward: -33714831216635.73
+               Mean episode length: 3.66
+     Episode_Reward/action_rate_l2: -0.0026
+     Episode_Reward/track_velocity: 0.2389
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.4205
+Metrics/base_velocity/error_vel_yaw: 1.1412
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1200
+                    Iteration time: 3.41s
+                        Total time: 390.35s
+                               ETA: 233835.0s
+################################################################################
+                     [1m Learning iteration 25/15000 
+                       Computation: 7 steps/s (collection: 3.283s, learning 0.125s)
+               Value function loss: 0.0045
+                    Surrogate loss: -0.0301
+             Mean action noise std: 0.49
+                 Mean total reward: -29466466329063.25
+               Mean episode length: 3.83
+     Episode_Reward/action_rate_l2: -0.0012
+     Episode_Reward/track_velocity: 0.0804
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.1606
+Metrics/base_velocity/error_vel_yaw: 0.3861
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1224
+                    Iteration time: 3.41s
+                        Total time: 393.76s
+                               ETA: 226789.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 25/15000 
+                       Computation: 7 steps/s (collection: 3.283s, learning 0.125s)
+               Value function loss: 0.0045
+                    Surrogate loss: -0.0301
+             Mean action noise std: 0.49
+                 Mean total reward: -29466466329063.25
+               Mean episode length: 3.83
+     Episode_Reward/action_rate_l2: -0.0012
+     Episode_Reward/track_velocity: 0.0804
+ Episode_Reward/undesired_contacts: -0.0100
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.1606
+Metrics/base_velocity/error_vel_yaw: 0.3861
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1248
+                    Iteration time: 3.41s
+                        Total time: 397.17s
+                               ETA: 228752.7s

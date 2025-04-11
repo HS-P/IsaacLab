@@ -1,0 +1,73 @@
+2025-03-11 21:07:15,171 INFO    MainThread:57636 [internal.py:wandb_internal():90] W&B internal server running at pid: 57636, started at: 2025-03-11 21:07:15.171182
+2025-03-11 21:07:15,172 INFO    WriterThread:57636 [datastore.py:open_for_write():75] open: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\run-gsvhl8y7.wandb
+2025-03-11 21:07:15,175 DEBUG   SenderThread:57636 [sender.py:send():236] send: header
+2025-03-11 21:07:15,175 DEBUG   SenderThread:57636 [sender.py:send():236] send: run
+2025-03-11 21:07:15,489 DEBUG   HandlerThread:57636 [handler.py:handle_request():140] handle_request: check_version
+2025-03-11 21:07:15,496 INFO    SenderThread:57636 [dir_watcher.py:__init__():216] watching files in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files
+2025-03-11 21:07:15,496 INFO    SenderThread:57636 [sender.py:_start_run_threads():815] run started: gsvhl8y7 with start time 1741694834
+2025-03-11 21:07:15,497 DEBUG   SenderThread:57636 [sender.py:send():236] send: summary
+2025-03-11 21:07:15,497 INFO    SenderThread:57636 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-11 21:07:15,498 DEBUG   SenderThread:57636 [sender.py:send_request():250] send_request: check_version
+2025-03-11 21:07:15,546 DEBUG   HandlerThread:57636 [handler.py:handle_request():140] handle_request: run_start
+2025-03-11 21:07:15,567 DEBUG   HandlerThread:57636 [meta.py:__init__():35] meta init
+2025-03-11 21:07:15,567 DEBUG   HandlerThread:57636 [meta.py:__init__():49] meta init done
+2025-03-11 21:07:15,568 DEBUG   HandlerThread:57636 [meta.py:probe():209] probe
+2025-03-11 21:07:15,577 DEBUG   HandlerThread:57636 [meta.py:_setup_git():199] setup git
+2025-03-11 21:07:15,672 DEBUG   HandlerThread:57636 [meta.py:_setup_git():206] setup git done
+2025-03-11 21:07:15,672 DEBUG   HandlerThread:57636 [meta.py:_save_pip():53] save pip
+2025-03-11 21:07:15,673 DEBUG   HandlerThread:57636 [meta.py:_save_pip():67] save pip done
+2025-03-11 21:07:15,673 DEBUG   HandlerThread:57636 [meta.py:_save_conda():74] save conda
+2025-03-11 21:07:15,677 ERROR   HandlerThread:57636 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "S:\anaconda3\envs\IsaacLab_2\lib\site-packages\wandb\sdk\internal\meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-11 21:07:15,677 DEBUG   HandlerThread:57636 [meta.py:_save_conda():84] save conda done
+2025-03-11 21:07:15,677 DEBUG   HandlerThread:57636 [meta.py:probe():247] probe done
+2025-03-11 21:07:15,862 DEBUG   SenderThread:57636 [sender.py:send():236] send: files
+2025-03-11 21:07:15,863 INFO    SenderThread:57636 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2025-03-11 21:07:15,863 DEBUG   HandlerThread:57636 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-11 21:07:15,863 DEBUG   SenderThread:57636 [sender.py:send_request():250] send_request: stop_status
+2025-03-11 21:07:16,182 DEBUG   SenderThread:57636 [sender.py:send():236] send: telemetry
+2025-03-11 21:07:16,507 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\wandb-metadata.json
+2025-03-11 21:07:16,508 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:16,508 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\wandb-summary.json
+2025-03-11 21:07:16,509 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\conda-environment.yaml
+2025-03-11 21:07:16,509 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\requirements.txt
+2025-03-11 21:07:18,520 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:22,551 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:24,565 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:28,594 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:31,183 DEBUG   HandlerThread:57636 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-11 21:07:31,183 DEBUG   SenderThread:57636 [sender.py:send_request():250] send_request: stop_status
+2025-03-11 21:07:32,624 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:34,639 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:36,652 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:37,569 INFO    Thread-17 :57636 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\AppData\Local\Temp\tmpx4c3aivrwandb\736z9icy-wandb-metadata.json
+2025-03-11 21:07:38,667 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:40,682 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:42,697 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:44,712 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:46,491 DEBUG   HandlerThread:57636 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-11 21:07:46,492 DEBUG   SenderThread:57636 [sender.py:send_request():250] send_request: stop_status
+2025-03-11 21:07:46,727 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:46,727 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\config.yaml
+2025-03-11 21:07:46,816 DEBUG   SenderThread:57636 [sender.py:send():236] send: stats
+2025-03-11 21:07:48,741 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:50,756 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:52,771 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:54,785 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:56,800 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:07:58,815 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:08:00,829 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:08:01,818 DEBUG   HandlerThread:57636 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-11 21:08:01,818 DEBUG   SenderThread:57636 [sender.py:send_request():250] send_request: stop_status
+2025-03-11 21:08:02,845 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:08:04,858 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log
+2025-03-11 21:08:06,873 INFO    Thread-11 :57636 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210714-gsvhl8y7\files\output.log

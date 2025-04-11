@@ -1,0 +1,2918 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 1.830470 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 8192
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.253963 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++--------------------------------------------+
+|            Active Command Terms            |
++-------+---------------+--------------------+
+| Index | Name          |        Type        |
++-------+---------------+--------------------+
+|   0   | base_position | UniformPoseCommand |
++-------+---------------+--------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 4)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          3 |
+|   1    | wheel_vel  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (4,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | base_position              |    (4,)    |
++------------+----------------------------+------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | scale_all_joint_armature       |
+|   4   | add_all_joint_default_pos      |
+|   5   | scale_all_joint_friction_model |
++-------+--------------------------------+
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | base_external_force_torque   |
+|   1    | reset_base                   |
+|   2    | reset_robot_joints           |
++--------+------------------------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++--------------------------------------+
+|         Active Reward Terms          |
++-------+---------------------+--------+
+| Index | Name                | Weight |
++-------+---------------------+--------+
+|   0   | action_rate_l2      |  -0.01 |
+|   1   | undesired_contacts  |  -10.0 |
+|   2   | joint_pos_pitch_exp |    1.0 |
++-------+---------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 1 active terms.
++---------------------------+
+|  Active Curriculum Terms  |
++-------+-------------------+
+| Index | Name              |
++-------+-------------------+
+|   0   | command_leg_pitch |
++-------+-------------------+
+[INFO]: Completed setting up the environment...
+Actor MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=4, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 74303 steps/s (collection: 2.448s, learning 0.198s)
+               Value function loss: 0.0075
+                    Surrogate loss: 0.0111
+             Mean action noise std: 0.50
+                 Mean total reward: -0.17
+               Mean episode length: 18.94
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0014
+Episode_Reward/joint_pos_pitch_exp: -0.0054
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5198
+      Episode_Termination/time_out: 8.1667
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 196608
+                    Iteration time: 2.65s
+                        Total time: 2.65s
+                               ETA: 39690.0s
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 74303 steps/s (collection: 2.448s, learning 0.198s)
+               Value function loss: 0.0075
+                    Surrogate loss: 0.0111
+             Mean action noise std: 0.50
+                 Mean total reward: -0.17
+               Mean episode length: 18.94
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0014
+Episode_Reward/joint_pos_pitch_exp: -0.0054
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5198
+      Episode_Termination/time_out: 8.1667
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 393216
+                    Iteration time: 2.65s
+                        Total time: 5.29s
+                               ETA: 79379.9s
+Could not find git repository in S:\anaconda3\envs\IsaacLab_2\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-03-12_17-52-28\git\isaac_berkeley_humanoid.diff
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 218332 steps/s (collection: 0.781s, learning 0.119s)
+               Value function loss: 0.0030
+                    Surrogate loss: 0.0048
+             Mean action noise std: 0.50
+                 Mean total reward: -0.40
+               Mean episode length: 42.38
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: -0.0163
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5856
+      Episode_Termination/time_out: 7.1667
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 589824
+                    Iteration time: 0.90s
+                        Total time: 6.19s
+                               ETA: 46440.6s
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 218332 steps/s (collection: 0.781s, learning 0.119s)
+               Value function loss: 0.0030
+                    Surrogate loss: 0.0048
+             Mean action noise std: 0.50
+                 Mean total reward: -0.40
+               Mean episode length: 42.38
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: -0.0163
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5856
+      Episode_Termination/time_out: 7.1667
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 786432
+                    Iteration time: 0.90s
+                        Total time: 7.09s
+                               ETA: 53193.9s
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 217848 steps/s (collection: 0.777s, learning 0.125s)
+               Value function loss: 0.0022
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.50
+                 Mean total reward: -0.64
+               Mean episode length: 67.29
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: -0.0273
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5806
+      Episode_Termination/time_out: 9.1667
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 983040
+                    Iteration time: 0.90s
+                        Total time: 8.00s
+                               ETA: 39972.1s
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 217848 steps/s (collection: 0.777s, learning 0.125s)
+               Value function loss: 0.0022
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.50
+                 Mean total reward: -0.64
+               Mean episode length: 67.29
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: -0.0273
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5806
+      Episode_Termination/time_out: 9.1667
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 1179648
+                    Iteration time: 0.90s
+                        Total time: 8.90s
+                               ETA: 44484.0s
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 219428 steps/s (collection: 0.776s, learning 0.119s)
+               Value function loss: 0.0019
+                    Surrogate loss: -0.0053
+             Mean action noise std: 0.50
+                 Mean total reward: -0.87
+               Mean episode length: 90.42
+     Episode_Reward/action_rate_l2: -0.0017
+ Episode_Reward/undesired_contacts: -0.0005
+Episode_Reward/joint_pos_pitch_exp: -0.0380
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5835
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 1376256
+                    Iteration time: 0.90s
+                        Total time: 9.79s
+                               ETA: 36720.1s
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 219428 steps/s (collection: 0.776s, learning 0.119s)
+               Value function loss: 0.0019
+                    Surrogate loss: -0.0053
+             Mean action noise std: 0.50
+                 Mean total reward: -0.87
+               Mean episode length: 90.42
+     Episode_Reward/action_rate_l2: -0.0017
+ Episode_Reward/undesired_contacts: -0.0005
+Episode_Reward/joint_pos_pitch_exp: -0.0380
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5835
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 1572864
+                    Iteration time: 0.90s
+                        Total time: 10.69s
+                               ETA: 40079.4s
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 218696 steps/s (collection: 0.776s, learning 0.122s)
+               Value function loss: 0.0016
+                    Surrogate loss: -0.0051
+             Mean action noise std: 0.50
+                 Mean total reward: -1.09
+               Mean episode length: 111.23
+     Episode_Reward/action_rate_l2: -0.0021
+ Episode_Reward/undesired_contacts: -0.0021
+Episode_Reward/joint_pos_pitch_exp: -0.0480
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5916
+      Episode_Termination/time_out: 8.0417
+  Episode_Termination/base_contact: 0.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 1769472
+                    Iteration time: 0.90s
+                        Total time: 11.59s
+                               ETA: 34757.7s
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 218696 steps/s (collection: 0.776s, learning 0.122s)
+               Value function loss: 0.0016
+                    Surrogate loss: -0.0051
+             Mean action noise std: 0.50
+                 Mean total reward: -1.09
+               Mean episode length: 111.23
+     Episode_Reward/action_rate_l2: -0.0021
+ Episode_Reward/undesired_contacts: -0.0021
+Episode_Reward/joint_pos_pitch_exp: -0.0480
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5916
+      Episode_Termination/time_out: 8.0417
+  Episode_Termination/base_contact: 0.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 1966080
+                    Iteration time: 0.90s
+                        Total time: 12.49s
+                               ETA: 37454.0s
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 219919 steps/s (collection: 0.778s, learning 0.115s)
+               Value function loss: 0.0015
+                    Surrogate loss: -0.0103
+             Mean action noise std: 0.49
+                 Mean total reward: -1.33
+               Mean episode length: 136.96
+     Episode_Reward/action_rate_l2: -0.0026
+ Episode_Reward/undesired_contacts: -0.0030
+Episode_Reward/joint_pos_pitch_exp: -0.0572
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5966
+      Episode_Termination/time_out: 8.6667
+  Episode_Termination/base_contact: 1.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 2162688
+                    Iteration time: 0.89s
+                        Total time: 13.38s
+                               ETA: 33443.8s
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 219919 steps/s (collection: 0.778s, learning 0.115s)
+               Value function loss: 0.0015
+                    Surrogate loss: -0.0103
+             Mean action noise std: 0.49
+                 Mean total reward: -1.33
+               Mean episode length: 136.96
+     Episode_Reward/action_rate_l2: -0.0026
+ Episode_Reward/undesired_contacts: -0.0030
+Episode_Reward/joint_pos_pitch_exp: -0.0572
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5966
+      Episode_Termination/time_out: 8.6667
+  Episode_Termination/base_contact: 1.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 2359296
+                    Iteration time: 0.89s
+                        Total time: 14.28s
+                               ETA: 35678.1s
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 216767 steps/s (collection: 0.784s, learning 0.123s)
+               Value function loss: 0.0013
+                    Surrogate loss: -0.0193
+             Mean action noise std: 0.49
+                 Mean total reward: -1.49
+               Mean episode length: 151.89
+     Episode_Reward/action_rate_l2: -0.0029
+ Episode_Reward/undesired_contacts: -0.0043
+Episode_Reward/joint_pos_pitch_exp: -0.0640
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6033
+      Episode_Termination/time_out: 8.0417
+  Episode_Termination/base_contact: 2.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 2555904
+                    Iteration time: 0.91s
+                        Total time: 15.18s
+                               ETA: 32522.0s
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 216767 steps/s (collection: 0.784s, learning 0.123s)
+               Value function loss: 0.0013
+                    Surrogate loss: -0.0193
+             Mean action noise std: 0.49
+                 Mean total reward: -1.49
+               Mean episode length: 151.89
+     Episode_Reward/action_rate_l2: -0.0029
+ Episode_Reward/undesired_contacts: -0.0043
+Episode_Reward/joint_pos_pitch_exp: -0.0640
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6033
+      Episode_Termination/time_out: 8.0417
+  Episode_Termination/base_contact: 2.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 2752512
+                    Iteration time: 0.91s
+                        Total time: 16.09s
+                               ETA: 34464.7s
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 221530 steps/s (collection: 0.763s, learning 0.124s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0195
+             Mean action noise std: 0.49
+                 Mean total reward: -1.65
+               Mean episode length: 168.11
+     Episode_Reward/action_rate_l2: -0.0032
+ Episode_Reward/undesired_contacts: -0.0077
+Episode_Reward/joint_pos_pitch_exp: -0.0693
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6169
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 5.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2949120
+                    Iteration time: 0.89s
+                        Total time: 16.98s
+                               ETA: 31817.9s
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 221530 steps/s (collection: 0.763s, learning 0.124s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0195
+             Mean action noise std: 0.49
+                 Mean total reward: -1.65
+               Mean episode length: 168.11
+     Episode_Reward/action_rate_l2: -0.0032
+ Episode_Reward/undesired_contacts: -0.0077
+Episode_Reward/joint_pos_pitch_exp: -0.0693
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6169
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 5.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3145728
+                    Iteration time: 0.89s
+                        Total time: 17.86s
+                               ETA: 33481.2s
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 216887 steps/s (collection: 0.783s, learning 0.123s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0219
+             Mean action noise std: 0.49
+                 Mean total reward: -1.73
+               Mean episode length: 173.52
+     Episode_Reward/action_rate_l2: -0.0033
+ Episode_Reward/undesired_contacts: -0.0111
+Episode_Reward/joint_pos_pitch_exp: -0.0698
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6281
+      Episode_Termination/time_out: 7.8333
+  Episode_Termination/base_contact: 10.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 3342336
+                    Iteration time: 0.91s
+                        Total time: 18.77s
+                               ETA: 31269.1s
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 216887 steps/s (collection: 0.783s, learning 0.123s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0219
+             Mean action noise std: 0.49
+                 Mean total reward: -1.73
+               Mean episode length: 173.52
+     Episode_Reward/action_rate_l2: -0.0033
+ Episode_Reward/undesired_contacts: -0.0111
+Episode_Reward/joint_pos_pitch_exp: -0.0698
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6281
+      Episode_Termination/time_out: 7.8333
+  Episode_Termination/base_contact: 10.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 3538944
+                    Iteration time: 0.91s
+                        Total time: 19.68s
+                               ETA: 32779.1s
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 215815 steps/s (collection: 0.788s, learning 0.122s)
+               Value function loss: 0.0014
+                    Surrogate loss: -0.0142
+             Mean action noise std: 0.49
+                 Mean total reward: -1.42
+               Mean episode length: 139.64
+     Episode_Reward/action_rate_l2: -0.0030
+ Episode_Reward/undesired_contacts: -0.0165
+Episode_Reward/joint_pos_pitch_exp: -0.0596
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6424
+      Episode_Termination/time_out: 7.0000
+  Episode_Termination/base_contact: 38.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 3735552
+                    Iteration time: 0.91s
+                        Total time: 20.59s
+                               ETA: 30864.9s
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 215815 steps/s (collection: 0.788s, learning 0.122s)
+               Value function loss: 0.0014
+                    Surrogate loss: -0.0142
+             Mean action noise std: 0.49
+                 Mean total reward: -1.42
+               Mean episode length: 139.64
+     Episode_Reward/action_rate_l2: -0.0030
+ Episode_Reward/undesired_contacts: -0.0165
+Episode_Reward/joint_pos_pitch_exp: -0.0596
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6424
+      Episode_Termination/time_out: 7.0000
+  Episode_Termination/base_contact: 38.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 3932160
+                    Iteration time: 0.91s
+                        Total time: 21.50s
+                               ETA: 32230.6s
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 207721 steps/s (collection: 0.828s, learning 0.118s)
+               Value function loss: 0.0028
+                    Surrogate loss: -0.0050
+             Mean action noise std: 0.49
+                 Mean total reward: -0.91
+               Mean episode length: 76.65
+     Episode_Reward/action_rate_l2: -0.0025
+ Episode_Reward/undesired_contacts: -0.0188
+Episode_Reward/joint_pos_pitch_exp: -0.0463
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6482
+      Episode_Termination/time_out: 6.2500
+  Episode_Termination/base_contact: 119.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 4128768
+                    Iteration time: 0.95s
+                        Total time: 22.45s
+                               ETA: 30588.4s
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 207721 steps/s (collection: 0.828s, learning 0.118s)
+               Value function loss: 0.0028
+                    Surrogate loss: -0.0050
+             Mean action noise std: 0.49
+                 Mean total reward: -0.91
+               Mean episode length: 76.65
+     Episode_Reward/action_rate_l2: -0.0025
+ Episode_Reward/undesired_contacts: -0.0188
+Episode_Reward/joint_pos_pitch_exp: -0.0463
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6482
+      Episode_Termination/time_out: 6.2500
+  Episode_Termination/base_contact: 119.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 4325376
+                    Iteration time: 0.95s
+                        Total time: 23.39s
+                               ETA: 31878.2s
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 209603 steps/s (collection: 0.818s, learning 0.120s)
+               Value function loss: 0.0053
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.48
+                 Mean total reward: -0.81
+               Mean episode length: 77.56
+     Episode_Reward/action_rate_l2: -0.0017
+ Episode_Reward/undesired_contacts: -0.0194
+Episode_Reward/joint_pos_pitch_exp: -0.0262
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 4.9583
+  Episode_Termination/base_contact: 181.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 4521984
+                    Iteration time: 0.94s
+                        Total time: 24.33s
+                               ETA: 30391.4s
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 209603 steps/s (collection: 0.818s, learning 0.120s)
+               Value function loss: 0.0053
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.48
+                 Mean total reward: -0.81
+               Mean episode length: 77.56
+     Episode_Reward/action_rate_l2: -0.0017
+ Episode_Reward/undesired_contacts: -0.0194
+Episode_Reward/joint_pos_pitch_exp: -0.0262
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 4.9583
+  Episode_Termination/base_contact: 181.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 4718592
+                    Iteration time: 0.94s
+                        Total time: 25.27s
+                               ETA: 31563.1s
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 210726 steps/s (collection: 0.813s, learning 0.119s)
+               Value function loss: 0.0052
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.47
+                 Mean total reward: -0.72
+               Mean episode length: 77.58
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0196
+Episode_Reward/joint_pos_pitch_exp: -0.0129
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 3.1667
+  Episode_Termination/base_contact: 201.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 4915200
+                    Iteration time: 0.93s
+                        Total time: 26.20s
+                               ETA: 30208.9s
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 210726 steps/s (collection: 0.813s, learning 0.119s)
+               Value function loss: 0.0052
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.47
+                 Mean total reward: -0.72
+               Mean episode length: 77.58
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0196
+Episode_Reward/joint_pos_pitch_exp: -0.0129
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 3.1667
+  Episode_Termination/base_contact: 201.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 5111808
+                    Iteration time: 0.93s
+                        Total time: 27.13s
+                               ETA: 31284.5s
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 208381 steps/s (collection: 0.820s, learning 0.123s)
+               Value function loss: 0.0074
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.47
+                 Mean total reward: -0.48
+               Mean episode length: 36.37
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0196
+Episode_Reward/joint_pos_pitch_exp: -0.0066
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.8750
+  Episode_Termination/base_contact: 191.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 5308416
+                    Iteration time: 0.94s
+                        Total time: 28.08s
+                               ETA: 30058.0s
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 208381 steps/s (collection: 0.820s, learning 0.123s)
+               Value function loss: 0.0074
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.47
+                 Mean total reward: -0.48
+               Mean episode length: 36.37
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0196
+Episode_Reward/joint_pos_pitch_exp: -0.0066
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.8750
+  Episode_Termination/base_contact: 191.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 5505024
+                    Iteration time: 0.94s
+                        Total time: 29.02s
+                               ETA: 31068.0s
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 210276 steps/s (collection: 0.812s, learning 0.123s)
+               Value function loss: 0.0089
+                    Surrogate loss: 0.0044
+             Mean action noise std: 0.46
+                 Mean total reward: -0.45
+               Mean episode length: 28.83
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0196
+Episode_Reward/joint_pos_pitch_exp: -0.0037
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.7917
+  Episode_Termination/base_contact: 169.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5701632
+                    Iteration time: 0.93s
+                        Total time: 29.96s
+                               ETA: 29929.0s
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 210276 steps/s (collection: 0.812s, learning 0.123s)
+               Value function loss: 0.0089
+                    Surrogate loss: 0.0044
+             Mean action noise std: 0.46
+                 Mean total reward: -0.45
+               Mean episode length: 28.83
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0196
+Episode_Reward/joint_pos_pitch_exp: -0.0037
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.7917
+  Episode_Termination/base_contact: 169.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5898240
+                    Iteration time: 0.93s
+                        Total time: 30.89s
+                               ETA: 30863.1s
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 213704 steps/s (collection: 0.805s, learning 0.114s)
+               Value function loss: 0.0096
+                    Surrogate loss: 0.0024
+             Mean action noise std: 0.46
+                 Mean total reward: -0.43
+               Mean episode length: 32.76
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0195
+Episode_Reward/joint_pos_pitch_exp: -0.0019
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6482
+      Episode_Termination/time_out: 3.0417
+  Episode_Termination/base_contact: 142.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6094848
+                    Iteration time: 0.92s
+                        Total time: 31.81s
+                               ETA: 29793.9s
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 213704 steps/s (collection: 0.805s, learning 0.114s)
+               Value function loss: 0.0096
+                    Surrogate loss: 0.0024
+             Mean action noise std: 0.46
+                 Mean total reward: -0.43
+               Mean episode length: 32.76
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0195
+Episode_Reward/joint_pos_pitch_exp: -0.0019
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6482
+      Episode_Termination/time_out: 3.0417
+  Episode_Termination/base_contact: 142.5000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6291456
+                    Iteration time: 0.92s
+                        Total time: 32.73s
+                               ETA: 30655.5s
+################################################################################
+                     [1m Learning iteration 16/15000 
+                       Computation: 210388 steps/s (collection: 0.813s, learning 0.121s)
+               Value function loss: 0.0090
+                    Surrogate loss: -0.0038
+             Mean action noise std: 0.45
+                 Mean total reward: -0.36
+               Mean episode length: 33.92
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0194
+Episode_Reward/joint_pos_pitch_exp: -0.0001
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.3750
+  Episode_Termination/base_contact: 99.7500
+--------------------------------------------------------------------------------
+                   Total timesteps: 6488064
+                    Iteration time: 0.93s
+                        Total time: 33.67s
+                               ETA: 29674.0s
+################################################################################
+                     [1m Learning iteration 16/15000 
+                       Computation: 210388 steps/s (collection: 0.813s, learning 0.121s)
+               Value function loss: 0.0090
+                    Surrogate loss: -0.0038
+             Mean action noise std: 0.45
+                 Mean total reward: -0.36
+               Mean episode length: 33.92
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0194
+Episode_Reward/joint_pos_pitch_exp: -0.0001
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.3750
+  Episode_Termination/base_contact: 99.7500
+--------------------------------------------------------------------------------
+                   Total timesteps: 6684672
+                    Iteration time: 0.93s
+                        Total time: 34.60s
+                               ETA: 30497.7s
+################################################################################
+                     [1m Learning iteration 17/15000 
+                       Computation: 215225 steps/s (collection: 0.799s, learning 0.114s)
+               Value function loss: 0.0090
+                    Surrogate loss: -0.0017
+             Mean action noise std: 0.44
+                 Mean total reward: -0.38
+               Mean episode length: 48.63
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0193
+Episode_Reward/joint_pos_pitch_exp: 0.0011
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 74.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 6881280
+                    Iteration time: 0.91s
+                        Total time: 35.51s
+                               ETA: 29561.8s
+################################################################################
+                     [1m Learning iteration 17/15000 
+                       Computation: 215225 steps/s (collection: 0.799s, learning 0.114s)
+               Value function loss: 0.0090
+                    Surrogate loss: -0.0017
+             Mean action noise std: 0.44
+                 Mean total reward: -0.38
+               Mean episode length: 48.63
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0193
+Episode_Reward/joint_pos_pitch_exp: 0.0011
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 74.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 7077888
+                    Iteration time: 0.91s
+                        Total time: 36.43s
+                               ETA: 30322.2s
+################################################################################
+                     [1m Learning iteration 18/15000 
+                       Computation: 218453 steps/s (collection: 0.778s, learning 0.122s)
+               Value function loss: 0.0077
+                    Surrogate loss: -0.0038
+             Mean action noise std: 0.44
+                 Mean total reward: -0.26
+               Mean episode length: 61.73
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0190
+Episode_Reward/joint_pos_pitch_exp: 0.0020
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 54.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 7274496
+                    Iteration time: 0.90s
+                        Total time: 37.33s
+                               ETA: 29434.1s
+################################################################################
+                     [1m Learning iteration 18/15000 
+                       Computation: 218453 steps/s (collection: 0.778s, learning 0.122s)
+               Value function loss: 0.0077
+                    Surrogate loss: -0.0038
+             Mean action noise std: 0.44
+                 Mean total reward: -0.26
+               Mean episode length: 61.73
+     Episode_Reward/action_rate_l2: -0.0008
+ Episode_Reward/undesired_contacts: -0.0190
+Episode_Reward/joint_pos_pitch_exp: 0.0020
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 54.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 7471104
+                    Iteration time: 0.90s
+                        Total time: 38.23s
+                               ETA: 30143.8s
+################################################################################
+                     [1m Learning iteration 19/15000 
+                       Computation: 219184 steps/s (collection: 0.779s, learning 0.117s)
+               Value function loss: 0.0071
+                    Surrogate loss: -0.0031
+             Mean action noise std: 0.44
+                 Mean total reward: -0.27
+               Mean episode length: 79.06
+     Episode_Reward/action_rate_l2: -0.0009
+ Episode_Reward/undesired_contacts: -0.0189
+Episode_Reward/joint_pos_pitch_exp: 0.0026
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.2917
+  Episode_Termination/base_contact: 43.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 7667712
+                    Iteration time: 0.90s
+                        Total time: 39.12s
+                               ETA: 29306.5s
+################################################################################
+                     [1m Learning iteration 19/15000 
+                       Computation: 219184 steps/s (collection: 0.779s, learning 0.117s)
+               Value function loss: 0.0071
+                    Surrogate loss: -0.0031
+             Mean action noise std: 0.44
+                 Mean total reward: -0.27
+               Mean episode length: 79.06
+     Episode_Reward/action_rate_l2: -0.0009
+ Episode_Reward/undesired_contacts: -0.0189
+Episode_Reward/joint_pos_pitch_exp: 0.0026
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.2917
+  Episode_Termination/base_contact: 43.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 7864320
+                    Iteration time: 0.90s
+                        Total time: 40.02s
+                               ETA: 29978.4s
+################################################################################
+                     [1m Learning iteration 20/15000 
+                       Computation: 213241 steps/s (collection: 0.795s, learning 0.127s)
+               Value function loss: 0.0058
+                    Surrogate loss: -0.0007
+             Mean action noise std: 0.44
+                 Mean total reward: -0.39
+               Mean episode length: 62.68
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0186
+Episode_Reward/joint_pos_pitch_exp: 0.0033
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 32.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 8060928
+                    Iteration time: 0.92s
+                        Total time: 40.94s
+                               ETA: 29206.7s
+################################################################################
+                     [1m Learning iteration 20/15000 
+                       Computation: 213241 steps/s (collection: 0.795s, learning 0.127s)
+               Value function loss: 0.0058
+                    Surrogate loss: -0.0007
+             Mean action noise std: 0.44
+                 Mean total reward: -0.39
+               Mean episode length: 62.68
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0186
+Episode_Reward/joint_pos_pitch_exp: 0.0033
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 32.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 8257536
+                    Iteration time: 0.92s
+                        Total time: 41.87s
+                               ETA: 29864.4s
+################################################################################
+                     [1m Learning iteration 21/15000 
+                       Computation: 215815 steps/s (collection: 0.789s, learning 0.121s)
+               Value function loss: 0.0056
+                    Surrogate loss: 0.0006
+             Mean action noise std: 0.43
+                 Mean total reward: -0.20
+               Mean episode length: 68.86
+     Episode_Reward/action_rate_l2: -0.0014
+ Episode_Reward/undesired_contacts: -0.0179
+Episode_Reward/joint_pos_pitch_exp: 0.0055
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6483
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 25.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 8454144
+                    Iteration time: 0.91s
+                        Total time: 42.78s
+                               ETA: 29125.3s
+################################################################################
+                     [1m Learning iteration 21/15000 
+                       Computation: 215815 steps/s (collection: 0.789s, learning 0.121s)
+               Value function loss: 0.0056
+                    Surrogate loss: 0.0006
+             Mean action noise std: 0.43
+                 Mean total reward: -0.20
+               Mean episode length: 68.86
+     Episode_Reward/action_rate_l2: -0.0014
+ Episode_Reward/undesired_contacts: -0.0179
+Episode_Reward/joint_pos_pitch_exp: 0.0055
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6483
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 25.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 8650752
+                    Iteration time: 0.91s
+                        Total time: 43.69s
+                               ETA: 29745.5s
+################################################################################
+                     [1m Learning iteration 22/15000 
+                       Computation: 216767 steps/s (collection: 0.786s, learning 0.121s)
+               Value function loss: 0.0048
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.43
+                 Mean total reward: -0.23
+               Mean episode length: 93.00
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0180
+Episode_Reward/joint_pos_pitch_exp: 0.0084
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6490
+      Episode_Termination/time_out: 2.3333
+  Episode_Termination/base_contact: 21.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 8847360
+                    Iteration time: 0.91s
+                        Total time: 44.59s
+                               ETA: 29041.0s
+################################################################################
+                     [1m Learning iteration 22/15000 
+                       Computation: 216767 steps/s (collection: 0.786s, learning 0.121s)
+               Value function loss: 0.0048
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.43
+                 Mean total reward: -0.23
+               Mean episode length: 93.00
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0180
+Episode_Reward/joint_pos_pitch_exp: 0.0084
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6490
+      Episode_Termination/time_out: 2.3333
+  Episode_Termination/base_contact: 21.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 9043968
+                    Iteration time: 0.91s
+                        Total time: 45.50s
+                               ETA: 29631.7s
+################################################################################
+                     [1m Learning iteration 23/15000 
+                       Computation: 212090 steps/s (collection: 0.806s, learning 0.120s)
+               Value function loss: 0.0039
+                    Surrogate loss: -0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: -0.13
+               Mean episode length: 111.85
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0178
+Episode_Reward/joint_pos_pitch_exp: 0.0081
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.1250
+  Episode_Termination/base_contact: 17.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 9240576
+                    Iteration time: 0.93s
+                        Total time: 46.43s
+                               ETA: 28973.6s
+################################################################################
+                     [1m Learning iteration 23/15000 
+                       Computation: 212090 steps/s (collection: 0.806s, learning 0.120s)
+               Value function loss: 0.0039
+                    Surrogate loss: -0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: -0.13
+               Mean episode length: 111.85
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0178
+Episode_Reward/joint_pos_pitch_exp: 0.0081
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.1250
+  Episode_Termination/base_contact: 17.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 9437184
+                    Iteration time: 0.93s
+                        Total time: 47.36s
+                               ETA: 29552.1s
+################################################################################
+                     [1m Learning iteration 24/15000 
+                       Computation: 215815 steps/s (collection: 0.784s, learning 0.126s)
+               Value function loss: 0.0030
+                    Surrogate loss: 0.0006
+             Mean action noise std: 0.43
+                 Mean total reward: -0.12
+               Mean episode length: 120.07
+     Episode_Reward/action_rate_l2: -0.0017
+ Episode_Reward/undesired_contacts: -0.0174
+Episode_Reward/joint_pos_pitch_exp: 0.0091
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 2.1667
+  Episode_Termination/base_contact: 14.9583
+--------------------------------------------------------------------------------
+                   Total timesteps: 9633792
+                    Iteration time: 0.91s
+                        Total time: 48.27s
+                               ETA: 28913.8s
+################################################################################
+                     [1m Learning iteration 24/15000 
+                       Computation: 215815 steps/s (collection: 0.784s, learning 0.126s)
+               Value function loss: 0.0030
+                    Surrogate loss: 0.0006
+             Mean action noise std: 0.43
+                 Mean total reward: -0.12
+               Mean episode length: 120.07
+     Episode_Reward/action_rate_l2: -0.0017
+ Episode_Reward/undesired_contacts: -0.0174
+Episode_Reward/joint_pos_pitch_exp: 0.0091
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 2.1667
+  Episode_Termination/base_contact: 14.9583
+--------------------------------------------------------------------------------
+                   Total timesteps: 9830400
+                    Iteration time: 0.91s
+                        Total time: 49.18s
+                               ETA: 29459.6s
+################################################################################
+                     [1m Learning iteration 25/15000 
+                       Computation: 219306 steps/s (collection: 0.775s, learning 0.121s)
+               Value function loss: 0.0027
+                    Surrogate loss: 0.0039
+             Mean action noise std: 0.43
+                 Mean total reward: -0.11
+               Mean episode length: 115.40
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0171
+Episode_Reward/joint_pos_pitch_exp: 0.0143
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 1.7500
+  Episode_Termination/base_contact: 11.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 10027008
+                    Iteration time: 0.90s
+                        Total time: 50.07s
+                               ETA: 28841.0s
+################################################################################
+                     [1m Learning iteration 25/15000 
+                       Computation: 219306 steps/s (collection: 0.775s, learning 0.121s)
+               Value function loss: 0.0027
+                    Surrogate loss: 0.0039
+             Mean action noise std: 0.43
+                 Mean total reward: -0.11
+               Mean episode length: 115.40
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0171
+Episode_Reward/joint_pos_pitch_exp: 0.0143
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 1.7500
+  Episode_Termination/base_contact: 11.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 10223616
+                    Iteration time: 0.90s
+                        Total time: 50.97s
+                               ETA: 29357.3s
+################################################################################
+                     [1m Learning iteration 26/15000 
+                       Computation: 220042 steps/s (collection: 0.775s, learning 0.118s)
+               Value function loss: 0.0022
+                    Surrogate loss: 0.0018
+             Mean action noise std: 0.44
+                 Mean total reward: -0.09
+               Mean episode length: 196.64
+     Episode_Reward/action_rate_l2: -0.0032
+ Episode_Reward/undesired_contacts: -0.0148
+Episode_Reward/joint_pos_pitch_exp: 0.0158
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6481
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 8.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 10420224
+                    Iteration time: 0.89s
+                        Total time: 51.86s
+                               ETA: 28763.6s
+################################################################################
+                     [1m Learning iteration 26/15000 
+                       Computation: 220042 steps/s (collection: 0.775s, learning 0.118s)
+               Value function loss: 0.0022
+                    Surrogate loss: 0.0018
+             Mean action noise std: 0.44
+                 Mean total reward: -0.09
+               Mean episode length: 196.64
+     Episode_Reward/action_rate_l2: -0.0032
+ Episode_Reward/undesired_contacts: -0.0148
+Episode_Reward/joint_pos_pitch_exp: 0.0158
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6481
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 8.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 10616832
+                    Iteration time: 0.89s
+                        Total time: 52.76s
+                               ETA: 29259.2s
+################################################################################
+                     [1m Learning iteration 27/15000 
+                       Computation: 216887 steps/s (collection: 0.778s, learning 0.128s)
+               Value function loss: 0.0022
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: 0.03
+               Mean episode length: 179.51
+     Episode_Reward/action_rate_l2: -0.0029
+ Episode_Reward/undesired_contacts: -0.0157
+Episode_Reward/joint_pos_pitch_exp: 0.0168
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 1.9167
+  Episode_Termination/base_contact: 6.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 10813440
+                    Iteration time: 0.91s
+                        Total time: 53.66s
+                               ETA: 28697.1s
+################################################################################
+                     [1m Learning iteration 27/15000 
+                       Computation: 216887 steps/s (collection: 0.778s, learning 0.128s)
+               Value function loss: 0.0022
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: 0.03
+               Mean episode length: 179.51
+     Episode_Reward/action_rate_l2: -0.0029
+ Episode_Reward/undesired_contacts: -0.0157
+Episode_Reward/joint_pos_pitch_exp: 0.0168
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 1.9167
+  Episode_Termination/base_contact: 6.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 11010048
+                    Iteration time: 0.91s
+                        Total time: 54.57s
+                               ETA: 29181.8s
+################################################################################
+                     [1m Learning iteration 28/15000 
+                       Computation: 217969 steps/s (collection: 0.786s, learning 0.115s)
+               Value function loss: 0.0022
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: 0.53
+               Mean episode length: 247.46
+     Episode_Reward/action_rate_l2: -0.0041
+ Episode_Reward/undesired_contacts: -0.0144
+Episode_Reward/joint_pos_pitch_exp: 0.0371
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 2.0417
+  Episode_Termination/base_contact: 5.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 11206656
+                    Iteration time: 0.90s
+                        Total time: 55.47s
+                               ETA: 28639.3s
+################################################################################
+                     [1m Learning iteration 28/15000 
+                       Computation: 217969 steps/s (collection: 0.786s, learning 0.115s)
+               Value function loss: 0.0022
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: 0.53
+               Mean episode length: 247.46
+     Episode_Reward/action_rate_l2: -0.0041
+ Episode_Reward/undesired_contacts: -0.0144
+Episode_Reward/joint_pos_pitch_exp: 0.0371
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 2.0417
+  Episode_Termination/base_contact: 5.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 11403264
+                    Iteration time: 0.90s
+                        Total time: 56.37s
+                               ETA: 29105.0s
+################################################################################
+                     [1m Learning iteration 29/15000 
+                       Computation: 216171 steps/s (collection: 0.787s, learning 0.122s)
+               Value function loss: 0.0020
+                    Surrogate loss: -0.0009
+             Mean action noise std: 0.43
+                 Mean total reward: 0.48
+               Mean episode length: 279.54
+     Episode_Reward/action_rate_l2: -0.0041
+ Episode_Reward/undesired_contacts: -0.0146
+Episode_Reward/joint_pos_pitch_exp: 0.0377
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6490
+      Episode_Termination/time_out: 2.2500
+  Episode_Termination/base_contact: 5.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 11599872
+                    Iteration time: 0.91s
+                        Total time: 57.28s
+                               ETA: 28586.8s
+################################################################################
+                     [1m Learning iteration 29/15000 
+                       Computation: 216171 steps/s (collection: 0.787s, learning 0.122s)
+               Value function loss: 0.0020
+                    Surrogate loss: -0.0009
+             Mean action noise std: 0.43
+                 Mean total reward: 0.48
+               Mean episode length: 279.54
+     Episode_Reward/action_rate_l2: -0.0041
+ Episode_Reward/undesired_contacts: -0.0146
+Episode_Reward/joint_pos_pitch_exp: 0.0377
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6490
+      Episode_Termination/time_out: 2.2500
+  Episode_Termination/base_contact: 5.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 11796480
+                    Iteration time: 0.91s
+                        Total time: 58.19s
+                               ETA: 29040.7s
+################################################################################
+                     [1m Learning iteration 30/15000 
+                       Computation: 216409 steps/s (collection: 0.785s, learning 0.123s)
+               Value function loss: 0.0019
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: 0.33
+               Mean episode length: 229.14
+     Episode_Reward/action_rate_l2: -0.0046
+ Episode_Reward/undesired_contacts: -0.0142
+Episode_Reward/joint_pos_pitch_exp: 0.0474
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 1.9583
+  Episode_Termination/base_contact: 4.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 11993088
+                    Iteration time: 0.91s
+                        Total time: 59.10s
+                               ETA: 28540.8s
+################################################################################
+                     [1m Learning iteration 30/15000 
+                       Computation: 216409 steps/s (collection: 0.785s, learning 0.123s)
+               Value function loss: 0.0019
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.43
+                 Mean total reward: 0.33
+               Mean episode length: 229.14
+     Episode_Reward/action_rate_l2: -0.0046
+ Episode_Reward/undesired_contacts: -0.0142
+Episode_Reward/joint_pos_pitch_exp: 0.0474
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 1.9583
+  Episode_Termination/base_contact: 4.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 12189696
+                    Iteration time: 0.91s
+                        Total time: 60.01s
+                               ETA: 28979.5s
+################################################################################
+                     [1m Learning iteration 31/15000 
+                       Computation: 210051 steps/s (collection: 0.812s, learning 0.123s)
+               Value function loss: 0.0016
+                    Surrogate loss: 0.0017
+             Mean action noise std: 0.42
+                 Mean total reward: 0.99
+               Mean episode length: 420.11
+     Episode_Reward/action_rate_l2: -0.0064
+ Episode_Reward/undesired_contacts: -0.0112
+Episode_Reward/joint_pos_pitch_exp: 0.0600
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 2.4167
+  Episode_Termination/base_contact: 3.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 12386304
+                    Iteration time: 0.94s
+                        Total time: 60.95s
+                               ETA: 28509.8s
+################################################################################
+                     [1m Learning iteration 31/15000 
+                       Computation: 210051 steps/s (collection: 0.812s, learning 0.123s)
+               Value function loss: 0.0016
+                    Surrogate loss: 0.0017
+             Mean action noise std: 0.42
+                 Mean total reward: 0.99
+               Mean episode length: 420.11
+     Episode_Reward/action_rate_l2: -0.0064
+ Episode_Reward/undesired_contacts: -0.0112
+Episode_Reward/joint_pos_pitch_exp: 0.0600
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 2.4167
+  Episode_Termination/base_contact: 3.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 12582912
+                    Iteration time: 0.94s
+                        Total time: 61.88s
+                               ETA: 28947.7s
+################################################################################
+                     [1m Learning iteration 32/15000 
+                       Computation: 217487 steps/s (collection: 0.783s, learning 0.120s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0001
+             Mean action noise std: 0.42
+                 Mean total reward: 1.13
+               Mean episode length: 458.49
+     Episode_Reward/action_rate_l2: -0.0077
+ Episode_Reward/undesired_contacts: -0.0093
+Episode_Reward/joint_pos_pitch_exp: 0.0751
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 2.5000
+  Episode_Termination/base_contact: 2.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 12779520
+                    Iteration time: 0.90s
+                        Total time: 62.79s
+                               ETA: 28478.6s
+################################################################################
+                     [1m Learning iteration 32/15000 
+                       Computation: 217487 steps/s (collection: 0.783s, learning 0.120s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0001
+             Mean action noise std: 0.42
+                 Mean total reward: 1.13
+               Mean episode length: 458.49
+     Episode_Reward/action_rate_l2: -0.0077
+ Episode_Reward/undesired_contacts: -0.0093
+Episode_Reward/joint_pos_pitch_exp: 0.0751
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 2.5000
+  Episode_Termination/base_contact: 2.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 12976128
+                    Iteration time: 0.90s
+                        Total time: 63.69s
+                               ETA: 28888.7s
+################################################################################
+                     [1m Learning iteration 33/15000 
+                       Computation: 217607 steps/s (collection: 0.777s, learning 0.126s)
+               Value function loss: 0.0009
+                    Surrogate loss: -0.0007
+             Mean action noise std: 0.42
+                 Mean total reward: 1.41
+               Mean episode length: 536.77
+     Episode_Reward/action_rate_l2: -0.0084
+ Episode_Reward/undesired_contacts: -0.0087
+Episode_Reward/joint_pos_pitch_exp: 0.0877
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6490
+      Episode_Termination/time_out: 1.9583
+  Episode_Termination/base_contact: 1.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 13172736
+                    Iteration time: 0.90s
+                        Total time: 64.59s
+                               ETA: 28434.8s
+################################################################################
+                     [1m Learning iteration 33/15000 
+                       Computation: 217607 steps/s (collection: 0.777s, learning 0.126s)
+               Value function loss: 0.0009
+                    Surrogate loss: -0.0007
+             Mean action noise std: 0.42
+                 Mean total reward: 1.41
+               Mean episode length: 536.77
+     Episode_Reward/action_rate_l2: -0.0084
+ Episode_Reward/undesired_contacts: -0.0087
+Episode_Reward/joint_pos_pitch_exp: 0.0877
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6490
+      Episode_Termination/time_out: 1.9583
+  Episode_Termination/base_contact: 1.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 13369344
+                    Iteration time: 0.90s
+                        Total time: 65.50s
+                               ETA: 28832.6s
+################################################################################
+                     [1m Learning iteration 34/15000 
+                       Computation: 218574 steps/s (collection: 0.773s, learning 0.126s)
+               Value function loss: 0.0004
+                    Surrogate loss: 0.0010
+             Mean action noise std: 0.41
+                 Mean total reward: 1.78
+               Mean episode length: 646.40
+     Episode_Reward/action_rate_l2: -0.0112
+ Episode_Reward/undesired_contacts: -0.0048
+Episode_Reward/joint_pos_pitch_exp: 0.0877
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6435
+      Episode_Termination/time_out: 2.0000
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 13565952
+                    Iteration time: 0.90s
+                        Total time: 66.40s
+                               ETA: 28391.5s
+################################################################################
+                     [1m Learning iteration 34/15000 
+                       Computation: 218574 steps/s (collection: 0.773s, learning 0.126s)
+               Value function loss: 0.0004
+                    Surrogate loss: 0.0010
+             Mean action noise std: 0.41
+                 Mean total reward: 1.78
+               Mean episode length: 646.40
+     Episode_Reward/action_rate_l2: -0.0112
+ Episode_Reward/undesired_contacts: -0.0048
+Episode_Reward/joint_pos_pitch_exp: 0.0877
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6435
+      Episode_Termination/time_out: 2.0000
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 13762560
+                    Iteration time: 0.90s
+                        Total time: 67.30s
+                               ETA: 28776.2s
+################################################################################
+                     [1m Learning iteration 35/15000 
+                       Computation: 215697 steps/s (collection: 0.791s, learning 0.120s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0007
+             Mean action noise std: 0.41
+                 Mean total reward: 1.88
+               Mean episode length: 637.52
+     Episode_Reward/action_rate_l2: -0.0110
+ Episode_Reward/undesired_contacts: -0.0063
+Episode_Reward/joint_pos_pitch_exp: 0.1320
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.2917
+  Episode_Termination/base_contact: 1.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 13959168
+                    Iteration time: 0.91s
+                        Total time: 68.21s
+                               ETA: 28353.9s
+################################################################################
+                     [1m Learning iteration 35/15000 
+                       Computation: 215697 steps/s (collection: 0.791s, learning 0.120s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0007
+             Mean action noise std: 0.41
+                 Mean total reward: 1.88
+               Mean episode length: 637.52
+     Episode_Reward/action_rate_l2: -0.0110
+ Episode_Reward/undesired_contacts: -0.0063
+Episode_Reward/joint_pos_pitch_exp: 0.1320
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.2917
+  Episode_Termination/base_contact: 1.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 14155776
+                    Iteration time: 0.91s
+                        Total time: 69.12s
+                               ETA: 28732.8s
+################################################################################
+                     [1m Learning iteration 36/15000 
+                       Computation: 215579 steps/s (collection: 0.787s, learning 0.124s)
+               Value function loss: 0.0008
+                    Surrogate loss: -0.0002
+             Mean action noise std: 0.41
+                 Mean total reward: 1.95
+               Mean episode length: 598.41
+     Episode_Reward/action_rate_l2: -0.0100
+ Episode_Reward/undesired_contacts: -0.0071
+Episode_Reward/joint_pos_pitch_exp: 0.1099
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.1667
+  Episode_Termination/base_contact: 1.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 14352384
+                    Iteration time: 0.91s
+                        Total time: 70.03s
+                               ETA: 28323.2s
+################################################################################
+                     [1m Learning iteration 36/15000 
+                       Computation: 215579 steps/s (collection: 0.787s, learning 0.124s)
+               Value function loss: 0.0008
+                    Surrogate loss: -0.0002
+             Mean action noise std: 0.41
+                 Mean total reward: 1.95
+               Mean episode length: 598.41
+     Episode_Reward/action_rate_l2: -0.0100
+ Episode_Reward/undesired_contacts: -0.0071
+Episode_Reward/joint_pos_pitch_exp: 0.1099
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.1667
+  Episode_Termination/base_contact: 1.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 14548992
+                    Iteration time: 0.91s
+                        Total time: 70.94s
+                               ETA: 28692.0s
+################################################################################
+                     [1m Learning iteration 37/15000 
+                       Computation: 220165 steps/s (collection: 0.767s, learning 0.125s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0025
+             Mean action noise std: 0.40
+                 Mean total reward: 2.37
+               Mean episode length: 711.53
+     Episode_Reward/action_rate_l2: -0.0127
+ Episode_Reward/undesired_contacts: -0.0042
+Episode_Reward/joint_pos_pitch_exp: 0.1487
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6459
+      Episode_Termination/time_out: 2.2500
+  Episode_Termination/base_contact: 0.4167
+--------------------------------------------------------------------------------
+                   Total timesteps: 14745600
+                    Iteration time: 0.89s
+                        Total time: 71.84s
+                               ETA: 28286.7s
+################################################################################
+                     [1m Learning iteration 37/15000 
+                       Computation: 220165 steps/s (collection: 0.767s, learning 0.125s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0025
+             Mean action noise std: 0.40
+                 Mean total reward: 2.37
+               Mean episode length: 711.53
+     Episode_Reward/action_rate_l2: -0.0127
+ Episode_Reward/undesired_contacts: -0.0042
+Episode_Reward/joint_pos_pitch_exp: 0.1487
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6459
+      Episode_Termination/time_out: 2.2500
+  Episode_Termination/base_contact: 0.4167
+--------------------------------------------------------------------------------
+                   Total timesteps: 14942208
+                    Iteration time: 0.89s
+                        Total time: 72.73s
+                               ETA: 28638.4s
+################################################################################
+                     [1m Learning iteration 38/15000 
+                       Computation: 222156 steps/s (collection: 0.762s, learning 0.122s)
+               Value function loss: 0.0004
+                    Surrogate loss: -0.0041
+             Mean action noise std: 0.39
+                 Mean total reward: 2.75
+               Mean episode length: 820.33
+     Episode_Reward/action_rate_l2: -0.0130
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: 0.1466
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6467
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 0.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 15138816
+                    Iteration time: 0.88s
+                        Total time: 73.61s
+                               ETA: 28241.7s
+################################################################################
+                     [1m Learning iteration 38/15000 
+                       Computation: 222156 steps/s (collection: 0.762s, learning 0.122s)
+               Value function loss: 0.0004
+                    Surrogate loss: -0.0041
+             Mean action noise std: 0.39
+                 Mean total reward: 2.75
+               Mean episode length: 820.33
+     Episode_Reward/action_rate_l2: -0.0130
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: 0.1466
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6467
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 0.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 15335424
+                    Iteration time: 0.88s
+                        Total time: 74.50s
+                               ETA: 28581.2s
+################################################################################
+                     [1m Learning iteration 39/15000 
+                       Computation: 221156 steps/s (collection: 0.761s, learning 0.127s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.39
+                 Mean total reward: 3.15
+               Mean episode length: 837.25
+     Episode_Reward/action_rate_l2: -0.0143
+ Episode_Reward/undesired_contacts: -0.0025
+Episode_Reward/joint_pos_pitch_exp: 0.1835
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6476
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 0.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 15532032
+                    Iteration time: 0.89s
+                        Total time: 75.39s
+                               ETA: 28197.3s
+################################################################################
+                     [1m Learning iteration 39/15000 
+                       Computation: 221156 steps/s (collection: 0.761s, learning 0.127s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.39
+                 Mean total reward: 3.15
+               Mean episode length: 837.25
+     Episode_Reward/action_rate_l2: -0.0143
+ Episode_Reward/undesired_contacts: -0.0025
+Episode_Reward/joint_pos_pitch_exp: 0.1835
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6476
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 0.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 15728640
+                    Iteration time: 0.89s
+                        Total time: 76.28s
+                               ETA: 28529.8s
+################################################################################
+                     [1m Learning iteration 40/15000 
+                       Computation: 223545 steps/s (collection: 0.758s, learning 0.121s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0005
+             Mean action noise std: 0.39
+                 Mean total reward: 2.90
+               Mean episode length: 857.49
+     Episode_Reward/action_rate_l2: -0.0158
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.1728
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6440
+      Episode_Termination/time_out: 2.3333
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 15925248
+                    Iteration time: 0.88s
+                        Total time: 77.16s
+                               ETA: 28153.0s
+################################################################################
+                     [1m Learning iteration 40/15000 
+                       Computation: 223545 steps/s (collection: 0.758s, learning 0.121s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0005
+             Mean action noise std: 0.39
+                 Mean total reward: 2.90
+               Mean episode length: 857.49
+     Episode_Reward/action_rate_l2: -0.0158
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.1728
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6440
+      Episode_Termination/time_out: 2.3333
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 16121856
+                    Iteration time: 0.88s
+                        Total time: 78.04s
+                               ETA: 28474.0s
+################################################################################
+                     [1m Learning iteration 41/15000 
+                       Computation: 228348 steps/s (collection: 0.739s, learning 0.121s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0066
+             Mean action noise std: 0.38
+                 Mean total reward: 3.25
+               Mean episode length: 925.30
+     Episode_Reward/action_rate_l2: -0.0158
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.2118
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6471
+      Episode_Termination/time_out: 2.6250
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 16318464
+                    Iteration time: 0.86s
+                        Total time: 78.90s
+                               ETA: 28100.8s
+################################################################################
+                     [1m Learning iteration 41/15000 
+                       Computation: 228348 steps/s (collection: 0.739s, learning 0.121s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0066
+             Mean action noise std: 0.38
+                 Mean total reward: 3.25
+               Mean episode length: 925.30
+     Episode_Reward/action_rate_l2: -0.0158
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.2118
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6471
+      Episode_Termination/time_out: 2.6250
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 16515072
+                    Iteration time: 0.86s
+                        Total time: 79.76s
+                               ETA: 28407.5s
+################################################################################
+                     [1m Learning iteration 42/15000 
+                       Computation: 223799 steps/s (collection: 0.759s, learning 0.119s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0065
+             Mean action noise std: 0.37
+                 Mean total reward: 4.27
+               Mean episode length: 968.56
+     Episode_Reward/action_rate_l2: -0.0161
+ Episode_Reward/undesired_contacts: -0.0006
+Episode_Reward/joint_pos_pitch_exp: 0.2453
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6473
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 16711680
+                    Iteration time: 0.88s
+                        Total time: 80.64s
+                               ETA: 28050.6s
+################################################################################
+                     [1m Learning iteration 42/15000 
+                       Computation: 223799 steps/s (collection: 0.759s, learning 0.119s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0065
+             Mean action noise std: 0.37
+                 Mean total reward: 4.27
+               Mean episode length: 968.56
+     Episode_Reward/action_rate_l2: -0.0161
+ Episode_Reward/undesired_contacts: -0.0006
+Episode_Reward/joint_pos_pitch_exp: 0.2453
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6473
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 16908288
+                    Iteration time: 0.88s
+                        Total time: 81.52s
+                               ETA: 28356.2s
+################################################################################
+                     [1m Learning iteration 43/15000 
+                       Computation: 227951 steps/s (collection: 0.745s, learning 0.117s)
+               Value function loss: 0.0003
+                    Surrogate loss: -0.0030
+             Mean action noise std: 0.37
+                 Mean total reward: 4.47
+               Mean episode length: 940.70
+     Episode_Reward/action_rate_l2: -0.0135
+ Episode_Reward/undesired_contacts: -0.0036
+Episode_Reward/joint_pos_pitch_exp: 0.2216
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 1.8750
+  Episode_Termination/base_contact: 0.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 17104896
+                    Iteration time: 0.86s
+                        Total time: 82.38s
+                               ETA: 28003.0s
+################################################################################
+                     [1m Learning iteration 43/15000 
+                       Computation: 227951 steps/s (collection: 0.745s, learning 0.117s)
+               Value function loss: 0.0003
+                    Surrogate loss: -0.0030
+             Mean action noise std: 0.37
+                 Mean total reward: 4.47
+               Mean episode length: 940.70
+     Episode_Reward/action_rate_l2: -0.0135
+ Episode_Reward/undesired_contacts: -0.0036
+Episode_Reward/joint_pos_pitch_exp: 0.2216
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 1.8750
+  Episode_Termination/base_contact: 0.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 17301504
+                    Iteration time: 0.86s
+                        Total time: 83.24s
+                               ETA: 28296.2s
+################################################################################
+                     [1m Learning iteration 44/15000 
+                       Computation: 224952 steps/s (collection: 0.749s, learning 0.125s)
+               Value function loss: 0.0004
+                    Surrogate loss: 0.0031
+             Mean action noise std: 0.36
+                 Mean total reward: 4.52
+               Mean episode length: 891.30
+     Episode_Reward/action_rate_l2: -0.0148
+ Episode_Reward/undesired_contacts: -0.0016
+Episode_Reward/joint_pos_pitch_exp: 0.2539
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6475
+      Episode_Termination/time_out: 2.2083
+  Episode_Termination/base_contact: 0.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 17498112
+                    Iteration time: 0.87s
+                        Total time: 84.11s
+                               ETA: 27956.1s
+################################################################################
+                     [1m Learning iteration 44/15000 
+                       Computation: 224952 steps/s (collection: 0.749s, learning 0.125s)
+               Value function loss: 0.0004
+                    Surrogate loss: 0.0031
+             Mean action noise std: 0.36
+                 Mean total reward: 4.52
+               Mean episode length: 891.30
+     Episode_Reward/action_rate_l2: -0.0148
+ Episode_Reward/undesired_contacts: -0.0016
+Episode_Reward/joint_pos_pitch_exp: 0.2539
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6475
+      Episode_Termination/time_out: 2.2083
+  Episode_Termination/base_contact: 0.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 17694720
+                    Iteration time: 0.87s
+                        Total time: 84.99s
+                               ETA: 28246.5s
+################################################################################
+                     [1m Learning iteration 45/15000 
+                       Computation: 224566 steps/s (collection: 0.751s, learning 0.124s)
+               Value function loss: 0.0005
+                    Surrogate loss: 0.0018
+             Mean action noise std: 0.36
+                 Mean total reward: 4.58
+               Mean episode length: 832.11
+     Episode_Reward/action_rate_l2: -0.0131
+ Episode_Reward/undesired_contacts: -0.0037
+Episode_Reward/joint_pos_pitch_exp: 0.2493
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6463
+      Episode_Termination/time_out: 2.2500
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 17891328
+                    Iteration time: 0.88s
+                        Total time: 85.86s
+                               ETA: 27915.3s
+################################################################################
+                     [1m Learning iteration 45/15000 
+                       Computation: 224566 steps/s (collection: 0.751s, learning 0.124s)
+               Value function loss: 0.0005
+                    Surrogate loss: 0.0018
+             Mean action noise std: 0.36
+                 Mean total reward: 4.58
+               Mean episode length: 832.11
+     Episode_Reward/action_rate_l2: -0.0131
+ Episode_Reward/undesired_contacts: -0.0037
+Episode_Reward/joint_pos_pitch_exp: 0.2493
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6463
+      Episode_Termination/time_out: 2.2500
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 18087936
+                    Iteration time: 0.88s
+                        Total time: 86.74s
+                               ETA: 28199.9s
+################################################################################
+                     [1m Learning iteration 46/15000 
+                       Computation: 220536 steps/s (collection: 0.768s, learning 0.123s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.36
+                 Mean total reward: 5.30
+               Mean episode length: 881.51
+     Episode_Reward/action_rate_l2: -0.0149
+ Episode_Reward/undesired_contacts: -0.0011
+Episode_Reward/joint_pos_pitch_exp: 0.3193
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.2083
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 18284544
+                    Iteration time: 0.89s
+                        Total time: 87.63s
+                               ETA: 27881.7s
+################################################################################
+                     [1m Learning iteration 46/15000 
+                       Computation: 220536 steps/s (collection: 0.768s, learning 0.123s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.36
+                 Mean total reward: 5.30
+               Mean episode length: 881.51
+     Episode_Reward/action_rate_l2: -0.0149
+ Episode_Reward/undesired_contacts: -0.0011
+Episode_Reward/joint_pos_pitch_exp: 0.3193
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.2083
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 18481152
+                    Iteration time: 0.89s
+                        Total time: 88.52s
+                               ETA: 28165.3s
+################################################################################
+                     [1m Learning iteration 47/15000 
+                       Computation: 222156 steps/s (collection: 0.764s, learning 0.120s)
+               Value function loss: 0.0003
+                    Surrogate loss: -0.0028
+             Mean action noise std: 0.35
+                 Mean total reward: 6.19
+               Mean episode length: 930.84
+     Episode_Reward/action_rate_l2: -0.0143
+ Episode_Reward/undesired_contacts: -0.0019
+Episode_Reward/joint_pos_pitch_exp: 0.3334
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 2.0833
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 18677760
+                    Iteration time: 0.88s
+                        Total time: 89.41s
+                               ETA: 27852.4s
+################################################################################
+                     [1m Learning iteration 47/15000 
+                       Computation: 222156 steps/s (collection: 0.764s, learning 0.120s)
+               Value function loss: 0.0003
+                    Surrogate loss: -0.0028
+             Mean action noise std: 0.35
+                 Mean total reward: 6.19
+               Mean episode length: 930.84
+     Episode_Reward/action_rate_l2: -0.0143
+ Episode_Reward/undesired_contacts: -0.0019
+Episode_Reward/joint_pos_pitch_exp: 0.3334
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 2.0833
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 18874368
+                    Iteration time: 0.88s
+                        Total time: 90.29s
+                               ETA: 28128.1s
+################################################################################
+                     [1m Learning iteration 48/15000 
+                       Computation: 222785 steps/s (collection: 0.763s, learning 0.120s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0006
+             Mean action noise std: 0.35
+                 Mean total reward: 6.88
+               Mean episode length: 940.72
+     Episode_Reward/action_rate_l2: -0.0151
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.3772
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.5000
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 19070976
+                    Iteration time: 0.88s
+                        Total time: 91.18s
+                               ETA: 27821.5s
+################################################################################
+                     [1m Learning iteration 48/15000 
+                       Computation: 222785 steps/s (collection: 0.763s, learning 0.120s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0006
+             Mean action noise std: 0.35
+                 Mean total reward: 6.88
+               Mean episode length: 940.72
+     Episode_Reward/action_rate_l2: -0.0151
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.3772
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.5000
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 19267584
+                    Iteration time: 0.88s
+                        Total time: 92.06s
+                               ETA: 28090.8s
+################################################################################
+                     [1m Learning iteration 49/15000 
+                       Computation: 218453 steps/s (collection: 0.778s, learning 0.122s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0011
+             Mean action noise std: 0.34
+                 Mean total reward: 7.82
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0151
+ Episode_Reward/undesired_contacts: -0.0001
+Episode_Reward/joint_pos_pitch_exp: 0.4077
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 3.7083
+  Episode_Termination/base_contact: 0.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 19464192
+                    Iteration time: 0.90s
+                        Total time: 92.96s
+                               ETA: 27796.3s
+################################################################################
+                     [1m Learning iteration 49/15000 
+                       Computation: 218453 steps/s (collection: 0.778s, learning 0.122s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0011
+             Mean action noise std: 0.34
+                 Mean total reward: 7.82
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0151
+ Episode_Reward/undesired_contacts: -0.0001
+Episode_Reward/joint_pos_pitch_exp: 0.4077
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6486
+      Episode_Termination/time_out: 3.7083
+  Episode_Termination/base_contact: 0.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 19660800
+                    Iteration time: 0.90s
+                        Total time: 93.86s
+                               ETA: 28065.4s
+################################################################################
+                     [1m Learning iteration 50/15000 
+                       Computation: 220908 steps/s (collection: 0.772s, learning 0.117s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.34
+                 Mean total reward: 8.08
+               Mean episode length: 970.36
+     Episode_Reward/action_rate_l2: -0.0148
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4215
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 4.6667
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 19857408
+                    Iteration time: 0.89s
+                        Total time: 94.75s
+                               ETA: 27774.1s
+################################################################################
+                     [1m Learning iteration 50/15000 
+                       Computation: 220908 steps/s (collection: 0.772s, learning 0.117s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.34
+                 Mean total reward: 8.08
+               Mean episode length: 970.36
+     Episode_Reward/action_rate_l2: -0.0148
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4215
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 4.6667
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 20054016
+                    Iteration time: 0.89s
+                        Total time: 95.64s
+                               ETA: 28035.0s
+################################################################################
+                     [1m Learning iteration 51/15000 
+                       Computation: 219919 steps/s (collection: 0.772s, learning 0.122s)
+               Value function loss: 0.0004
+                    Surrogate loss: -0.0013
+             Mean action noise std: 0.34
+                 Mean total reward: 8.55
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0146
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4341
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 11.4583
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 20250624
+                    Iteration time: 0.89s
+                        Total time: 96.53s
+                               ETA: 27751.1s
+################################################################################
+                     [1m Learning iteration 51/15000 
+                       Computation: 219919 steps/s (collection: 0.772s, learning 0.122s)
+               Value function loss: 0.0004
+                    Surrogate loss: -0.0013
+             Mean action noise std: 0.34
+                 Mean total reward: 8.55
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0146
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4341
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 11.4583
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 20447232
+                    Iteration time: 0.89s
+                        Total time: 97.43s
+                               ETA: 28008.1s
+################################################################################
+                     [1m Learning iteration 52/15000 
+                       Computation: 218211 steps/s (collection: 0.785s, learning 0.116s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0033
+             Mean action noise std: 0.34
+                 Mean total reward: 8.63
+               Mean episode length: 980.25
+     Episode_Reward/action_rate_l2: -0.0145
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: 0.4441
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6483
+      Episode_Termination/time_out: 22.1667
+  Episode_Termination/base_contact: 0.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 20643840
+                    Iteration time: 0.90s
+                        Total time: 98.33s
+                               ETA: 27731.9s
+################################################################################
+                     [1m Learning iteration 52/15000 
+                       Computation: 218211 steps/s (collection: 0.785s, learning 0.116s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0033
+             Mean action noise std: 0.34
+                 Mean total reward: 8.63
+               Mean episode length: 980.25
+     Episode_Reward/action_rate_l2: -0.0145
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: 0.4441
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6483
+      Episode_Termination/time_out: 22.1667
+  Episode_Termination/base_contact: 0.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 20840448
+                    Iteration time: 0.90s
+                        Total time: 99.23s
+                               ETA: 27986.0s
+################################################################################
+                     [1m Learning iteration 53/15000 
+                       Computation: 216053 steps/s (collection: 0.793s, learning 0.117s)
+               Value function loss: 0.0008
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.33
+                 Mean total reward: 8.71
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0142
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4483
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6481
+      Episode_Termination/time_out: 29.5833
+  Episode_Termination/base_contact: 0.5833
+--------------------------------------------------------------------------------
+                   Total timesteps: 21037056
+                    Iteration time: 0.91s
+                        Total time: 100.14s
+                               ETA: 27717.8s
+################################################################################
+                     [1m Learning iteration 53/15000 
+                       Computation: 216053 steps/s (collection: 0.793s, learning 0.117s)
+               Value function loss: 0.0008
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.33
+                 Mean total reward: 8.71
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0142
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4483
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6481
+      Episode_Termination/time_out: 29.5833
+  Episode_Termination/base_contact: 0.5833
+--------------------------------------------------------------------------------
+                   Total timesteps: 21233664
+                    Iteration time: 0.91s
+                        Total time: 101.05s
+                               ETA: 27969.7s
+################################################################################
+                     [1m Learning iteration 54/15000 
+                       Computation: 212549 steps/s (collection: 0.802s, learning 0.122s)
+               Value function loss: 0.0007
+                    Surrogate loss: 0.0050
+             Mean action noise std: 0.33
+                 Mean total reward: 8.69
+               Mean episode length: 970.36
+     Episode_Reward/action_rate_l2: -0.0141
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: 0.4533
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6475
+      Episode_Termination/time_out: 33.7500
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 21430272
+                    Iteration time: 0.92s
+                        Total time: 101.97s
+                               ETA: 27710.7s
+################################################################################
+                     [1m Learning iteration 54/15000 
+                       Computation: 212549 steps/s (collection: 0.802s, learning 0.122s)
+               Value function loss: 0.0007
+                    Surrogate loss: 0.0050
+             Mean action noise std: 0.33
+                 Mean total reward: 8.69
+               Mean episode length: 970.36
+     Episode_Reward/action_rate_l2: -0.0141
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: 0.4533
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6475
+      Episode_Termination/time_out: 33.7500
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 21626880
+                    Iteration time: 0.92s
+                        Total time: 102.90s
+                               ETA: 27962.0s
+################################################################################
+                     [1m Learning iteration 55/15000 
+                       Computation: 222659 steps/s (collection: 0.762s, learning 0.120s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0001
+             Mean action noise std: 0.33
+                 Mean total reward: 9.04
+               Mean episode length: 1000.00
+     Episode_Reward/action_rate_l2: -0.0139
+ Episode_Reward/undesired_contacts: -0.0002
+Episode_Reward/joint_pos_pitch_exp: 0.4585
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6472
+      Episode_Termination/time_out: 32.6250
+  Episode_Termination/base_contact: 0.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 21823488
+                    Iteration time: 0.88s
+                        Total time: 103.78s
+                               ETA: 27696.5s
+################################################################################
+                     [1m Learning iteration 55/15000 
+                       Computation: 222659 steps/s (collection: 0.762s, learning 0.120s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0001
+             Mean action noise std: 0.33
+                 Mean total reward: 9.04
+               Mean episode length: 1000.00
+     Episode_Reward/action_rate_l2: -0.0139
+ Episode_Reward/undesired_contacts: -0.0002
+Episode_Reward/joint_pos_pitch_exp: 0.4585
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6472
+      Episode_Termination/time_out: 32.6250
+  Episode_Termination/base_contact: 0.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 22020096
+                    Iteration time: 0.88s
+                        Total time: 104.66s
+                               ETA: 27932.2s
+################################################################################
+                     [1m Learning iteration 56/15000 
+                       Computation: 214170 steps/s (collection: 0.794s, learning 0.124s)
+               Value function loss: 0.0015
+                    Surrogate loss: 0.0024
+             Mean action noise std: 0.33
+                 Mean total reward: 8.70
+               Mean episode length: 960.47
+     Episode_Reward/action_rate_l2: -0.0134
+ Episode_Reward/undesired_contacts: -0.0008
+Episode_Reward/joint_pos_pitch_exp: 0.4478
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6476
+      Episode_Termination/time_out: 29.2083
+  Episode_Termination/base_contact: 1.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 22216704
+                    Iteration time: 0.92s
+                        Total time: 105.58s
+                               ETA: 27681.0s
+################################################################################
+                     [1m Learning iteration 56/15000 
+                       Computation: 214170 steps/s (collection: 0.794s, learning 0.124s)
+               Value function loss: 0.0015
+                    Surrogate loss: 0.0024
+             Mean action noise std: 0.33
+                 Mean total reward: 8.70
+               Mean episode length: 960.47
+     Episode_Reward/action_rate_l2: -0.0134
+ Episode_Reward/undesired_contacts: -0.0008
+Episode_Reward/joint_pos_pitch_exp: 0.4478
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6476
+      Episode_Termination/time_out: 29.2083
+  Episode_Termination/base_contact: 1.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 22413312
+                    Iteration time: 0.92s
+                        Total time: 106.50s
+                               ETA: 27921.7s
+################################################################################
+                     [1m Learning iteration 57/15000 
+                       Computation: 220908 steps/s (collection: 0.768s, learning 0.122s)
+               Value function loss: 0.0018
+                    Surrogate loss: 0.0020
+             Mean action noise std: 0.33
+                 Mean total reward: 8.83
+               Mean episode length: 970.35
+     Episode_Reward/action_rate_l2: -0.0131
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.4455
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6477
+      Episode_Termination/time_out: 26.0833
+  Episode_Termination/base_contact: 1.4167
+--------------------------------------------------------------------------------
+                   Total timesteps: 22609920
+                    Iteration time: 0.89s
+                        Total time: 107.39s
+                               ETA: 27667.7s
+################################################################################
+                     [1m Learning iteration 57/15000 
+                       Computation: 220908 steps/s (collection: 0.768s, learning 0.122s)
+               Value function loss: 0.0018
+                    Surrogate loss: 0.0020
+             Mean action noise std: 0.33
+                 Mean total reward: 8.83
+               Mean episode length: 970.35
+     Episode_Reward/action_rate_l2: -0.0131
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.4455
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6477
+      Episode_Termination/time_out: 26.0833
+  Episode_Termination/base_contact: 1.4167
+--------------------------------------------------------------------------------
+                   Total timesteps: 22806528
+                    Iteration time: 0.89s
+                        Total time: 108.28s
+                               ETA: 27897.0s
+################################################################################
+                     [1m Learning iteration 58/15000 
+                       Computation: 224823 steps/s (collection: 0.758s, learning 0.116s)
+               Value function loss: 0.0025
+                    Surrogate loss: -0.0012
+             Mean action noise std: 0.33
+                 Mean total reward: 8.78
+               Mean episode length: 960.48
+     Episode_Reward/action_rate_l2: -0.0125
+ Episode_Reward/undesired_contacts: -0.0017
+Episode_Reward/joint_pos_pitch_exp: 0.4300
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 21.6250
+  Episode_Termination/base_contact: 2.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 23003136
+                    Iteration time: 0.87s
+                        Total time: 109.15s
+                               ETA: 27643.8s
+################################################################################
+                     [1m Learning iteration 58/15000 
+                       Computation: 224823 steps/s (collection: 0.758s, learning 0.116s)
+               Value function loss: 0.0025
+                    Surrogate loss: -0.0012
+             Mean action noise std: 0.33
+                 Mean total reward: 8.78
+               Mean episode length: 960.48
+     Episode_Reward/action_rate_l2: -0.0125
+ Episode_Reward/undesired_contacts: -0.0017
+Episode_Reward/joint_pos_pitch_exp: 0.4300
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 21.6250
+  Episode_Termination/base_contact: 2.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 23199744
+                    Iteration time: 0.87s
+                        Total time: 110.03s
+                               ETA: 27865.3s
+################################################################################
+                     [1m Learning iteration 59/15000 
+                       Computation: 215815 steps/s (collection: 0.789s, learning 0.122s)
+               Value function loss: 0.0013
+                    Surrogate loss: -0.0008
+             Mean action noise std: 0.33
+                 Mean total reward: 8.62
+               Mean episode length: 940.72
+     Episode_Reward/action_rate_l2: -0.0128
+ Episode_Reward/undesired_contacts: -0.0011
+Episode_Reward/joint_pos_pitch_exp: 0.4468
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 16.2500
+  Episode_Termination/base_contact: 1.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 23396352
+                    Iteration time: 0.91s
+                        Total time: 110.94s
+                               ETA: 27625.9s
+################################################################################
+                     [1m Learning iteration 59/15000 
+                       Computation: 215815 steps/s (collection: 0.789s, learning 0.122s)
+               Value function loss: 0.0013
+                    Surrogate loss: -0.0008
+             Mean action noise std: 0.33
+                 Mean total reward: 8.62
+               Mean episode length: 940.72
+     Episode_Reward/action_rate_l2: -0.0128
+ Episode_Reward/undesired_contacts: -0.0011
+Episode_Reward/joint_pos_pitch_exp: 0.4468
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 16.2500
+  Episode_Termination/base_contact: 1.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 23592960
+                    Iteration time: 0.91s
+                        Total time: 111.85s
+                               ETA: 27852.7s
+################################################################################
+                     [1m Learning iteration 60/15000 
+                       Computation: 213010 steps/s (collection: 0.799s, learning 0.124s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.33
+                 Mean total reward: 9.17
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0131
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4675
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 11.0417
+  Episode_Termination/base_contact: 0.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 23789568
+                    Iteration time: 0.92s
+                        Total time: 112.77s
+                               ETA: 27620.4s
+################################################################################
+                     [1m Learning iteration 60/15000 
+                       Computation: 213010 steps/s (collection: 0.799s, learning 0.124s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0008
+             Mean action noise std: 0.33
+                 Mean total reward: 9.17
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0131
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4675
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 11.0417
+  Episode_Termination/base_contact: 0.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 23986176
+                    Iteration time: 0.92s
+                        Total time: 113.70s
+                               ETA: 27846.4s
+################################################################################
+                     [1m Learning iteration 61/15000 
+                       Computation: 214989 steps/s (collection: 0.792s, learning 0.122s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0000
+             Mean action noise std: 0.32
+                 Mean total reward: 8.92
+               Mean episode length: 960.48
+     Episode_Reward/action_rate_l2: -0.0128
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.4599
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 9.8750
+  Episode_Termination/base_contact: 0.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 24182784
+                    Iteration time: 0.91s
+                        Total time: 114.61s
+                               ETA: 27615.8s
+################################################################################
+                     [1m Learning iteration 61/15000 
+                       Computation: 214989 steps/s (collection: 0.792s, learning 0.122s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0000
+             Mean action noise std: 0.32
+                 Mean total reward: 8.92
+               Mean episode length: 960.48
+     Episode_Reward/action_rate_l2: -0.0128
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.4599
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 9.8750
+  Episode_Termination/base_contact: 0.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 24379392
+                    Iteration time: 0.91s
+                        Total time: 115.53s
+                               ETA: 27836.1s
+################################################################################
+                     [1m Learning iteration 62/15000 
+                       Computation: 224310 steps/s (collection: 0.758s, learning 0.118s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0022
+             Mean action noise std: 0.32
+                 Mean total reward: 9.15
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0129
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4706
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6470
+      Episode_Termination/time_out: 7.7500
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 24576000
+                    Iteration time: 0.88s
+                        Total time: 116.40s
+                               ETA: 27600.3s
+################################################################################
+                     [1m Learning iteration 62/15000 
+                       Computation: 224310 steps/s (collection: 0.758s, learning 0.118s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0022
+             Mean action noise std: 0.32
+                 Mean total reward: 9.15
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0129
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4706
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6470
+      Episode_Termination/time_out: 7.7500
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 24772608
+                    Iteration time: 0.88s
+                        Total time: 117.28s
+                               ETA: 27808.1s
+################################################################################
+                     [1m Learning iteration 63/15000 
+                       Computation: 223038 steps/s (collection: 0.766s, learning 0.115s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0002
+             Mean action noise std: 0.32
+                 Mean total reward: 9.20
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0126
+ Episode_Reward/undesired_contacts: -0.0006
+Episode_Reward/joint_pos_pitch_exp: 0.4683
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 7.1667
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 24969216
+                    Iteration time: 0.88s
+                        Total time: 118.16s
+                               ETA: 27577.5s
+################################################################################
+                     [1m Learning iteration 63/15000 
+                       Computation: 223038 steps/s (collection: 0.766s, learning 0.115s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0002
+             Mean action noise std: 0.32
+                 Mean total reward: 9.20
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0126
+ Episode_Reward/undesired_contacts: -0.0006
+Episode_Reward/joint_pos_pitch_exp: 0.4683
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 7.1667
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 25165824
+                    Iteration time: 0.88s
+                        Total time: 119.04s
+                               ETA: 27783.3s
+################################################################################
+                     [1m Learning iteration 64/15000 
+                       Computation: 211862 steps/s (collection: 0.802s, learning 0.126s)
+               Value function loss: 0.0003
+                    Surrogate loss: 0.0020
+             Mean action noise std: 0.32
+                 Mean total reward: 8.94
+               Mean episode length: 950.60
+     Episode_Reward/action_rate_l2: -0.0126
+ Episode_Reward/undesired_contacts: -0.0005
+Episode_Reward/joint_pos_pitch_exp: 0.4719
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6475
+      Episode_Termination/time_out: 4.7917
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 25362432
+                    Iteration time: 0.93s
+                        Total time: 119.97s
+                               ETA: 27567.2s
+################################################################################
+                     [1m Learning iteration 64/15000 
+                       Computation: 211862 steps/s (collection: 0.802s, learning 0.126s)
+               Value function loss: 0.0003
+                    Surrogate loss: 0.0020
+             Mean action noise std: 0.32
+                 Mean total reward: 8.94
+               Mean episode length: 950.60
+     Episode_Reward/action_rate_l2: -0.0126
+ Episode_Reward/undesired_contacts: -0.0005
+Episode_Reward/joint_pos_pitch_exp: 0.4719
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6475
+      Episode_Termination/time_out: 4.7917
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 25559040
+                    Iteration time: 0.93s
+                        Total time: 120.90s
+                               ETA: 27780.5s
+################################################################################
+                     [1m Learning iteration 65/15000 
+                       Computation: 222156 steps/s (collection: 0.766s, learning 0.119s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0014
+             Mean action noise std: 0.32
+                 Mean total reward: 9.20
+               Mean episode length: 970.36
+     Episode_Reward/action_rate_l2: -0.0124
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.4707
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6473
+      Episode_Termination/time_out: 5.0417
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 25755648
+                    Iteration time: 0.88s
+                        Total time: 121.78s
+                               ETA: 27558.0s
+################################################################################
+                     [1m Learning iteration 65/15000 
+                       Computation: 222156 steps/s (collection: 0.766s, learning 0.119s)
+               Value function loss: 0.0002
+                    Surrogate loss: 0.0014
+             Mean action noise std: 0.32
+                 Mean total reward: 9.20
+               Mean episode length: 970.36
+     Episode_Reward/action_rate_l2: -0.0124
+ Episode_Reward/undesired_contacts: -0.0007
+Episode_Reward/joint_pos_pitch_exp: 0.4707
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6473
+      Episode_Termination/time_out: 5.0417
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 25952256
+                    Iteration time: 0.88s
+                        Total time: 122.67s
+                               ETA: 27758.2s
+################################################################################
+                     [1m Learning iteration 66/15000 
+                       Computation: 217607 steps/s (collection: 0.780s, learning 0.123s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0028
+             Mean action noise std: 0.32
+                 Mean total reward: 9.37
+               Mean episode length: 980.25
+     Episode_Reward/action_rate_l2: -0.0120
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.4663
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 4.4583
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 26148864
+                    Iteration time: 0.90s
+                        Total time: 123.57s
+                               ETA: 27543.5s
+################################################################################
+                     [1m Learning iteration 66/15000 
+                       Computation: 217607 steps/s (collection: 0.780s, learning 0.123s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0028
+             Mean action noise std: 0.32
+                 Mean total reward: 9.37
+               Mean episode length: 980.25
+     Episode_Reward/action_rate_l2: -0.0120
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.4663
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 4.4583
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 26345472
+                    Iteration time: 0.90s
+                        Total time: 124.47s
+                               ETA: 27744.9s
+################################################################################
+                     [1m Learning iteration 67/15000 
+                       Computation: 204906 steps/s (collection: 0.832s, learning 0.127s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0021
+             Mean action noise std: 0.31
+                 Mean total reward: 9.50
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0123
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: 0.4858
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6467
+      Episode_Termination/time_out: 3.4583
+  Episode_Termination/base_contact: 0.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 26542080
+                    Iteration time: 0.96s
+                        Total time: 125.43s
+                               ETA: 27545.8s
+################################################################################
+                     [1m Learning iteration 67/15000 
+                       Computation: 204906 steps/s (collection: 0.832s, learning 0.127s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0021
+             Mean action noise std: 0.31
+                 Mean total reward: 9.50
+               Mean episode length: 990.12
+     Episode_Reward/action_rate_l2: -0.0123
+ Episode_Reward/undesired_contacts: -0.0003
+Episode_Reward/joint_pos_pitch_exp: 0.4858
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6467
+      Episode_Termination/time_out: 3.4583
+  Episode_Termination/base_contact: 0.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 26738688
+                    Iteration time: 0.96s
+                        Total time: 126.39s
+                               ETA: 27756.5s
+################################################################################
+                     [1m Learning iteration 68/15000 
+                       Computation: 200416 steps/s (collection: 0.854s, learning 0.126s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.31
+                 Mean total reward: 9.23
+               Mean episode length: 960.48
+     Episode_Reward/action_rate_l2: -0.0118
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.4700
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 3.6250
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 26935296
+                    Iteration time: 0.98s
+                        Total time: 127.37s
+                               ETA: 27564.7s
+################################################################################
+                     [1m Learning iteration 68/15000 
+                       Computation: 200416 steps/s (collection: 0.854s, learning 0.126s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.31
+                 Mean total reward: 9.23
+               Mean episode length: 960.48
+     Episode_Reward/action_rate_l2: -0.0118
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: 0.4700
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6474
+      Episode_Termination/time_out: 3.6250
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 27131904
+                    Iteration time: 0.98s
+                        Total time: 128.36s
+                               ETA: 27777.0s
+################################################################################
+                     [1m Learning iteration 69/15000 
+                       Computation: 210952 steps/s (collection: 0.804s, learning 0.128s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.31
+                 Mean total reward: 9.47
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0120
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4850
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6469
+      Episode_Termination/time_out: 3.3750
+  Episode_Termination/base_contact: 0.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 27328512
+                    Iteration time: 0.93s
+                        Total time: 129.29s
+                               ETA: 27577.1s
+################################################################################
+                     [1m Learning iteration 69/15000 
+                       Computation: 210952 steps/s (collection: 0.804s, learning 0.128s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.31
+                 Mean total reward: 9.47
+               Mean episode length: 980.24
+     Episode_Reward/action_rate_l2: -0.0120
+ Episode_Reward/undesired_contacts: -0.0004
+Episode_Reward/joint_pos_pitch_exp: 0.4850
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6469
+      Episode_Termination/time_out: 3.3750
+  Episode_Termination/base_contact: 0.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 27525120
+                    Iteration time: 0.93s
+                        Total time: 130.22s

@@ -1,0 +1,5512 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 1.814109 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 8192
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.279217 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++--------------------------------------------+
+|            Active Command Terms            |
++-------+---------------+--------------------+
+| Index | Name          |        Type        |
++-------+---------------+--------------------+
+|   0   | base_position | UniformPoseCommand |
++-------+---------------+--------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 4)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          3 |
+|   1    | wheel_vel  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (4,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | base_position              |    (4,)    |
++------------+----------------------------+------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | scale_all_joint_armature       |
+|   4   | add_all_joint_default_pos      |
+|   5   | scale_all_joint_friction_model |
++-------+--------------------------------+
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | base_external_force_torque   |
+|   1    | reset_base                   |
+|   2    | reset_robot_joints           |
++--------+------------------------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++--------------------------------------+
+|         Active Reward Terms          |
++-------+---------------------+--------+
+| Index | Name                | Weight |
++-------+---------------------+--------+
+|   0   | action_rate_l2      |  -0.01 |
+|   1   | undesired_contacts  |  -10.0 |
+|   2   | joint_pos_pitch_exp |    1.0 |
++-------+---------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 1 active terms.
++---------------------------+
+|  Active Curriculum Terms  |
++-------+-------------------+
+| Index | Name              |
++-------+-------------------+
+|   0   | command_leg_pitch |
++-------+-------------------+
+[INFO]: Completed setting up the environment...
+(-0.28, -0.28)
+비교대상 tensor(0., device='cuda:0')
+조건 0.008
+Actor MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=4, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+(-0.28, -0.28)
+비교대상 tensor(-9.5147e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.9134e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.8838e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.8369e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.7705e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.6985e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.0568e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.2510e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.5173e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.9995e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.9987e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.9155e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 62814 steps/s (collection: 2.921s, learning 0.209s)
+               Value function loss: 0.0063
+                    Surrogate loss: 0.0065
+             Mean action noise std: 0.50
+                 Mean total reward: -0.18
+               Mean episode length: 18.82
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0033
+Episode_Reward/joint_pos_pitch_exp: -0.0049
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5274
+      Episode_Termination/time_out: 8.1667
+  Episode_Termination/base_contact: 3.5833
+--------------------------------------------------------------------------------
+                   Total timesteps: 196608
+                    Iteration time: 3.13s
+                        Total time: 3.13s
+                               ETA: 46950.0s
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 62814 steps/s (collection: 2.921s, learning 0.209s)
+               Value function loss: 0.0063
+                    Surrogate loss: 0.0065
+             Mean action noise std: 0.50
+                 Mean total reward: -0.18
+               Mean episode length: 18.82
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0033
+Episode_Reward/joint_pos_pitch_exp: -0.0049
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5274
+      Episode_Termination/time_out: 8.1667
+  Episode_Termination/base_contact: 3.5833
+--------------------------------------------------------------------------------
+                   Total timesteps: 393216
+                    Iteration time: 3.13s
+                        Total time: 6.26s
+                               ETA: 93899.9s
+Could not find git repository in S:\anaconda3\envs\IsaacLab_2\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-03-12_17-24-03\git\isaac_berkeley_humanoid.diff
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 189959 steps/s (collection: 0.912s, learning 0.123s)
+               Value function loss: 0.0041
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.50
+                 Mean total reward: -0.38
+               Mean episode length: 41.75
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: -0.0154
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5899
+      Episode_Termination/time_out: 7.0417
+  Episode_Termination/base_contact: 0.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 589824
+                    Iteration time: 1.03s
+                        Total time: 7.29s
+                               ETA: 54708.8s
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 189959 steps/s (collection: 0.912s, learning 0.123s)
+               Value function loss: 0.0041
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.50
+                 Mean total reward: -0.38
+               Mean episode length: 41.75
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: -0.0154
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5899
+      Episode_Termination/time_out: 7.0417
+  Episode_Termination/base_contact: 0.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 786432
+                    Iteration time: 1.03s
+                        Total time: 8.33s
+                               ETA: 62470.8s
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 192847 steps/s (collection: 0.894s, learning 0.125s)
+               Value function loss: 0.0022
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.50
+                 Mean total reward: -0.62
+               Mean episode length: 65.92
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: -0.0258
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5859
+      Episode_Termination/time_out: 9.1667
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 983040
+                    Iteration time: 1.02s
+                        Total time: 9.35s
+                               ETA: 46741.2s
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 192847 steps/s (collection: 0.894s, learning 0.125s)
+               Value function loss: 0.0022
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.50
+                 Mean total reward: -0.62
+               Mean episode length: 65.92
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0010
+Episode_Reward/joint_pos_pitch_exp: -0.0258
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5859
+      Episode_Termination/time_out: 9.1667
+  Episode_Termination/base_contact: 0.5417
+--------------------------------------------------------------------------------
+                   Total timesteps: 1179648
+                    Iteration time: 1.02s
+                        Total time: 10.37s
+                               ETA: 51838.0s
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 191719 steps/s (collection: 0.901s, learning 0.124s)
+               Value function loss: 0.0019
+                    Surrogate loss: -0.0120
+             Mean action noise std: 0.50
+                 Mean total reward: -0.86
+               Mean episode length: 88.65
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0027
+Episode_Reward/joint_pos_pitch_exp: -0.0351
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5958
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 1.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 1376256
+                    Iteration time: 1.03s
+                        Total time: 11.39s
+                               ETA: 42720.8s
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 191719 steps/s (collection: 0.901s, learning 0.124s)
+               Value function loss: 0.0019
+                    Surrogate loss: -0.0120
+             Mean action noise std: 0.50
+                 Mean total reward: -0.86
+               Mean episode length: 88.65
+     Episode_Reward/action_rate_l2: -0.0016
+ Episode_Reward/undesired_contacts: -0.0027
+Episode_Reward/joint_pos_pitch_exp: -0.0351
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.5958
+      Episode_Termination/time_out: 8.2500
+  Episode_Termination/base_contact: 1.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 1572864
+                    Iteration time: 1.03s
+                        Total time: 12.42s
+                               ETA: 46565.6s
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 192187 steps/s (collection: 0.901s, learning 0.121s)
+               Value function loss: 0.0014
+                    Surrogate loss: -0.0111
+             Mean action noise std: 0.50
+                 Mean total reward: -1.05
+               Mean episode length: 108.56
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0038
+Episode_Reward/joint_pos_pitch_exp: -0.0437
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6019
+      Episode_Termination/time_out: 7.8750
+  Episode_Termination/base_contact: 1.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 1769472
+                    Iteration time: 1.02s
+                        Total time: 13.44s
+                               ETA: 40318.2s
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 192187 steps/s (collection: 0.901s, learning 0.121s)
+               Value function loss: 0.0014
+                    Surrogate loss: -0.0111
+             Mean action noise std: 0.50
+                 Mean total reward: -1.05
+               Mean episode length: 108.56
+     Episode_Reward/action_rate_l2: -0.0020
+ Episode_Reward/undesired_contacts: -0.0038
+Episode_Reward/joint_pos_pitch_exp: -0.0437
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6019
+      Episode_Termination/time_out: 7.8750
+  Episode_Termination/base_contact: 1.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 1966080
+                    Iteration time: 1.02s
+                        Total time: 14.47s
+                               ETA: 43386.4s
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 191346 steps/s (collection: 0.903s, learning 0.124s)
+               Value function loss: 0.0013
+                    Surrogate loss: -0.0145
+             Mean action noise std: 0.49
+                 Mean total reward: -1.21
+               Mean episode length: 122.37
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0064
+Episode_Reward/joint_pos_pitch_exp: -0.0499
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6112
+      Episode_Termination/time_out: 8.6667
+  Episode_Termination/base_contact: 4.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 2162688
+                    Iteration time: 1.03s
+                        Total time: 15.49s
+                               ETA: 38720.8s
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 191346 steps/s (collection: 0.903s, learning 0.124s)
+               Value function loss: 0.0013
+                    Surrogate loss: -0.0145
+             Mean action noise std: 0.49
+                 Mean total reward: -1.21
+               Mean episode length: 122.37
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0064
+Episode_Reward/joint_pos_pitch_exp: -0.0499
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6112
+      Episode_Termination/time_out: 8.6667
+  Episode_Termination/base_contact: 4.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 2359296
+                    Iteration time: 1.03s
+                        Total time: 16.52s
+                               ETA: 41288.7s
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 192000 steps/s (collection: 0.897s, learning 0.127s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0194
+             Mean action noise std: 0.49
+                 Mean total reward: -1.42
+               Mean episode length: 146.52
+     Episode_Reward/action_rate_l2: -0.0027
+ Episode_Reward/undesired_contacts: -0.0088
+Episode_Reward/joint_pos_pitch_exp: -0.0557
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6199
+      Episode_Termination/time_out: 7.4167
+  Episode_Termination/base_contact: 6.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2555904
+                    Iteration time: 1.02s
+                        Total time: 17.54s
+                               ETA: 37581.3s
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 192000 steps/s (collection: 0.897s, learning 0.127s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0194
+             Mean action noise std: 0.49
+                 Mean total reward: -1.42
+               Mean episode length: 146.52
+     Episode_Reward/action_rate_l2: -0.0027
+ Episode_Reward/undesired_contacts: -0.0088
+Episode_Reward/joint_pos_pitch_exp: -0.0557
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6199
+      Episode_Termination/time_out: 7.4167
+  Episode_Termination/base_contact: 6.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2752512
+                    Iteration time: 1.02s
+                        Total time: 18.57s
+                               ETA: 39774.8s
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 193036 steps/s (collection: 0.894s, learning 0.124s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0228
+             Mean action noise std: 0.49
+                 Mean total reward: -1.37
+               Mean episode length: 141.63
+     Episode_Reward/action_rate_l2: -0.0027
+ Episode_Reward/undesired_contacts: -0.0120
+Episode_Reward/joint_pos_pitch_exp: -0.0526
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6311
+      Episode_Termination/time_out: 7.8750
+  Episode_Termination/base_contact: 12.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 2949120
+                    Iteration time: 1.02s
+                        Total time: 19.59s
+                               ETA: 36709.4s
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 193036 steps/s (collection: 0.894s, learning 0.124s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0228
+             Mean action noise std: 0.49
+                 Mean total reward: -1.37
+               Mean episode length: 141.63
+     Episode_Reward/action_rate_l2: -0.0027
+ Episode_Reward/undesired_contacts: -0.0120
+Episode_Reward/joint_pos_pitch_exp: -0.0526
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6311
+      Episode_Termination/time_out: 7.8750
+  Episode_Termination/base_contact: 12.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 3145728
+                    Iteration time: 1.02s
+                        Total time: 20.61s
+                               ETA: 38618.2s
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 189959 steps/s (collection: 0.910s, learning 0.125s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0177
+             Mean action noise std: 0.49
+                 Mean total reward: -1.31
+               Mean episode length: 129.48
+     Episode_Reward/action_rate_l2: -0.0026
+ Episode_Reward/undesired_contacts: -0.0148
+Episode_Reward/joint_pos_pitch_exp: -0.0496
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6391
+      Episode_Termination/time_out: 7.4583
+  Episode_Termination/base_contact: 22.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 3342336
+                    Iteration time: 1.03s
+                        Total time: 21.64s
+                               ETA: 36049.1s
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 189959 steps/s (collection: 0.910s, learning 0.125s)
+               Value function loss: 0.0012
+                    Surrogate loss: -0.0177
+             Mean action noise std: 0.49
+                 Mean total reward: -1.31
+               Mean episode length: 129.48
+     Episode_Reward/action_rate_l2: -0.0026
+ Episode_Reward/undesired_contacts: -0.0148
+Episode_Reward/joint_pos_pitch_exp: -0.0496
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6391
+      Episode_Termination/time_out: 7.4583
+  Episode_Termination/base_contact: 22.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 3538944
+                    Iteration time: 1.03s
+                        Total time: 22.68s
+                               ETA: 37773.1s
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 192000 steps/s (collection: 0.904s, learning 0.120s)
+               Value function loss: 0.0018
+                    Surrogate loss: -0.0088
+             Mean action noise std: 0.49
+                 Mean total reward: -1.21
+               Mean episode length: 125.01
+     Episode_Reward/action_rate_l2: -0.0023
+ Episode_Reward/undesired_contacts: -0.0178
+Episode_Reward/joint_pos_pitch_exp: -0.0401
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6459
+      Episode_Termination/time_out: 6.4583
+  Episode_Termination/base_contact: 60.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 3735552
+                    Iteration time: 1.02s
+                        Total time: 23.70s
+                               ETA: 35528.6s
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 192000 steps/s (collection: 0.904s, learning 0.120s)
+               Value function loss: 0.0018
+                    Surrogate loss: -0.0088
+             Mean action noise std: 0.49
+                 Mean total reward: -1.21
+               Mean episode length: 125.01
+     Episode_Reward/action_rate_l2: -0.0023
+ Episode_Reward/undesired_contacts: -0.0178
+Episode_Reward/joint_pos_pitch_exp: -0.0401
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6459
+      Episode_Termination/time_out: 6.4583
+  Episode_Termination/base_contact: 60.2917
+--------------------------------------------------------------------------------
+                   Total timesteps: 3932160
+                    Iteration time: 1.02s
+                        Total time: 24.72s
+                               ETA: 37063.7s
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 187961 steps/s (collection: 0.921s, learning 0.124s)
+               Value function loss: 0.0034
+                    Surrogate loss: -0.0042
+             Mean action noise std: 0.48
+                 Mean total reward: -0.90
+               Mean episode length: 84.64
+     Episode_Reward/action_rate_l2: -0.0019
+ Episode_Reward/undesired_contacts: -0.0190
+Episode_Reward/joint_pos_pitch_exp: -0.0294
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6481
+      Episode_Termination/time_out: 5.8333
+  Episode_Termination/base_contact: 124.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 4128768
+                    Iteration time: 1.05s
+                        Total time: 25.77s
+                               ETA: 35117.4s
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 187961 steps/s (collection: 0.921s, learning 0.124s)
+               Value function loss: 0.0034
+                    Surrogate loss: -0.0042
+             Mean action noise std: 0.48
+                 Mean total reward: -0.90
+               Mean episode length: 84.64
+     Episode_Reward/action_rate_l2: -0.0019
+ Episode_Reward/undesired_contacts: -0.0190
+Episode_Reward/joint_pos_pitch_exp: -0.0294
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6481
+      Episode_Termination/time_out: 5.8333
+  Episode_Termination/base_contact: 124.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 4325376
+                    Iteration time: 1.05s
+                        Total time: 26.82s
+                               ETA: 36542.9s
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 187067 steps/s (collection: 0.927s, learning 0.124s)
+               Value function loss: 0.0050
+                    Surrogate loss: -0.0035
+             Mean action noise std: 0.47
+                 Mean total reward: -0.71
+               Mean episode length: 70.82
+     Episode_Reward/action_rate_l2: -0.0015
+ Episode_Reward/undesired_contacts: -0.0193
+Episode_Reward/joint_pos_pitch_exp: -0.0194
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6483
+      Episode_Termination/time_out: 5.0833
+  Episode_Termination/base_contact: 155.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4521984
+                    Iteration time: 1.05s
+                        Total time: 27.87s
+                               ETA: 34808.2s
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 187067 steps/s (collection: 0.927s, learning 0.124s)
+               Value function loss: 0.0050
+                    Surrogate loss: -0.0035
+             Mean action noise std: 0.47
+                 Mean total reward: -0.71
+               Mean episode length: 70.82
+     Episode_Reward/action_rate_l2: -0.0015
+ Episode_Reward/undesired_contacts: -0.0193
+Episode_Reward/joint_pos_pitch_exp: -0.0194
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6483
+      Episode_Termination/time_out: 5.0833
+  Episode_Termination/base_contact: 155.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4718592
+                    Iteration time: 1.05s
+                        Total time: 28.92s
+                               ETA: 36121.0s
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 188231 steps/s (collection: 0.917s, learning 0.127s)
+               Value function loss: 0.0060
+                    Surrogate loss: -0.0034
+             Mean action noise std: 0.46
+                 Mean total reward: -0.61
+               Mean episode length: 59.33
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0195
+Episode_Reward/joint_pos_pitch_exp: -0.0123
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 3.5417
+  Episode_Termination/base_contact: 158.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 4915200
+                    Iteration time: 1.04s
+                        Total time: 29.96s
+                               ETA: 34544.4s
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 188231 steps/s (collection: 0.917s, learning 0.127s)
+               Value function loss: 0.0060
+                    Surrogate loss: -0.0034
+             Mean action noise std: 0.46
+                 Mean total reward: -0.61
+               Mean episode length: 59.33
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0195
+Episode_Reward/joint_pos_pitch_exp: -0.0123
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 3.5417
+  Episode_Termination/base_contact: 158.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 5111808
+                    Iteration time: 1.04s
+                        Total time: 31.01s
+                               ETA: 35748.6s
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.5873e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-8.2197e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 187961 steps/s (collection: 0.925s, learning 0.121s)
+               Value function loss: 0.0072
+                    Surrogate loss: -0.0024
+             Mean action noise std: 0.46
+                 Mean total reward: -0.55
+               Mean episode length: 53.62
+     Episode_Reward/action_rate_l2: -0.0010
+ Episode_Reward/undesired_contacts: -0.0195
+Episode_Reward/joint_pos_pitch_exp: -0.0070
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.9167
+  Episode_Termination/base_contact: 143.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 5308416
+                    Iteration time: 1.05s
+                        Total time: 32.05s
+                               ETA: 34312.7s
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 187961 steps/s (collection: 0.925s, learning 0.121s)
+               Value function loss: 0.0072
+                    Surrogate loss: -0.0024
+             Mean action noise std: 0.46
+                 Mean total reward: -0.55
+               Mean episode length: 53.62
+     Episode_Reward/action_rate_l2: -0.0010
+ Episode_Reward/undesired_contacts: -0.0195
+Episode_Reward/joint_pos_pitch_exp: -0.0070
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.9167
+  Episode_Termination/base_contact: 143.9167
+--------------------------------------------------------------------------------
+                   Total timesteps: 5505024
+                    Iteration time: 1.05s
+                        Total time: 33.10s
+                               ETA: 35432.4s
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-8.8928e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-8.5938e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.9180e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.9885e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.4250e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.4871e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.8655e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.9414e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.1797e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.8526e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.5876e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.5622e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 185918 steps/s (collection: 0.933s, learning 0.124s)
+               Value function loss: 0.0089
+                    Surrogate loss: 0.0007
+             Mean action noise std: 0.45
+                 Mean total reward: -0.53
+               Mean episode length: 62.56
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0193
+Episode_Reward/joint_pos_pitch_exp: -0.0054
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 3.4167
+  Episode_Termination/base_contact: 110.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 5701632
+                    Iteration time: 1.06s
+                        Total time: 34.16s
+                               ETA: 34124.6s
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 185918 steps/s (collection: 0.933s, learning 0.124s)
+               Value function loss: 0.0089
+                    Surrogate loss: 0.0007
+             Mean action noise std: 0.45
+                 Mean total reward: -0.53
+               Mean episode length: 62.56
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0193
+Episode_Reward/joint_pos_pitch_exp: -0.0054
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 3.4167
+  Episode_Termination/base_contact: 110.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 5898240
+                    Iteration time: 1.06s
+                        Total time: 35.21s
+                               ETA: 35181.1s
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.7012e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.0518e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-9.6181e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-8.4711e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.5583e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.2894e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.6077e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.9137e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.2650e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.1418e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.3580e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.2327e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-8.3585e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.3955e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-8.6814e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.1459e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.5608e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.2597e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.8261e-05, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 190974 steps/s (collection: 0.902s, learning 0.127s)
+               Value function loss: 0.0092
+                    Surrogate loss: -0.0050
+             Mean action noise std: 0.45
+                 Mean total reward: -0.44
+               Mean episode length: 64.01
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0192
+Episode_Reward/joint_pos_pitch_exp: -0.0032
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 3.3333
+  Episode_Termination/base_contact: 93.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 6094848
+                    Iteration time: 1.03s
+                        Total time: 36.24s
+                               ETA: 33944.3s
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 190974 steps/s (collection: 0.902s, learning 0.127s)
+               Value function loss: 0.0092
+                    Surrogate loss: -0.0050
+             Mean action noise std: 0.45
+                 Mean total reward: -0.44
+               Mean episode length: 64.01
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0192
+Episode_Reward/joint_pos_pitch_exp: -0.0032
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 3.3333
+  Episode_Termination/base_contact: 93.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 6291456
+                    Iteration time: 1.03s
+                        Total time: 37.27s
+                               ETA: 34908.5s
+(-0.28, -0.28)
+비교대상 tensor(4.2186e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.6300e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.8370e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.0527e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.8809e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.7874e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.7582e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.7040e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.3300e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.1690e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.2760e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.9997e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.2785e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.9202e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.8900e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.0312e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.0491e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.3980e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.3056e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.3837e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.3245e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.3574e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.5667e-05, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 16/15000 
+                       Computation: 189684 steps/s (collection: 0.914s, learning 0.122s)
+               Value function loss: 0.0089
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.44
+                 Mean total reward: -0.45
+               Mean episode length: 63.15
+     Episode_Reward/action_rate_l2: -0.0010
+ Episode_Reward/undesired_contacts: -0.0192
+Episode_Reward/joint_pos_pitch_exp: -0.0003
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 2.7500
+  Episode_Termination/base_contact: 77.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 6488064
+                    Iteration time: 1.04s
+                        Total time: 38.31s
+                               ETA: 33766.4s
+################################################################################
+                     [1m Learning iteration 16/15000 
+                       Computation: 189684 steps/s (collection: 0.914s, learning 0.122s)
+               Value function loss: 0.0089
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.44
+                 Mean total reward: -0.45
+               Mean episode length: 63.15
+     Episode_Reward/action_rate_l2: -0.0010
+ Episode_Reward/undesired_contacts: -0.0192
+Episode_Reward/joint_pos_pitch_exp: -0.0003
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 2.7500
+  Episode_Termination/base_contact: 77.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 6684672
+                    Iteration time: 1.04s
+                        Total time: 39.35s
+                               ETA: 34680.0s
+(-0.28, -0.28)
+비교대상 tensor(3.7925e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(3.2970e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.5986e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.5419e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.6529e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.7182e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.6876e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.6932e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.0139e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.7100e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.7389e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.0982e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.8680e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.0374e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.5537e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.9277e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.8856e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.8021e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.7456e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.0531e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.1733e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.2990e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.9090e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.9397e-05, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 17/15000 
+                       Computation: 190696 steps/s (collection: 0.905s, learning 0.126s)
+               Value function loss: 0.0080
+                    Surrogate loss: -0.0033
+             Mean action noise std: 0.44
+                 Mean total reward: -0.33
+               Mean episode length: 44.27
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0189
+Episode_Reward/joint_pos_pitch_exp: 0.0016
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 2.9583
+  Episode_Termination/base_contact: 59.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 6881280
+                    Iteration time: 1.03s
+                        Total time: 40.38s
+                               ETA: 33609.3s
+################################################################################
+                     [1m Learning iteration 17/15000 
+                       Computation: 190696 steps/s (collection: 0.905s, learning 0.126s)
+               Value function loss: 0.0080
+                    Surrogate loss: -0.0033
+             Mean action noise std: 0.44
+                 Mean total reward: -0.33
+               Mean episode length: 44.27
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0189
+Episode_Reward/joint_pos_pitch_exp: 0.0016
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 2.9583
+  Episode_Termination/base_contact: 59.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 7077888
+                    Iteration time: 1.03s
+                        Total time: 41.41s
+                               ETA: 34467.5s
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.6815e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.8477e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.3226e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.8121e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.7555e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.9124e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.1288e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.4823e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.5135e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.2585e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.8479e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.8039e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.2035e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.7104e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.4839e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(1.1170e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.7772e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.2032e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.4736e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.8248e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.3185e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.4638e-05, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 18/15000 
+                       Computation: 188502 steps/s (collection: 0.917s, learning 0.126s)
+               Value function loss: 0.0067
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.43
+                 Mean total reward: -0.30
+               Mean episode length: 60.70
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0186
+Episode_Reward/joint_pos_pitch_exp: 0.0015
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.6250
+  Episode_Termination/base_contact: 42.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 7274496
+                    Iteration time: 1.04s
+                        Total time: 42.45s
+                               ETA: 33473.7s
+################################################################################
+                     [1m Learning iteration 18/15000 
+                       Computation: 188502 steps/s (collection: 0.917s, learning 0.126s)
+               Value function loss: 0.0067
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.43
+                 Mean total reward: -0.30
+               Mean episode length: 60.70
+     Episode_Reward/action_rate_l2: -0.0011
+ Episode_Reward/undesired_contacts: -0.0186
+Episode_Reward/joint_pos_pitch_exp: 0.0015
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.6250
+  Episode_Termination/base_contact: 42.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 7471104
+                    Iteration time: 1.04s
+                        Total time: 43.49s
+                               ETA: 34296.1s
+(-0.28, -0.28)
+비교대상 tensor(6.2273e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.8392e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(3.1279e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.9623e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(5.8358e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-6.5742e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(3.7161e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.6980e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.9210e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.8330e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.4356e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.0589e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.8325e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.8488e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.3349e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.7751e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.4145e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.6679e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.1300e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 19/15000 
+                       Computation: 191719 steps/s (collection: 0.905s, learning 0.120s)
+               Value function loss: 0.0058
+                    Surrogate loss: -0.0016
+             Mean action noise std: 0.43
+                 Mean total reward: -0.22
+               Mean episode length: 81.99
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0183
+Episode_Reward/joint_pos_pitch_exp: 0.0037
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 30.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 7667712
+                    Iteration time: 1.03s
+                        Total time: 44.52s
+                               ETA: 33347.3s
+################################################################################
+                     [1m Learning iteration 19/15000 
+                       Computation: 191719 steps/s (collection: 0.905s, learning 0.120s)
+               Value function loss: 0.0058
+                    Surrogate loss: -0.0016
+             Mean action noise std: 0.43
+                 Mean total reward: -0.22
+               Mean episode length: 81.99
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: -0.0183
+Episode_Reward/joint_pos_pitch_exp: 0.0037
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6488
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 30.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 7864320
+                    Iteration time: 1.03s
+                        Total time: 45.54s
+                               ETA: 34115.4s
+(-0.28, -0.28)
+비교대상 tensor(9.4734e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.6456e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.2175e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.4608e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.5099e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.9566e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.8611e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.5328e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.6449e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.2149e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-1.4536e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.3548e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.4964e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.1906e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 20/15000 
+                       Computation: 190511 steps/s (collection: 0.908s, learning 0.124s)
+               Value function loss: 0.0044
+                    Surrogate loss: -0.0016
+             Mean action noise std: 0.43
+                 Mean total reward: -0.30
+               Mean episode length: 91.43
+     Episode_Reward/action_rate_l2: -0.0015
+ Episode_Reward/undesired_contacts: -0.0176
+Episode_Reward/joint_pos_pitch_exp: 0.0045
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 3.0417
+  Episode_Termination/base_contact: 23.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 8060928
+                    Iteration time: 1.03s
+                        Total time: 46.58s
+                               ETA: 33224.9s
+################################################################################
+                     [1m Learning iteration 20/15000 
+                       Computation: 190511 steps/s (collection: 0.908s, learning 0.124s)
+               Value function loss: 0.0044
+                    Surrogate loss: -0.0016
+             Mean action noise std: 0.43
+                 Mean total reward: -0.30
+               Mean episode length: 91.43
+     Episode_Reward/action_rate_l2: -0.0015
+ Episode_Reward/undesired_contacts: -0.0176
+Episode_Reward/joint_pos_pitch_exp: 0.0045
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6489
+      Episode_Termination/time_out: 3.0417
+  Episode_Termination/base_contact: 23.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 8257536
+                    Iteration time: 1.03s
+                        Total time: 47.61s
+                               ETA: 33961.0s
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.9579e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.5116e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-7.5169e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.0974e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.1034e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.3264e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(3.0264e-06, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 21/15000 
+                       Computation: 190143 steps/s (collection: 0.909s, learning 0.125s)
+               Value function loss: 0.0041
+                    Surrogate loss: -0.0010
+             Mean action noise std: 0.43
+                 Mean total reward: -0.24
+               Mean episode length: 105.41
+     Episode_Reward/action_rate_l2: -0.0018
+ Episode_Reward/undesired_contacts: -0.0175
+Episode_Reward/joint_pos_pitch_exp: 0.0054
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 19.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 8454144
+                    Iteration time: 1.03s
+                        Total time: 48.64s
+                               ETA: 33119.2s
+################################################################################
+                     [1m Learning iteration 21/15000 
+                       Computation: 190143 steps/s (collection: 0.909s, learning 0.125s)
+               Value function loss: 0.0041
+                    Surrogate loss: -0.0010
+             Mean action noise std: 0.43
+                 Mean total reward: -0.24
+               Mean episode length: 105.41
+     Episode_Reward/action_rate_l2: -0.0018
+ Episode_Reward/undesired_contacts: -0.0175
+Episode_Reward/joint_pos_pitch_exp: 0.0054
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 19.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 8650752
+                    Iteration time: 1.03s
+                        Total time: 49.68s
+                               ETA: 33823.2s
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.8105e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-4.2410e-06, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.4618e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.9349e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(3.9658e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(9.6749e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(7.1619e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.6282e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 22/15000 
+                       Computation: 191625 steps/s (collection: 0.896s, learning 0.130s)
+               Value function loss: 0.0032
+                    Surrogate loss: -0.0012
+             Mean action noise std: 0.43
+                 Mean total reward: -0.21
+               Mean episode length: 126.48
+     Episode_Reward/action_rate_l2: -0.0018
+ Episode_Reward/undesired_contacts: -0.0169
+Episode_Reward/joint_pos_pitch_exp: 0.0071
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.6667
+  Episode_Termination/base_contact: 14.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 8847360
+                    Iteration time: 1.03s
+                        Total time: 50.70s
+                               ETA: 33018.6s
+################################################################################
+                     [1m Learning iteration 22/15000 
+                       Computation: 191625 steps/s (collection: 0.896s, learning 0.130s)
+               Value function loss: 0.0032
+                    Surrogate loss: -0.0012
+             Mean action noise std: 0.43
+                 Mean total reward: -0.21
+               Mean episode length: 126.48
+     Episode_Reward/action_rate_l2: -0.0018
+ Episode_Reward/undesired_contacts: -0.0169
+Episode_Reward/joint_pos_pitch_exp: 0.0071
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.6667
+  Episode_Termination/base_contact: 14.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 9043968
+                    Iteration time: 1.03s
+                        Total time: 51.73s
+                               ETA: 33686.8s
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.4942e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.8554e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(4.9664e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 23/15000 
+                       Computation: 192942 steps/s (collection: 0.898s, learning 0.120s)
+               Value function loss: 0.0029
+                    Surrogate loss: -0.0005
+             Mean action noise std: 0.42
+                 Mean total reward: -0.05
+               Mean episode length: 151.55
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0162
+Episode_Reward/joint_pos_pitch_exp: 0.0141
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6493
+      Episode_Termination/time_out: 2.4167
+  Episode_Termination/base_contact: 10.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 9240576
+                    Iteration time: 1.02s
+                        Total time: 52.75s
+                               ETA: 32916.9s
+################################################################################
+                     [1m Learning iteration 23/15000 
+                       Computation: 192942 steps/s (collection: 0.898s, learning 0.120s)
+               Value function loss: 0.0029
+                    Surrogate loss: -0.0005
+             Mean action noise std: 0.42
+                 Mean total reward: -0.05
+               Mean episode length: 151.55
+     Episode_Reward/action_rate_l2: -0.0024
+ Episode_Reward/undesired_contacts: -0.0162
+Episode_Reward/joint_pos_pitch_exp: 0.0141
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6493
+      Episode_Termination/time_out: 2.4167
+  Episode_Termination/base_contact: 10.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 9437184
+                    Iteration time: 1.02s
+                        Total time: 53.77s
+                               ETA: 33552.8s
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.5565e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.6499e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(6.6063e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.1053e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 24/15000 
+                       Computation: 188412 steps/s (collection: 0.920s, learning 0.123s)
+               Value function loss: 0.0027
+                    Surrogate loss: 0.0024
+             Mean action noise std: 0.43
+                 Mean total reward: -0.01
+               Mean episode length: 141.39
+     Episode_Reward/action_rate_l2: -0.0023
+ Episode_Reward/undesired_contacts: -0.0163
+Episode_Reward/joint_pos_pitch_exp: 0.0154
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 2.1667
+  Episode_Termination/base_contact: 9.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 9633792
+                    Iteration time: 1.04s
+                        Total time: 54.81s
+                               ETA: 32833.6s
+################################################################################
+                     [1m Learning iteration 24/15000 
+                       Computation: 188412 steps/s (collection: 0.920s, learning 0.123s)
+               Value function loss: 0.0027
+                    Surrogate loss: 0.0024
+             Mean action noise std: 0.43
+                 Mean total reward: -0.01
+               Mean episode length: 141.39
+     Episode_Reward/action_rate_l2: -0.0023
+ Episode_Reward/undesired_contacts: -0.0163
+Episode_Reward/joint_pos_pitch_exp: 0.0154
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 2.1667
+  Episode_Termination/base_contact: 9.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 9830400
+                    Iteration time: 1.04s
+                        Total time: 55.85s
+                               ETA: 33458.7s
+(-0.28, -0.28)
+비교대상 tensor(-2.2968e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 25/15000 
+                       Computation: 187067 steps/s (collection: 0.924s, learning 0.126s)
+               Value function loss: 0.0027
+                    Surrogate loss: 0.0044
+             Mean action noise std: 0.43
+                 Mean total reward: 0.05
+               Mean episode length: 146.75
+     Episode_Reward/action_rate_l2: -0.0025
+ Episode_Reward/undesired_contacts: -0.0164
+Episode_Reward/joint_pos_pitch_exp: 0.0195
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6495
+      Episode_Termination/time_out: 1.9167
+  Episode_Termination/base_contact: 8.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 10027008
+                    Iteration time: 1.05s
+                        Total time: 56.90s
+                               ETA: 32775.1s
+################################################################################
+                     [1m Learning iteration 25/15000 
+                       Computation: 187067 steps/s (collection: 0.924s, learning 0.126s)
+               Value function loss: 0.0027
+                    Surrogate loss: 0.0044
+             Mean action noise std: 0.43
+                 Mean total reward: 0.05
+               Mean episode length: 146.75
+     Episode_Reward/action_rate_l2: -0.0025
+ Episode_Reward/undesired_contacts: -0.0164
+Episode_Reward/joint_pos_pitch_exp: 0.0195
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6495
+      Episode_Termination/time_out: 1.9167
+  Episode_Termination/base_contact: 8.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 10223616
+                    Iteration time: 1.05s
+                        Total time: 57.96s
+                               ETA: 33380.4s
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(8.1214e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0001, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 26/15000 
+                       Computation: 188955 steps/s (collection: 0.915s, learning 0.125s)
+               Value function loss: 0.0023
+                    Surrogate loss: 0.0005
+             Mean action noise std: 0.42
+                 Mean total reward: 0.01
+               Mean episode length: 193.92
+     Episode_Reward/action_rate_l2: -0.0037
+ Episode_Reward/undesired_contacts: -0.0141
+Episode_Reward/joint_pos_pitch_exp: 0.0263
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6494
+      Episode_Termination/time_out: 3.0000
+  Episode_Termination/base_contact: 7.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 10420224
+                    Iteration time: 1.04s
+                        Total time: 59.00s
+                               ETA: 32719.0s
+################################################################################
+                     [1m Learning iteration 26/15000 
+                       Computation: 188955 steps/s (collection: 0.915s, learning 0.125s)
+               Value function loss: 0.0023
+                    Surrogate loss: 0.0005
+             Mean action noise std: 0.42
+                 Mean total reward: 0.01
+               Mean episode length: 193.92
+     Episode_Reward/action_rate_l2: -0.0037
+ Episode_Reward/undesired_contacts: -0.0141
+Episode_Reward/joint_pos_pitch_exp: 0.0263
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6494
+      Episode_Termination/time_out: 3.0000
+  Episode_Termination/base_contact: 7.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 10616832
+                    Iteration time: 1.04s
+                        Total time: 60.04s
+                               ETA: 33296.0s
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.7328e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.7630e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 27/15000 
+                       Computation: 190235 steps/s (collection: 0.907s, learning 0.126s)
+               Value function loss: 0.0023
+                    Surrogate loss: -0.0011
+             Mean action noise std: 0.42
+                 Mean total reward: 0.22
+               Mean episode length: 239.33
+     Episode_Reward/action_rate_l2: -0.0038
+ Episode_Reward/undesired_contacts: -0.0142
+Episode_Reward/joint_pos_pitch_exp: 0.0294
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6499
+      Episode_Termination/time_out: 2.7083
+  Episode_Termination/base_contact: 6.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 10813440
+                    Iteration time: 1.03s
+                        Total time: 61.07s
+                               ETA: 32657.4s
+################################################################################
+                     [1m Learning iteration 27/15000 
+                       Computation: 190235 steps/s (collection: 0.907s, learning 0.126s)
+               Value function loss: 0.0023
+                    Surrogate loss: -0.0011
+             Mean action noise std: 0.42
+                 Mean total reward: 0.22
+               Mean episode length: 239.33
+     Episode_Reward/action_rate_l2: -0.0038
+ Episode_Reward/undesired_contacts: -0.0142
+Episode_Reward/joint_pos_pitch_exp: 0.0294
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6499
+      Episode_Termination/time_out: 2.7083
+  Episode_Termination/base_contact: 6.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 11010048
+                    Iteration time: 1.03s
+                        Total time: 62.10s
+                               ETA: 33210.1s
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.7679e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.3289e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 28/15000 
+                       Computation: 189776 steps/s (collection: 0.908s, learning 0.127s)
+               Value function loss: 0.0021
+                    Surrogate loss: 0.0029
+             Mean action noise std: 0.42
+                 Mean total reward: 0.42
+               Mean episode length: 257.96
+     Episode_Reward/action_rate_l2: -0.0045
+ Episode_Reward/undesired_contacts: -0.0129
+Episode_Reward/joint_pos_pitch_exp: 0.0347
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6494
+      Episode_Termination/time_out: 2.9583
+  Episode_Termination/base_contact: 5.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 11206656
+                    Iteration time: 1.04s
+                        Total time: 63.14s
+                               ETA: 32597.6s
+################################################################################
+                     [1m Learning iteration 28/15000 
+                       Computation: 189776 steps/s (collection: 0.908s, learning 0.127s)
+               Value function loss: 0.0021
+                    Surrogate loss: 0.0029
+             Mean action noise std: 0.42
+                 Mean total reward: 0.42
+               Mean episode length: 257.96
+     Episode_Reward/action_rate_l2: -0.0045
+ Episode_Reward/undesired_contacts: -0.0129
+Episode_Reward/joint_pos_pitch_exp: 0.0347
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6494
+      Episode_Termination/time_out: 2.9583
+  Episode_Termination/base_contact: 5.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 11403264
+                    Iteration time: 1.04s
+                        Total time: 64.18s
+                               ETA: 33132.5s
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0005, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0003, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.4914e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 29/15000 
+                       Computation: 191439 steps/s (collection: 0.896s, learning 0.130s)
+               Value function loss: 0.0018
+                    Surrogate loss: 0.0017
+             Mean action noise std: 0.42
+                 Mean total reward: 0.48
+               Mean episode length: 272.13
+     Episode_Reward/action_rate_l2: -0.0045
+ Episode_Reward/undesired_contacts: -0.0130
+Episode_Reward/joint_pos_pitch_exp: 0.0400
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.5417
+  Episode_Termination/base_contact: 4.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 11599872
+                    Iteration time: 1.03s
+                        Total time: 65.20s
+                               ETA: 32538.4s
+################################################################################
+                     [1m Learning iteration 29/15000 
+                       Computation: 191439 steps/s (collection: 0.896s, learning 0.130s)
+               Value function loss: 0.0018
+                    Surrogate loss: 0.0017
+             Mean action noise std: 0.42
+                 Mean total reward: 0.48
+               Mean episode length: 272.13
+     Episode_Reward/action_rate_l2: -0.0045
+ Episode_Reward/undesired_contacts: -0.0130
+Episode_Reward/joint_pos_pitch_exp: 0.0400
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.5417
+  Episode_Termination/base_contact: 4.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 11796480
+                    Iteration time: 1.03s
+                        Total time: 66.23s
+                               ETA: 33050.9s
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.2239e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0022, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(2.1920e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-5.5725e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0016, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 30/15000 
+                       Computation: 191067 steps/s (collection: 0.898s, learning 0.130s)
+               Value function loss: 0.0017
+                    Surrogate loss: 0.0016
+             Mean action noise std: 0.42
+                 Mean total reward: 0.80
+               Mean episode length: 344.44
+     Episode_Reward/action_rate_l2: -0.0056
+ Episode_Reward/undesired_contacts: -0.0120
+Episode_Reward/joint_pos_pitch_exp: 0.0548
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6496
+      Episode_Termination/time_out: 2.1250
+  Episode_Termination/base_contact: 2.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 11993088
+                    Iteration time: 1.03s
+                        Total time: 67.26s
+                               ETA: 32479.6s
+################################################################################
+                     [1m Learning iteration 30/15000 
+                       Computation: 191067 steps/s (collection: 0.898s, learning 0.130s)
+               Value function loss: 0.0017
+                    Surrogate loss: 0.0016
+             Mean action noise std: 0.42
+                 Mean total reward: 0.80
+               Mean episode length: 344.44
+     Episode_Reward/action_rate_l2: -0.0056
+ Episode_Reward/undesired_contacts: -0.0120
+Episode_Reward/joint_pos_pitch_exp: 0.0548
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6496
+      Episode_Termination/time_out: 2.1250
+  Episode_Termination/base_contact: 2.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 12189696
+                    Iteration time: 1.03s
+                        Total time: 68.29s
+                               ETA: 32976.5s
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.1525e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0025, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 31/15000 
+                       Computation: 192847 steps/s (collection: 0.898s, learning 0.122s)
+               Value function loss: 0.0015
+                    Surrogate loss: -0.0009
+             Mean action noise std: 0.41
+                 Mean total reward: 1.19
+               Mean episode length: 416.60
+     Episode_Reward/action_rate_l2: -0.0069
+ Episode_Reward/undesired_contacts: -0.0101
+Episode_Reward/joint_pos_pitch_exp: 0.0735
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6496
+      Episode_Termination/time_out: 2.3333
+  Episode_Termination/base_contact: 2.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 12386304
+                    Iteration time: 1.02s
+                        Total time: 69.31s
+                               ETA: 32420.7s
+################################################################################
+                     [1m Learning iteration 31/15000 
+                       Computation: 192847 steps/s (collection: 0.898s, learning 0.122s)
+               Value function loss: 0.0015
+                    Surrogate loss: -0.0009
+             Mean action noise std: 0.41
+                 Mean total reward: 1.19
+               Mean episode length: 416.60
+     Episode_Reward/action_rate_l2: -0.0069
+ Episode_Reward/undesired_contacts: -0.0101
+Episode_Reward/joint_pos_pitch_exp: 0.0735
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6496
+      Episode_Termination/time_out: 2.3333
+  Episode_Termination/base_contact: 2.7083
+--------------------------------------------------------------------------------
+                   Total timesteps: 12582912
+                    Iteration time: 1.02s
+                        Total time: 70.33s
+                               ETA: 32897.6s
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0021, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0025, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0030, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0007, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0004, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0017, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.7109e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0033, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0021, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0006, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 32/15000 
+                       Computation: 192094 steps/s (collection: 0.898s, learning 0.125s)
+               Value function loss: 0.0015
+                    Surrogate loss: -0.0004
+             Mean action noise std: 0.41
+                 Mean total reward: 1.17
+               Mean episode length: 426.21
+     Episode_Reward/action_rate_l2: -0.0069
+ Episode_Reward/undesired_contacts: -0.0099
+Episode_Reward/joint_pos_pitch_exp: 0.0743
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.7917
+  Episode_Termination/base_contact: 2.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 12779520
+                    Iteration time: 1.02s
+                        Total time: 71.35s
+                               ETA: 32362.8s
+################################################################################
+                     [1m Learning iteration 32/15000 
+                       Computation: 192094 steps/s (collection: 0.898s, learning 0.125s)
+               Value function loss: 0.0015
+                    Surrogate loss: -0.0004
+             Mean action noise std: 0.41
+                 Mean total reward: 1.17
+               Mean episode length: 426.21
+     Episode_Reward/action_rate_l2: -0.0069
+ Episode_Reward/undesired_contacts: -0.0099
+Episode_Reward/joint_pos_pitch_exp: 0.0743
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6491
+      Episode_Termination/time_out: 2.7917
+  Episode_Termination/base_contact: 2.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 12976128
+                    Iteration time: 1.02s
+                        Total time: 72.37s
+                               ETA: 32827.1s
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0012, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0017, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.8655e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.3294e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0032, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0034, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 33/15000 
+                       Computation: 192942 steps/s (collection: 0.897s, learning 0.122s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0015
+             Mean action noise std: 0.40
+                 Mean total reward: 1.34
+               Mean episode length: 457.22
+     Episode_Reward/action_rate_l2: -0.0075
+ Episode_Reward/undesired_contacts: -0.0095
+Episode_Reward/joint_pos_pitch_exp: 0.0855
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 2.0833
+  Episode_Termination/base_contact: 1.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 13172736
+                    Iteration time: 1.02s
+                        Total time: 73.39s
+                               ETA: 32308.0s
+################################################################################
+                     [1m Learning iteration 33/15000 
+                       Computation: 192942 steps/s (collection: 0.897s, learning 0.122s)
+               Value function loss: 0.0011
+                    Surrogate loss: -0.0015
+             Mean action noise std: 0.40
+                 Mean total reward: 1.34
+               Mean episode length: 457.22
+     Episode_Reward/action_rate_l2: -0.0075
+ Episode_Reward/undesired_contacts: -0.0095
+Episode_Reward/joint_pos_pitch_exp: 0.0855
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6492
+      Episode_Termination/time_out: 2.0833
+  Episode_Termination/base_contact: 1.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 13369344
+                    Iteration time: 1.02s
+                        Total time: 74.41s
+                               ETA: 32756.6s
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0022, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.7968e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0033, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0011, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0030, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0026, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0023, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0033, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0033, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0032, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 34/15000 
+                       Computation: 193226 steps/s (collection: 0.892s, learning 0.125s)
+               Value function loss: 0.0008
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.40
+                 Mean total reward: 1.98
+               Mean episode length: 610.06
+     Episode_Reward/action_rate_l2: -0.0102
+ Episode_Reward/undesired_contacts: -0.0060
+Episode_Reward/joint_pos_pitch_exp: 0.1112
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.7083
+  Episode_Termination/base_contact: 1.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 13565952
+                    Iteration time: 1.02s
+                        Total time: 75.43s
+                               ETA: 32253.6s
+################################################################################
+                     [1m Learning iteration 34/15000 
+                       Computation: 193226 steps/s (collection: 0.892s, learning 0.125s)
+               Value function loss: 0.0008
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.40
+                 Mean total reward: 1.98
+               Mean episode length: 610.06
+     Episode_Reward/action_rate_l2: -0.0102
+ Episode_Reward/undesired_contacts: -0.0060
+Episode_Reward/joint_pos_pitch_exp: 0.1112
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.7083
+  Episode_Termination/base_contact: 1.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 13762560
+                    Iteration time: 1.02s
+                        Total time: 76.45s
+                               ETA: 32688.7s
+(-0.28, -0.28)
+비교대상 tensor(0.0023, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0033, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-2.6110e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0034, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0017, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.4222e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0026, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0017, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0021, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0026, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0008, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 35/15000 
+                       Computation: 191719 steps/s (collection: 0.904s, learning 0.121s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.40
+                 Mean total reward: 1.74
+               Mean episode length: 549.02
+     Episode_Reward/action_rate_l2: -0.0087
+ Episode_Reward/undesired_contacts: -0.0080
+Episode_Reward/joint_pos_pitch_exp: 0.1026
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6497
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 1.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 13959168
+                    Iteration time: 1.03s
+                        Total time: 77.47s
+                               ETA: 32204.9s
+################################################################################
+                     [1m Learning iteration 35/15000 
+                       Computation: 191719 steps/s (collection: 0.904s, learning 0.121s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0019
+             Mean action noise std: 0.40
+                 Mean total reward: 1.74
+               Mean episode length: 549.02
+     Episode_Reward/action_rate_l2: -0.0087
+ Episode_Reward/undesired_contacts: -0.0080
+Episode_Reward/joint_pos_pitch_exp: 0.1026
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6497
+      Episode_Termination/time_out: 2.4583
+  Episode_Termination/base_contact: 1.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 14155776
+                    Iteration time: 1.03s
+                        Total time: 78.50s
+                               ETA: 32631.1s
+(-0.28, -0.28)
+비교대상 tensor(0.0030, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0023, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0034, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0013, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0022, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0038, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0038, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0040, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0020, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 36/15000 
+                       Computation: 190789 steps/s (collection: 0.904s, learning 0.126s)
+               Value function loss: 0.0005
+                    Surrogate loss: 0.0011
+             Mean action noise std: 0.39
+                 Mean total reward: 2.36
+               Mean episode length: 647.32
+     Episode_Reward/action_rate_l2: -0.0120
+ Episode_Reward/undesired_contacts: -0.0038
+Episode_Reward/joint_pos_pitch_exp: 0.1495
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.4167
+  Episode_Termination/base_contact: 0.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 14352384
+                    Iteration time: 1.03s
+                        Total time: 79.53s
+                               ETA: 32163.9s
+################################################################################
+                     [1m Learning iteration 36/15000 
+                       Computation: 190789 steps/s (collection: 0.904s, learning 0.126s)
+               Value function loss: 0.0005
+                    Surrogate loss: 0.0011
+             Mean action noise std: 0.39
+                 Mean total reward: 2.36
+               Mean episode length: 647.32
+     Episode_Reward/action_rate_l2: -0.0120
+ Episode_Reward/undesired_contacts: -0.0038
+Episode_Reward/joint_pos_pitch_exp: 0.1495
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6484
+      Episode_Termination/time_out: 2.4167
+  Episode_Termination/base_contact: 0.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 14548992
+                    Iteration time: 1.03s
+                        Total time: 80.56s
+                               ETA: 32580.6s
+(-0.28, -0.28)
+비교대상 tensor(0.0026, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0009, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0025, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0015, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0017, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0026, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-0.0002, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0032, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 37/15000 
+                       Computation: 189867 steps/s (collection: 0.898s, learning 0.137s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0033
+             Mean action noise std: 0.39
+                 Mean total reward: 2.53
+               Mean episode length: 681.67
+     Episode_Reward/action_rate_l2: -0.0115
+ Episode_Reward/undesired_contacts: -0.0048
+Episode_Reward/joint_pos_pitch_exp: 0.1423
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 2.6250
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 14745600
+                    Iteration time: 1.04s
+                        Total time: 81.59s
+                               ETA: 32128.9s
+################################################################################
+                     [1m Learning iteration 37/15000 
+                       Computation: 189867 steps/s (collection: 0.898s, learning 0.137s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0033
+             Mean action noise std: 0.39
+                 Mean total reward: 2.53
+               Mean episode length: 681.67
+     Episode_Reward/action_rate_l2: -0.0115
+ Episode_Reward/undesired_contacts: -0.0048
+Episode_Reward/joint_pos_pitch_exp: 0.1423
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6487
+      Episode_Termination/time_out: 2.6250
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 14942208
+                    Iteration time: 1.04s
+                        Total time: 82.63s
+                               ETA: 32536.6s
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0042, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0034, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0040, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0025, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0014, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0016, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0044, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 38/15000 
+                       Computation: 196509 steps/s (collection: 0.871s, learning 0.129s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0007
+             Mean action noise std: 0.39
+                 Mean total reward: 2.91
+               Mean episode length: 723.28
+     Episode_Reward/action_rate_l2: -0.0127
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: 0.1704
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6503
+      Episode_Termination/time_out: 3.2083
+  Episode_Termination/base_contact: 0.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 15138816
+                    Iteration time: 1.00s
+                        Total time: 83.63s
+                               ETA: 32084.1s
+################################################################################
+                     [1m Learning iteration 38/15000 
+                       Computation: 196509 steps/s (collection: 0.871s, learning 0.129s)
+               Value function loss: 0.0006
+                    Surrogate loss: 0.0007
+             Mean action noise std: 0.39
+                 Mean total reward: 2.91
+               Mean episode length: 723.28
+     Episode_Reward/action_rate_l2: -0.0127
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: 0.1704
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6503
+      Episode_Termination/time_out: 3.2083
+  Episode_Termination/base_contact: 0.8333
+--------------------------------------------------------------------------------
+                   Total timesteps: 15335424
+                    Iteration time: 1.00s
+                        Total time: 84.63s
+                               ETA: 32467.9s
+(-0.28, -0.28)
+비교대상 tensor(0.0037, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0032, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0048, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0025, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0044, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0032, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.5917e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0033, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0042, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.7463e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0034, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0044, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0049, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0010, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 39/15000 
+                       Computation: 193037 steps/s (collection: 0.895s, learning 0.123s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0008
+             Mean action noise std: 0.39
+                 Mean total reward: 3.02
+               Mean episode length: 758.92
+     Episode_Reward/action_rate_l2: -0.0127
+ Episode_Reward/undesired_contacts: -0.0038
+Episode_Reward/joint_pos_pitch_exp: 0.1715
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6493
+      Episode_Termination/time_out: 2.6667
+  Episode_Termination/base_contact: 0.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 15532032
+                    Iteration time: 1.02s
+                        Total time: 85.65s
+                               ETA: 32035.0s
+################################################################################
+                     [1m Learning iteration 39/15000 
+                       Computation: 193037 steps/s (collection: 0.895s, learning 0.123s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0008
+             Mean action noise std: 0.39
+                 Mean total reward: 3.02
+               Mean episode length: 758.92
+     Episode_Reward/action_rate_l2: -0.0127
+ Episode_Reward/undesired_contacts: -0.0038
+Episode_Reward/joint_pos_pitch_exp: 0.1715
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6493
+      Episode_Termination/time_out: 2.6667
+  Episode_Termination/base_contact: 0.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 15728640
+                    Iteration time: 1.02s
+                        Total time: 86.67s
+                               ETA: 32416.0s
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0044, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0034, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0048, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 40/15000 
+                       Computation: 192000 steps/s (collection: 0.900s, learning 0.124s)
+               Value function loss: 0.0004
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.38
+                 Mean total reward: 3.48
+               Mean episode length: 843.17
+     Episode_Reward/action_rate_l2: -0.0147
+ Episode_Reward/undesired_contacts: -0.0016
+Episode_Reward/joint_pos_pitch_exp: 0.2086
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6495
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 0.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 15925248
+                    Iteration time: 1.02s
+                        Total time: 87.69s
+                               ETA: 31996.9s
+################################################################################
+                     [1m Learning iteration 40/15000 
+                       Computation: 192000 steps/s (collection: 0.900s, learning 0.124s)
+               Value function loss: 0.0004
+                    Surrogate loss: 0.0009
+             Mean action noise std: 0.38
+                 Mean total reward: 3.48
+               Mean episode length: 843.17
+     Episode_Reward/action_rate_l2: -0.0147
+ Episode_Reward/undesired_contacts: -0.0016
+Episode_Reward/joint_pos_pitch_exp: 0.2086
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6495
+      Episode_Termination/time_out: 2.5833
+  Episode_Termination/base_contact: 0.3333
+--------------------------------------------------------------------------------
+                   Total timesteps: 16121856
+                    Iteration time: 1.02s
+                        Total time: 88.72s
+                               ETA: 32370.5s
+(-0.28, -0.28)
+비교대상 tensor(0.0022, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0048, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0040, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0049, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.1395e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0050, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0038, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0048, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0049, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0048, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0039, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0050, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0024, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0038, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0038, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 41/15000 
+                       Computation: 195435 steps/s (collection: 0.882s, learning 0.123s)
+               Value function loss: 0.0005
+                    Surrogate loss: 0.0038
+             Mean action noise std: 0.38
+                 Mean total reward: 3.65
+               Mean episode length: 825.81
+     Episode_Reward/action_rate_l2: -0.0134
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: 0.1985
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6501
+      Episode_Termination/time_out: 2.8750
+  Episode_Termination/base_contact: 0.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 16318464
+                    Iteration time: 1.01s
+                        Total time: 89.72s
+                               ETA: 31956.0s
+################################################################################
+                     [1m Learning iteration 41/15000 
+                       Computation: 195435 steps/s (collection: 0.882s, learning 0.123s)
+               Value function loss: 0.0005
+                    Surrogate loss: 0.0038
+             Mean action noise std: 0.38
+                 Mean total reward: 3.65
+               Mean episode length: 825.81
+     Episode_Reward/action_rate_l2: -0.0134
+ Episode_Reward/undesired_contacts: -0.0035
+Episode_Reward/joint_pos_pitch_exp: 0.1985
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6501
+      Episode_Termination/time_out: 2.8750
+  Episode_Termination/base_contact: 0.6250
+--------------------------------------------------------------------------------
+                   Total timesteps: 16515072
+                    Iteration time: 1.01s
+                        Total time: 90.73s
+                               ETA: 32314.3s
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0047, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0045, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0051, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0051, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0052, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0052, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0053, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0018, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0044, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0029, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0052, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0052, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0055, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0044, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0028, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0057, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0053, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 42/15000 
+                       Computation: 192094 steps/s (collection: 0.900s, learning 0.123s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0002
+             Mean action noise std: 0.38
+                 Mean total reward: 3.98
+               Mean episode length: 832.00
+     Episode_Reward/action_rate_l2: -0.0138
+ Episode_Reward/undesired_contacts: -0.0028
+Episode_Reward/joint_pos_pitch_exp: 0.2242
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6506
+      Episode_Termination/time_out: 4.2083
+  Episode_Termination/base_contact: 0.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 16711680
+                    Iteration time: 1.02s
+                        Total time: 91.75s
+                               ETA: 31916.7s
+################################################################################
+                     [1m Learning iteration 42/15000 
+                       Computation: 192094 steps/s (collection: 0.900s, learning 0.123s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0002
+             Mean action noise std: 0.38
+                 Mean total reward: 3.98
+               Mean episode length: 832.00
+     Episode_Reward/action_rate_l2: -0.0138
+ Episode_Reward/undesired_contacts: -0.0028
+Episode_Reward/joint_pos_pitch_exp: 0.2242
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6506
+      Episode_Termination/time_out: 4.2083
+  Episode_Termination/base_contact: 0.7917
+--------------------------------------------------------------------------------
+                   Total timesteps: 16908288
+                    Iteration time: 1.02s
+                        Total time: 92.77s
+                               ETA: 32272.7s
+(-0.28, -0.28)
+비교대상 tensor(-3.9750e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0057, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0054, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(-3.0005e-05, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0057, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0019, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0035, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0057, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0058, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0027, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0016, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0057, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0058, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0056, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0058, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 43/15000 
+                       Computation: 198093 steps/s (collection: 0.871s, learning 0.121s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0001
+             Mean action noise std: 0.38
+                 Mean total reward: 3.76
+               Mean episode length: 763.02
+     Episode_Reward/action_rate_l2: -0.0110
+ Episode_Reward/undesired_contacts: -0.0063
+Episode_Reward/joint_pos_pitch_exp: 0.1871
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6496
+      Episode_Termination/time_out: 2.3750
+  Episode_Termination/base_contact: 1.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 17104896
+                    Iteration time: 0.99s
+                        Total time: 93.77s
+                               ETA: 31874.5s
+################################################################################
+                     [1m Learning iteration 43/15000 
+                       Computation: 198093 steps/s (collection: 0.871s, learning 0.121s)
+               Value function loss: 0.0006
+                    Surrogate loss: -0.0001
+             Mean action noise std: 0.38
+                 Mean total reward: 3.76
+               Mean episode length: 763.02
+     Episode_Reward/action_rate_l2: -0.0110
+ Episode_Reward/undesired_contacts: -0.0063
+Episode_Reward/joint_pos_pitch_exp: 0.1871
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6496
+      Episode_Termination/time_out: 2.3750
+  Episode_Termination/base_contact: 1.0417
+--------------------------------------------------------------------------------
+                   Total timesteps: 17301504
+                    Iteration time: 0.99s
+                        Total time: 94.76s
+                               ETA: 32211.9s
+(-0.28, -0.28)
+비교대상 tensor(0.0057, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0058, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0061, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0060, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0061, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0059, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0058, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0030, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0059, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0062, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0062, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0064, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0050, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0041, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0060, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0046, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0065, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0064, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0060, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0063, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0063, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0064, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0062, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 44/15000 
+                       Computation: 194854 steps/s (collection: 0.886s, learning 0.123s)
+               Value function loss: 0.0003
+                    Surrogate loss: 0.0025
+             Mean action noise std: 0.38
+                 Mean total reward: 5.07
+               Mean episode length: 901.20
+     Episode_Reward/action_rate_l2: -0.0149
+ Episode_Reward/undesired_contacts: -0.0012
+Episode_Reward/joint_pos_pitch_exp: 0.2860
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6499
+      Episode_Termination/time_out: 2.8333
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 17498112
+                    Iteration time: 1.01s
+                        Total time: 95.77s
+                               ETA: 31829.3s
+################################################################################
+                     [1m Learning iteration 44/15000 
+                       Computation: 194854 steps/s (collection: 0.886s, learning 0.123s)
+               Value function loss: 0.0003
+                    Surrogate loss: 0.0025
+             Mean action noise std: 0.38
+                 Mean total reward: 5.07
+               Mean episode length: 901.20
+     Episode_Reward/action_rate_l2: -0.0149
+ Episode_Reward/undesired_contacts: -0.0012
+Episode_Reward/joint_pos_pitch_exp: 0.2860
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6499
+      Episode_Termination/time_out: 2.8333
+  Episode_Termination/base_contact: 0.2083
+--------------------------------------------------------------------------------
+                   Total timesteps: 17694720
+                    Iteration time: 1.01s
+                        Total time: 96.78s
+                               ETA: 32164.7s
+(-0.28, -0.28)
+비교대상 tensor(0.0062, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0064, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0061, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0065, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0065, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0062, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0063, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0063, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0066, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0063, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0064, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0066, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0067, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0066, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0064, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0031, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0055, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0049, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0066, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0068, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0065, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0070, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0070, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0067, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 45/15000 
+                       Computation: 193036 steps/s (collection: 0.897s, learning 0.122s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0012
+             Mean action noise std: 0.37
+                 Mean total reward: 5.86
+               Mean episode length: 960.59
+     Episode_Reward/action_rate_l2: -0.0150
+ Episode_Reward/undesired_contacts: -0.0008
+Episode_Reward/joint_pos_pitch_exp: 0.3127
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.9167
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 17891328
+                    Iteration time: 1.02s
+                        Total time: 97.80s
+                               ETA: 31794.5s
+################################################################################
+                     [1m Learning iteration 45/15000 
+                       Computation: 193036 steps/s (collection: 0.897s, learning 0.122s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0012
+             Mean action noise std: 0.37
+                 Mean total reward: 5.86
+               Mean episode length: 960.59
+     Episode_Reward/action_rate_l2: -0.0150
+ Episode_Reward/undesired_contacts: -0.0008
+Episode_Reward/joint_pos_pitch_exp: 0.3127
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6485
+      Episode_Termination/time_out: 2.9167
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 18087936
+                    Iteration time: 1.02s
+                        Total time: 98.81s
+                               ETA: 32125.6s
+(-0.28, -0.28)
+비교대상 tensor(0.0049, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0066, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0071, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0070, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0069, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0068, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0069, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0070, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0068, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0070, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0070, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0069, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0071, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0069, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0069, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0071, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0071, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0071, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0043, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 46/15000 
+                       Computation: 196215 steps/s (collection: 0.876s, learning 0.125s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0109
+             Mean action noise std: 0.37
+                 Mean total reward: 6.46
+               Mean episode length: 970.35
+     Episode_Reward/action_rate_l2: -0.0152
+ Episode_Reward/undesired_contacts: -0.0005
+Episode_Reward/joint_pos_pitch_exp: 0.3405
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 3.4583
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 18284544
+                    Iteration time: 1.00s
+                        Total time: 99.82s
+                               ETA: 31758.8s
+################################################################################
+                     [1m Learning iteration 46/15000 
+                       Computation: 196215 steps/s (collection: 0.876s, learning 0.125s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0109
+             Mean action noise std: 0.37
+                 Mean total reward: 6.46
+               Mean episode length: 970.35
+     Episode_Reward/action_rate_l2: -0.0152
+ Episode_Reward/undesired_contacts: -0.0005
+Episode_Reward/joint_pos_pitch_exp: 0.3405
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6479
+      Episode_Termination/time_out: 3.4583
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 18481152
+                    Iteration time: 1.00s
+                        Total time: 100.82s
+                               ETA: 32077.6s
+(-0.28, -0.28)
+비교대상 tensor(0.0073, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0074, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0074, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0073, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0058, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0074, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0059, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0073, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0072, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0074, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0075, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0074, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0074, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0036, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0077, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0073, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0078, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0079, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0077, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0076, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0077, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0077, device='cuda:0')
+조건 0.008
+################################################################################
+                     [1m Learning iteration 47/15000 
+                       Computation: 194276 steps/s (collection: 0.888s, learning 0.124s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0051
+             Mean action noise std: 0.36
+                 Mean total reward: 6.69
+               Mean episode length: 950.69
+     Episode_Reward/action_rate_l2: -0.0147
+ Episode_Reward/undesired_contacts: -0.0008
+Episode_Reward/joint_pos_pitch_exp: 0.3584
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 3.5000
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 18677760
+                    Iteration time: 1.01s
+                        Total time: 101.83s
+                               ETA: 31722.4s
+################################################################################
+                     [1m Learning iteration 47/15000 
+                       Computation: 194276 steps/s (collection: 0.888s, learning 0.124s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0051
+             Mean action noise std: 0.36
+                 Mean total reward: 6.69
+               Mean episode length: 950.69
+     Episode_Reward/action_rate_l2: -0.0147
+ Episode_Reward/undesired_contacts: -0.0008
+Episode_Reward/joint_pos_pitch_exp: 0.3584
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6480
+      Episode_Termination/time_out: 3.5000
+  Episode_Termination/base_contact: 0.1250
+--------------------------------------------------------------------------------
+                   Total timesteps: 18874368
+                    Iteration time: 1.01s
+                        Total time: 102.84s
+                               ETA: 32037.7s
+(-0.28, -0.28)
+비교대상 tensor(0.0068, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0075, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0079, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0062, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0075, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0077, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0079, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0076, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0080, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0075, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0069, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0078, device='cuda:0')
+조건 0.008
+(-0.28, -0.28)
+비교대상 tensor(0.0080, device='cuda:0')

@@ -1,0 +1,28 @@
+{
+    "os": "Windows-10-10.0.26100-SP0",
+    "python": "3.10.16",
+    "heartbeatAt": "2025-04-09T02:11:39.943445",
+    "startedAt": "2025-04-09T02:11:37.474851",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--task",
+        "Velocity-Flat-Berkeley-Humanoid-v0",
+        "--headless"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\shawn\\IsaacLab\\isaac_berkeley_humanoid\\scripts\\rsl_rl\\train.py",
+    "codePath": "scripts\\rsl_rl\\train.py",
+    "git": {
+        "remote": "https://github.com/HybridRobotics/isaac_berkeley_humanoid.git",
+        "commit": "ffc7b2692917fdaf7cd87da53ada778e989dae35"
+    },
+    "email": null,
+    "root": "C:/Users/shawn/IsaacLab/isaac_berkeley_humanoid",
+    "host": "MARS2",
+    "username": "shawn",
+    "executable": "C:\\Users\\shawn\\anaconda3\\envs\\IsaacLab\\python.exe"
+}

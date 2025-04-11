@@ -1,0 +1,1061 @@
+
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 1.153405 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.293187 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------------+
+|              Active Command Terms              |
++-------+---------------+------------------------+
+| Index | Name          |          Type          |
++-------+---------------+------------------------+
+|   0   | base_velocity | UniformVelocityCommand |
++-------+---------------+------------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 4)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          3 |
+|   1    | wheel_vel  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++-------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (3,)) |
++-------------+---------------------------+-------------+
+|    Index    | Name                      |    Shape    |
++-------------+---------------------------+-------------+
+|      0      | base_lin_vel              |     (3,)    |
++-------------+---------------------------+-------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | scale_all_joint_armature       |
+|   4   | add_all_joint_default_pos      |
+|   5   | scale_all_joint_friction_model |
++-------+--------------------------------+
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | base_external_force_torque   |
+|   1    | reset_base                   |
+|   2    | reset_robot_joints           |
++--------+------------------------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++-------------------------------------+
+|         Active Reward Terms         |
++-------+--------------------+--------+
+| Index | Name               | Weight |
++-------+--------------------+--------+
+|   0   | action_rate_l2     |  -0.01 |
+|   1   | track_velocity     |    1.0 |
+|   2   | undesired_contacts |  -10.0 |
++-------+--------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 1 active terms.
++----------------------------+
+|  Active Curriculum Terms   |
++-------+--------------------+
+| Index | Name               |
++-------+--------------------+
+|   0   | command_velocity_x |
++-------+--------------------+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Actor MLP: Sequential(
+  (0): Linear(in_features=3, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=4, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=3, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+reward tensor([4.9614e-05], device='cuda:0')
+commanded_velocity tensor([0.1192], device='cuda:0')
+joint_angle_changed tensor([[0.0004]], device='cuda:0')
+reward tensor([0.0045], device='cuda:0')
+commanded_velocity tensor([0.0493], device='cuda:0')
+joint_angle_changed tensor([[0.0911]], device='cuda:0')
+reward tensor([0.0467], device='cuda:0')
+commanded_velocity tensor([0.4728], device='cuda:0')
+joint_angle_changed tensor([[0.0988]], device='cuda:0')
+reward tensor([-0.0238], device='cuda:0')
+commanded_velocity tensor([-0.5448], device='cuda:0')
+joint_angle_changed tensor([[0.0438]], device='cuda:0')
+reward tensor([0.1415], device='cuda:0')
+commanded_velocity tensor([0.5867], device='cuda:0')
+joint_angle_changed tensor([[0.2412]], device='cuda:0')
+reward tensor([-0.0044], device='cuda:0')
+commanded_velocity tensor([-0.0764], device='cuda:0')
+joint_angle_changed tensor([[0.0573]], device='cuda:0')
+reward tensor([0.0056], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0079]], device='cuda:0')
+reward tensor([0.0083], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0118]], device='cuda:0')
+reward tensor([0.0168], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0237]], device='cuda:0')
+reward tensor([0.0225], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0319]], device='cuda:0')
+reward tensor([0.0276], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0390]], device='cuda:0')
+reward tensor([0.0286], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0405]], device='cuda:0')
+reward tensor([0.0311], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0440]], device='cuda:0')
+reward tensor([0.0330], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0467]], device='cuda:0')
+reward tensor([0.0550], device='cuda:0')
+commanded_velocity tensor([-0.7073], device='cuda:0')
+joint_angle_changed tensor([[-0.0777]], device='cuda:0')
+reward tensor([-0.0052], device='cuda:0')
+commanded_velocity tensor([-0.0725], device='cuda:0')
+joint_angle_changed tensor([[0.0719]], device='cuda:0')
+reward tensor([-0.0272], device='cuda:0')
+commanded_velocity tensor([-0.4961], device='cuda:0')
+joint_angle_changed tensor([[0.0548]], device='cuda:0')
+reward tensor([-0.0670], device='cuda:0')
+commanded_velocity tensor([-0.9633], device='cuda:0')
+joint_angle_changed tensor([[0.0696]], device='cuda:0')
+reward tensor([0.0328], device='cuda:0')
+commanded_velocity tensor([0.6044], device='cuda:0')
+joint_angle_changed tensor([[0.0542]], device='cuda:0')
+reward tensor([0.0105], device='cuda:0')
+commanded_velocity tensor([0.0979], device='cuda:0')
+joint_angle_changed tensor([[0.1073]], device='cuda:0')
+reward tensor([0.0478], device='cuda:0')
+commanded_velocity tensor([0.6623], device='cuda:0')
+joint_angle_changed tensor([[0.0723]], device='cuda:0')
+reward tensor([-0.0051], device='cuda:0')
+commanded_velocity tensor([-0.1312], device='cuda:0')
+joint_angle_changed tensor([[0.0386]], device='cuda:0')
+reward tensor([0.0455], device='cuda:0')
+commanded_velocity tensor([0.6859], device='cuda:0')
+joint_angle_changed tensor([[0.0664]], device='cuda:0')
+reward tensor([0.0554], device='cuda:0')
+commanded_velocity tensor([0.9061], device='cuda:0')
+joint_angle_changed tensor([[0.0611]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 6 steps/s (collection: 3.356s, learning 0.167s)
+               Value function loss: 0.0292
+                    Surrogate loss: -0.0492
+             Mean action noise std: 0.50
+                 Mean total reward: -0.31
+               Mean episode length: 1.50
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0171
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0009
+Metrics/base_velocity/error_vel_yaw: 0.0009
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24
+                    Iteration time: 3.52s
+                        Total time: 3.52s
+                               ETA: 52852.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 6 steps/s (collection: 3.356s, learning 0.167s)
+               Value function loss: 0.0292
+                    Surrogate loss: -0.0492
+             Mean action noise std: 0.50
+                 Mean total reward: -0.31
+               Mean episode length: 1.50
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0171
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0009
+Metrics/base_velocity/error_vel_yaw: 0.0009
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 48
+                    Iteration time: 3.52s
+                        Total time: 7.05s
+                               ETA: 105704.9s
+Could not find git repository in S:\anaconda3\envs\IsaacLab_2\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-03-11_21-53-42\git\isaac_berkeley_humanoid.diff
+reward tensor([-0.0057], device='cuda:0')
+commanded_velocity tensor([-0.0958], device='cuda:0')
+joint_angle_changed tensor([[0.0598]], device='cuda:0')
+reward tensor([-0.0079], device='cuda:0')
+commanded_velocity tensor([-0.1673], device='cuda:0')
+joint_angle_changed tensor([[0.0472]], device='cuda:0')
+reward tensor([-0.0136], device='cuda:0')
+commanded_velocity tensor([-0.2711], device='cuda:0')
+joint_angle_changed tensor([[0.0502]], device='cuda:0')
+reward tensor([-0.0425], device='cuda:0')
+commanded_velocity tensor([-0.9208], device='cuda:0')
+joint_angle_changed tensor([[0.0461]], device='cuda:0')
+reward tensor([-0.0021], device='cuda:0')
+commanded_velocity tensor([-0.0379], device='cuda:0')
+joint_angle_changed tensor([[0.0566]], device='cuda:0')
+reward tensor([0.0045], device='cuda:0')
+commanded_velocity tensor([-0.5738], device='cuda:0')
+joint_angle_changed tensor([[-0.0078]], device='cuda:0')
+reward tensor([0.0347], device='cuda:0')
+commanded_velocity tensor([0.6230], device='cuda:0')
+joint_angle_changed tensor([[0.0556]], device='cuda:0')
+reward tensor([0.0107], device='cuda:0')
+commanded_velocity tensor([0.1769], device='cuda:0')
+joint_angle_changed tensor([[0.0602]], device='cuda:0')
+reward tensor([-0.0387], device='cuda:0')
+commanded_velocity tensor([-0.7569], device='cuda:0')
+joint_angle_changed tensor([[0.0511]], device='cuda:0')
+reward tensor([0.0450], device='cuda:0')
+commanded_velocity tensor([0.8616], device='cuda:0')
+joint_angle_changed tensor([[0.0523]], device='cuda:0')
+reward tensor([0.0292], device='cuda:0')
+commanded_velocity tensor([0.5489], device='cuda:0')
+joint_angle_changed tensor([[0.0533]], device='cuda:0')
+reward tensor([-0.0101], device='cuda:0')
+commanded_velocity tensor([-0.1895], device='cuda:0')
+joint_angle_changed tensor([[0.0534]], device='cuda:0')
+reward tensor([-0.0246], device='cuda:0')
+commanded_velocity tensor([-0.6884], device='cuda:0')
+joint_angle_changed tensor([[0.0358]], device='cuda:0')
+reward tensor([-0.0081], device='cuda:0')
+commanded_velocity tensor([-0.1671], device='cuda:0')
+joint_angle_changed tensor([[0.0482]], device='cuda:0')
+reward tensor([0.0360], device='cuda:0')
+commanded_velocity tensor([0.6612], device='cuda:0')
+joint_angle_changed tensor([[0.0545]], device='cuda:0')
+reward tensor([-0.0090], device='cuda:0')
+commanded_velocity tensor([-0.1684], device='cuda:0')
+joint_angle_changed tensor([[0.0534]], device='cuda:0')
+reward tensor([-0.0190], device='cuda:0')
+commanded_velocity tensor([-0.2297], device='cuda:0')
+joint_angle_changed tensor([[0.0827]], device='cuda:0')
+reward tensor([-0.0005], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[0.0017]], device='cuda:0')
+reward tensor([0.0018], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[-0.0057]], device='cuda:0')
+reward tensor([0.0079], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[-0.0254]], device='cuda:0')
+reward tensor([0.0116], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[-0.0375]], device='cuda:0')
+reward tensor([0.0131], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[-0.0422]], device='cuda:0')
+reward tensor([0.0134], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[-0.0432]], device='cuda:0')
+reward tensor([0.0255], device='cuda:0')
+commanded_velocity tensor([-0.3096], device='cuda:0')
+joint_angle_changed tensor([[-0.0822]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 9 steps/s (collection: 2.478s, learning 0.086s)
+               Value function loss: 0.0128
+                    Surrogate loss: -0.0387
+             Mean action noise std: 0.50
+                 Mean total reward: -0.35
+               Mean episode length: 1.41
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: -0.0000
+ Episode_Reward/undesired_contacts: -0.0167
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0012
+Metrics/base_velocity/error_vel_yaw: 0.0008
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 72
+                    Iteration time: 2.56s
+                        Total time: 9.61s
+                               ETA: 72081.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 9 steps/s (collection: 2.478s, learning 0.086s)
+               Value function loss: 0.0128
+                    Surrogate loss: -0.0387
+             Mean action noise std: 0.50
+                 Mean total reward: -0.35
+               Mean episode length: 1.41
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: -0.0000
+ Episode_Reward/undesired_contacts: -0.0167
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0012
+Metrics/base_velocity/error_vel_yaw: 0.0008
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 96
+                    Iteration time: 2.56s
+                        Total time: 12.18s
+                               ETA: 91313.8s
+reward tensor([-0.0890], device='cuda:0')
+commanded_velocity tensor([-0.5231], device='cuda:0')
+joint_angle_changed tensor([[0.1701]], device='cuda:0')
+reward tensor([0.0007], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.0072]], device='cuda:0')
+reward tensor([0.0012], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.0118]], device='cuda:0')
+reward tensor([0.0015], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.0157]], device='cuda:0')
+reward tensor([0.0020], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.0202]], device='cuda:0')
+reward tensor([0.0035], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.0360]], device='cuda:0')
+reward tensor([0.0059], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.0605]], device='cuda:0')
+reward tensor([0.0125], device='cuda:0')
+commanded_velocity tensor([-0.0975], device='cuda:0')
+joint_angle_changed tensor([[-0.1278]], device='cuda:0')
+reward tensor([0.0366], device='cuda:0')
+commanded_velocity tensor([0.6682], device='cuda:0')
+joint_angle_changed tensor([[0.0548]], device='cuda:0')
+reward tensor([0.0331], device='cuda:0')
+commanded_velocity tensor([0.6838], device='cuda:0')
+joint_angle_changed tensor([[0.0484]], device='cuda:0')
+reward tensor([0.0692], device='cuda:0')
+commanded_velocity tensor([0.8626], device='cuda:0')
+joint_angle_changed tensor([[0.0802]], device='cuda:0')
+reward tensor([6.4534e-05], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[-0.0025]], device='cuda:0')
+reward tensor([-7.5680e-05], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[0.0029]], device='cuda:0')
+reward tensor([-0.0002], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[0.0062]], device='cuda:0')
+reward tensor([-1.7033e-06], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[6.6215e-05]], device='cuda:0')
+reward tensor([6.1048e-05], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[-0.0024]], device='cuda:0')
+reward tensor([0.0002], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[-0.0065]], device='cuda:0')
+reward tensor([0.0003], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[-0.0129]], device='cuda:0')
+reward tensor([0.0002], device='cuda:0')
+commanded_velocity tensor([-0.0257], device='cuda:0')
+joint_angle_changed tensor([[-0.0095]], device='cuda:0')
+reward tensor([0.0308], device='cuda:0')
+commanded_velocity tensor([0.6301], device='cuda:0')
+joint_angle_changed tensor([[0.0489]], device='cuda:0')
+reward tensor([0.0523], device='cuda:0')
+commanded_velocity tensor([0.8417], device='cuda:0')
+joint_angle_changed tensor([[0.0621]], device='cuda:0')
+reward tensor([-0.0213], device='cuda:0')
+commanded_velocity tensor([0.9291], device='cuda:0')
+joint_angle_changed tensor([[-0.0229]], device='cuda:0')
+reward tensor([4.9953e-05], device='cuda:0')
+commanded_velocity tensor([-0.0074], device='cuda:0')
+joint_angle_changed tensor([[-0.0067]], device='cuda:0')
+reward tensor([0.0061], device='cuda:0')
+commanded_velocity tensor([0.1306], device='cuda:0')
+joint_angle_changed tensor([[0.0463]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 9 steps/s (collection: 2.407s, learning 0.085s)
+               Value function loss: 0.0115
+                    Surrogate loss: -0.0453
+             Mean action noise std: 0.50
+                 Mean total reward: -0.34
+               Mean episode length: 1.60
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0150
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0016
+Metrics/base_velocity/error_vel_yaw: 0.0022
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 120
+                    Iteration time: 2.49s
+                        Total time: 14.67s
+                               ETA: 73330.1s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 9 steps/s (collection: 2.407s, learning 0.085s)
+               Value function loss: 0.0115
+                    Surrogate loss: -0.0453
+             Mean action noise std: 0.50
+                 Mean total reward: -0.34
+               Mean episode length: 1.60
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0150
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0016
+Metrics/base_velocity/error_vel_yaw: 0.0022
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 144
+                    Iteration time: 2.49s
+                        Total time: 17.16s
+                               ETA: 85788.5s
+reward tensor([0.0139], device='cuda:0')
+commanded_velocity tensor([0.2796], device='cuda:0')
+joint_angle_changed tensor([[0.0496]], device='cuda:0')
+reward tensor([0.0248], device='cuda:0')
+commanded_velocity tensor([0.4481], device='cuda:0')
+joint_angle_changed tensor([[0.0553]], device='cuda:0')
+reward tensor([-0.0517], device='cuda:0')
+commanded_velocity tensor([-0.9820], device='cuda:0')
+joint_angle_changed tensor([[0.0527]], device='cuda:0')
+reward tensor([0.0272], device='cuda:0')
+commanded_velocity tensor([0.5211], device='cuda:0')
+joint_angle_changed tensor([[0.0523]], device='cuda:0')
+reward tensor([-0.0016], device='cuda:0')
+commanded_velocity tensor([0.3266], device='cuda:0')
+joint_angle_changed tensor([[-0.0049]], device='cuda:0')
+reward tensor([-0.0168], device='cuda:0')
+commanded_velocity tensor([-0.3486], device='cuda:0')
+joint_angle_changed tensor([[0.0482]], device='cuda:0')
+reward tensor([-0.0050], device='cuda:0')
+commanded_velocity tensor([0.6002], device='cuda:0')
+joint_angle_changed tensor([[-0.0083]], device='cuda:0')
+reward tensor([-0.0057], device='cuda:0')
+commanded_velocity tensor([0.5474], device='cuda:0')
+joint_angle_changed tensor([[-0.0103]], device='cuda:0')
+reward tensor([-0.0010], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0072]], device='cuda:0')
+reward tensor([-0.0004], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0029]], device='cuda:0')
+reward tensor([-0.0008], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0058]], device='cuda:0')
+reward tensor([-0.0008], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0056]], device='cuda:0')
+reward tensor([-0.0008], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0055]], device='cuda:0')
+reward tensor([-0.0017], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0116]], device='cuda:0')
+reward tensor([-0.0061], device='cuda:0')
+commanded_velocity tensor([0.1448], device='cuda:0')
+joint_angle_changed tensor([[-0.0420]], device='cuda:0')
+reward tensor([0.0541], device='cuda:0')
+commanded_velocity tensor([0.9241], device='cuda:0')
+joint_angle_changed tensor([[0.0585]], device='cuda:0')
+reward tensor([-0.0052], device='cuda:0')
+commanded_velocity tensor([-0.0978], device='cuda:0')
+joint_angle_changed tensor([[0.0529]], device='cuda:0')
+reward tensor([-0.0226], device='cuda:0')
+commanded_velocity tensor([-0.3602], device='cuda:0')
+joint_angle_changed tensor([[0.0627]], device='cuda:0')
+reward tensor([-0.0077], device='cuda:0')
+commanded_velocity tensor([0.7661], device='cuda:0')
+joint_angle_changed tensor([[-0.0100]], device='cuda:0')
+reward tensor([0.0132], device='cuda:0')
+commanded_velocity tensor([0.2692], device='cuda:0')
+joint_angle_changed tensor([[0.0489]], device='cuda:0')
+reward tensor([0.0081], device='cuda:0')
+commanded_velocity tensor([0.1357], device='cuda:0')
+joint_angle_changed tensor([[0.0600]], device='cuda:0')
+reward tensor([-0.0051], device='cuda:0')
+commanded_velocity tensor([0.2941], device='cuda:0')
+joint_angle_changed tensor([[-0.0174]], device='cuda:0')
+reward tensor([-0.0050], device='cuda:0')
+commanded_velocity tensor([0.2941], device='cuda:0')
+joint_angle_changed tensor([[-0.0170]], device='cuda:0')
+reward tensor([-0.0039], device='cuda:0')
+commanded_velocity tensor([0.2941], device='cuda:0')
+joint_angle_changed tensor([[-0.0131]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 9 steps/s (collection: 2.361s, learning 0.085s)
+               Value function loss: 0.0084
+                    Surrogate loss: -0.0386
+             Mean action noise std: 0.50
+                 Mean total reward: -0.34
+               Mean episode length: 1.55
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0158
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0015
+Metrics/base_velocity/error_vel_yaw: 0.0018
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 168
+                    Iteration time: 2.45s
+                        Total time: 19.61s
+                               ETA: 73509.6s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 9 steps/s (collection: 2.361s, learning 0.085s)
+               Value function loss: 0.0084
+                    Surrogate loss: -0.0386
+             Mean action noise std: 0.50
+                 Mean total reward: -0.34
+               Mean episode length: 1.55
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0158
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0015
+Metrics/base_velocity/error_vel_yaw: 0.0018
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 192
+                    Iteration time: 2.45s
+                        Total time: 22.05s
+                               ETA: 82682.1s
+reward tensor([-0.0014], device='cuda:0')
+commanded_velocity tensor([0.2941], device='cuda:0')
+joint_angle_changed tensor([[-0.0047]], device='cuda:0')
+reward tensor([0.0006], device='cuda:0')
+commanded_velocity tensor([0.2941], device='cuda:0')
+joint_angle_changed tensor([[0.0021]], device='cuda:0')
+reward tensor([-0.0013], device='cuda:0')
+commanded_velocity tensor([0.2941], device='cuda:0')
+joint_angle_changed tensor([[-0.0046]], device='cuda:0')
+reward tensor([0.0053], device='cuda:0')
+commanded_velocity tensor([0.6335], device='cuda:0')
+joint_angle_changed tensor([[0.0083]], device='cuda:0')
+reward tensor([0.0098], device='cuda:0')
+commanded_velocity tensor([-0.2855], device='cuda:0')
+joint_angle_changed tensor([[-0.0345]], device='cuda:0')
+reward tensor([0.0159], device='cuda:0')
+commanded_velocity tensor([-0.2855], device='cuda:0')
+joint_angle_changed tensor([[-0.0556]], device='cuda:0')
+reward tensor([0.0206], device='cuda:0')
+commanded_velocity tensor([-0.2855], device='cuda:0')
+joint_angle_changed tensor([[-0.0722]], device='cuda:0')
+reward tensor([0.0254], device='cuda:0')
+commanded_velocity tensor([-0.2855], device='cuda:0')
+joint_angle_changed tensor([[-0.0890]], device='cuda:0')
+reward tensor([0.0271], device='cuda:0')
+commanded_velocity tensor([-0.2855], device='cuda:0')
+joint_angle_changed tensor([[-0.0949]], device='cuda:0')
+reward tensor([-0.0098], device='cuda:0')
+commanded_velocity tensor([-0.1820], device='cuda:0')
+joint_angle_changed tensor([[0.0540]], device='cuda:0')
+reward tensor([-0.0533], device='cuda:0')
+commanded_velocity tensor([-0.9214], device='cuda:0')
+joint_angle_changed tensor([[0.0579]], device='cuda:0')
+reward tensor([0.0221], device='cuda:0')
+commanded_velocity tensor([0.4637], device='cuda:0')
+joint_angle_changed tensor([[0.0477]], device='cuda:0')
+reward tensor([0.0078], device='cuda:0')
+commanded_velocity tensor([0.1278], device='cuda:0')
+joint_angle_changed tensor([[0.0613]], device='cuda:0')
+reward tensor([0.0280], device='cuda:0')
+commanded_velocity tensor([0.5198], device='cuda:0')
+joint_angle_changed tensor([[0.0538]], device='cuda:0')
+reward tensor([0.0630], device='cuda:0')
+commanded_velocity tensor([0.6720], device='cuda:0')
+joint_angle_changed tensor([[0.0937]], device='cuda:0')
+reward tensor([0.0327], device='cuda:0')
+commanded_velocity tensor([0.8319], device='cuda:0')
+joint_angle_changed tensor([[0.0393]], device='cuda:0')
+reward tensor([0.0036], device='cuda:0')
+commanded_velocity tensor([-0.2661], device='cuda:0')
+joint_angle_changed tensor([[-0.0134]], device='cuda:0')
+reward tensor([0.0026], device='cuda:0')
+commanded_velocity tensor([-0.2661], device='cuda:0')
+joint_angle_changed tensor([[-0.0099]], device='cuda:0')
+reward tensor([-0.0119], device='cuda:0')
+commanded_velocity tensor([-0.1536], device='cuda:0')
+joint_angle_changed tensor([[0.0776]], device='cuda:0')
+reward tensor([-0.0283], device='cuda:0')
+commanded_velocity tensor([-0.7293], device='cuda:0')
+joint_angle_changed tensor([[0.0388]], device='cuda:0')
+reward tensor([-1.7325e-05], device='cuda:0')
+commanded_velocity tensor([-0.0023], device='cuda:0')
+joint_angle_changed tensor([[0.0077]], device='cuda:0')
+reward tensor([0.0350], device='cuda:0')
+commanded_velocity tensor([0.6589], device='cuda:0')
+joint_angle_changed tensor([[0.0531]], device='cuda:0')
+reward tensor([-0.0018], device='cuda:0')
+commanded_velocity tensor([-0.0330], device='cuda:0')
+joint_angle_changed tensor([[0.0560]], device='cuda:0')
+reward tensor([7.7309e-05], device='cuda:0')
+commanded_velocity tensor([-0.0097], device='cuda:0')
+joint_angle_changed tensor([[-0.0080]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 9 steps/s (collection: 2.403s, learning 0.083s)
+               Value function loss: 0.0170
+                    Surrogate loss: -0.0230
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.56
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0142
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0014
+Metrics/base_velocity/error_vel_yaw: 0.0011
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 216
+                    Iteration time: 2.49s
+                        Total time: 24.54s
+                               ETA: 73600.3s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 9 steps/s (collection: 2.403s, learning 0.083s)
+               Value function loss: 0.0170
+                    Surrogate loss: -0.0230
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.56
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0142
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0014
+Metrics/base_velocity/error_vel_yaw: 0.0011
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 240
+                    Iteration time: 2.49s
+                        Total time: 27.03s
+                               ETA: 81059.3s
+reward tensor([0.1529], device='cuda:0')
+commanded_velocity tensor([0.8049], device='cuda:0')
+joint_angle_changed tensor([[0.1899]], device='cuda:0')
+reward tensor([0.0027], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[-0.0035]], device='cuda:0')
+reward tensor([2.0942e-05], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[-2.7307e-05]], device='cuda:0')
+reward tensor([-0.0003], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[0.0004]], device='cuda:0')
+reward tensor([-0.0005], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[0.0006]], device='cuda:0')
+reward tensor([-0.0032], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[0.0041]], device='cuda:0')
+reward tensor([-0.0040], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[0.0052]], device='cuda:0')
+reward tensor([0.0521], device='cuda:0')
+commanded_velocity tensor([-0.7669], device='cuda:0')
+joint_angle_changed tensor([[-0.0679]], device='cuda:0')
+reward tensor([-0.0131], device='cuda:0')
+commanded_velocity tensor([-0.2503], device='cuda:0')
+joint_angle_changed tensor([[0.0524]], device='cuda:0')
+reward tensor([-0.0038], device='cuda:0')
+commanded_velocity tensor([-0.0288], device='cuda:0')
+joint_angle_changed tensor([[0.1313]], device='cuda:0')
+reward tensor([0.0005], device='cuda:0')
+commanded_velocity tensor([0.1485], device='cuda:0')
+joint_angle_changed tensor([[0.0033]], device='cuda:0')
+reward tensor([0.0039], device='cuda:0')
+commanded_velocity tensor([0.1485], device='cuda:0')
+joint_angle_changed tensor([[0.0263]], device='cuda:0')
+reward tensor([0.0055], device='cuda:0')
+commanded_velocity tensor([0.1485], device='cuda:0')
+joint_angle_changed tensor([[0.0367]], device='cuda:0')
+reward tensor([0.0043], device='cuda:0')
+commanded_velocity tensor([0.1485], device='cuda:0')
+joint_angle_changed tensor([[0.0286]], device='cuda:0')
+reward tensor([0.0037], device='cuda:0')
+commanded_velocity tensor([0.1485], device='cuda:0')
+joint_angle_changed tensor([[0.0246]], device='cuda:0')
+reward tensor([0.0021], device='cuda:0')
+commanded_velocity tensor([-0.1174], device='cuda:0')
+joint_angle_changed tensor([[-0.0178]], device='cuda:0')
+reward tensor([0.0351], device='cuda:0')
+commanded_velocity tensor([0.6183], device='cuda:0')
+joint_angle_changed tensor([[0.0568]], device='cuda:0')
+reward tensor([-0.0336], device='cuda:0')
+commanded_velocity tensor([-0.3114], device='cuda:0')
+joint_angle_changed tensor([[0.1079]], device='cuda:0')
+reward tensor([0.0107], device='cuda:0')
+commanded_velocity tensor([0.2222], device='cuda:0')
+joint_angle_changed tensor([[0.0480]], device='cuda:0')
+reward tensor([-0.0113], device='cuda:0')
+commanded_velocity tensor([-0.2033], device='cuda:0')
+joint_angle_changed tensor([[0.0556]], device='cuda:0')
+reward tensor([0.0029], device='cuda:0')
+commanded_velocity tensor([0.0531], device='cuda:0')
+joint_angle_changed tensor([[0.0549]], device='cuda:0')
+reward tensor([-0.0048], device='cuda:0')
+commanded_velocity tensor([0.4066], device='cuda:0')
+joint_angle_changed tensor([[-0.0118]], device='cuda:0')
+reward tensor([-0.0054], device='cuda:0')
+commanded_velocity tensor([0.4066], device='cuda:0')
+joint_angle_changed tensor([[-0.0132]], device='cuda:0')
+reward tensor([-0.0048], device='cuda:0')
+commanded_velocity tensor([0.4066], device='cuda:0')
+joint_angle_changed tensor([[-0.0119]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 9 steps/s (collection: 2.379s, learning 0.089s)
+               Value function loss: 0.0148
+                    Surrogate loss: -0.0341
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.62
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0175
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0021
+Metrics/base_velocity/error_vel_yaw: 0.0018
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 264
+                    Iteration time: 2.47s
+                        Total time: 29.50s
+                               ETA: 73714.1s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 9 steps/s (collection: 2.379s, learning 0.089s)
+               Value function loss: 0.0148
+                    Surrogate loss: -0.0341
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.62
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0175
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0021
+Metrics/base_velocity/error_vel_yaw: 0.0018
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 288
+                    Iteration time: 2.47s
+                        Total time: 31.96s
+                               ETA: 79883.3s
+reward tensor([-0.0016], device='cuda:0')
+commanded_velocity tensor([-0.5256], device='cuda:0')
+joint_angle_changed tensor([[0.0030]], device='cuda:0')
+reward tensor([0.0327], device='cuda:0')
+commanded_velocity tensor([0.4910], device='cuda:0')
+joint_angle_changed tensor([[0.0667]], device='cuda:0')
+reward tensor([-0.0098], device='cuda:0')
+commanded_velocity tensor([-0.2049], device='cuda:0')
+joint_angle_changed tensor([[0.0480]], device='cuda:0')
+reward tensor([0.0283], device='cuda:0')
+commanded_velocity tensor([0.5507], device='cuda:0')
+joint_angle_changed tensor([[0.0513]], device='cuda:0')
+reward tensor([0.0135], device='cuda:0')
+commanded_velocity tensor([0.2393], device='cuda:0')
+joint_angle_changed tensor([[0.0562]], device='cuda:0')
+reward tensor([0.0453], device='cuda:0')
+commanded_velocity tensor([0.7264], device='cuda:0')
+joint_angle_changed tensor([[0.0624]], device='cuda:0')
+reward tensor([-0.0388], device='cuda:0')
+commanded_velocity tensor([-0.8023], device='cuda:0')
+joint_angle_changed tensor([[0.0483]], device='cuda:0')
+reward tensor([0.0153], device='cuda:0')
+commanded_velocity tensor([0.2706], device='cuda:0')
+joint_angle_changed tensor([[0.0566]], device='cuda:0')
+reward tensor([-0.0032], device='cuda:0')
+commanded_velocity tensor([-0.1641], device='cuda:0')
+joint_angle_changed tensor([[0.0196]], device='cuda:0')
+reward tensor([0.0056], device='cuda:0')
+commanded_velocity tensor([0.0932], device='cuda:0')
+joint_angle_changed tensor([[0.0596]], device='cuda:0')
+reward tensor([0.0377], device='cuda:0')
+commanded_velocity tensor([0.8638], device='cuda:0')
+joint_angle_changed tensor([[0.0437]], device='cuda:0')
+reward tensor([-0.0162], device='cuda:0')
+commanded_velocity tensor([-0.2906], device='cuda:0')
+joint_angle_changed tensor([[0.0559]], device='cuda:0')
+reward tensor([-0.0154], device='cuda:0')
+commanded_velocity tensor([-0.3355], device='cuda:0')
+joint_angle_changed tensor([[0.0459]], device='cuda:0')
+reward tensor([-0.0045], device='cuda:0')
+commanded_velocity tensor([-0.6400], device='cuda:0')
+joint_angle_changed tensor([[0.0070]], device='cuda:0')
+reward tensor([0.0593], device='cuda:0')
+commanded_velocity tensor([0.7913], device='cuda:0')
+joint_angle_changed tensor([[0.0750]], device='cuda:0')
+reward tensor([0.0299], device='cuda:0')
+commanded_velocity tensor([0.9125], device='cuda:0')
+joint_angle_changed tensor([[0.0327]], device='cuda:0')
+reward tensor([0.0025], device='cuda:0')
+commanded_velocity tensor([-0.1172], device='cuda:0')
+joint_angle_changed tensor([[-0.0211]], device='cuda:0')
+reward tensor([0.0041], device='cuda:0')
+commanded_velocity tensor([-0.1172], device='cuda:0')
+joint_angle_changed tensor([[-0.0348]], device='cuda:0')
+reward tensor([0.0061], device='cuda:0')
+commanded_velocity tensor([-0.1172], device='cuda:0')
+joint_angle_changed tensor([[-0.0518]], device='cuda:0')
+reward tensor([0.0367], device='cuda:0')
+commanded_velocity tensor([0.5792], device='cuda:0')
+joint_angle_changed tensor([[0.0634]], device='cuda:0')
+reward tensor([-0.0042], device='cuda:0')
+commanded_velocity tensor([-0.0454], device='cuda:0')
+joint_angle_changed tensor([[0.0927]], device='cuda:0')
+reward tensor([0.0497], device='cuda:0')
+commanded_velocity tensor([0.8069], device='cuda:0')
+joint_angle_changed tensor([[0.0616]], device='cuda:0')
+reward tensor([0.0100], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0147]], device='cuda:0')
+reward tensor([0.0081], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0119]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 9 steps/s (collection: 2.440s, learning 0.088s)
+               Value function loss: 0.0095
+                    Surrogate loss: -0.0412
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.49
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0183
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0013
+Metrics/base_velocity/error_vel_yaw: 0.0006
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 312
+                    Iteration time: 2.53s
+                        Total time: 34.49s
+                               ETA: 73881.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 9 steps/s (collection: 2.440s, learning 0.088s)
+               Value function loss: 0.0095
+                    Surrogate loss: -0.0412
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.49
+     Episode_Reward/action_rate_l2: -0.0000
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0183
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0013
+Metrics/base_velocity/error_vel_yaw: 0.0006
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 336
+                    Iteration time: 2.53s
+                        Total time: 37.02s
+                               ETA: 79296.8s
+reward tensor([0.0115], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0169]], device='cuda:0')
+reward tensor([0.0124], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0182]], device='cuda:0')
+reward tensor([0.0144], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0212]], device='cuda:0')
+reward tensor([0.0147], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0215]], device='cuda:0')
+reward tensor([0.0160], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0235]], device='cuda:0')
+reward tensor([0.0426], device='cuda:0')
+commanded_velocity tensor([-0.6806], device='cuda:0')
+joint_angle_changed tensor([[-0.0625]], device='cuda:0')
+reward tensor([-0.0054], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0184]], device='cuda:0')
+reward tensor([-0.0127], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0431]], device='cuda:0')
+reward tensor([-0.0202], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0684]], device='cuda:0')
+reward tensor([-0.0260], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0882]], device='cuda:0')
+reward tensor([-0.0294], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0996]], device='cuda:0')
+reward tensor([-0.0292], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0988]], device='cuda:0')
+reward tensor([-0.0261], device='cuda:0')
+commanded_velocity tensor([0.2950], device='cuda:0')
+joint_angle_changed tensor([[-0.0885]], device='cuda:0')
+reward tensor([-0.0014], device='cuda:0')
+commanded_velocity tensor([0.6164], device='cuda:0')
+joint_angle_changed tensor([[-0.0023]], device='cuda:0')
+reward tensor([0.0055], device='cuda:0')
+commanded_velocity tensor([-0.6658], device='cuda:0')
+joint_angle_changed tensor([[-0.0083]], device='cuda:0')
+reward tensor([0.0224], device='cuda:0')
+commanded_velocity tensor([0.4884], device='cuda:0')
+joint_angle_changed tensor([[0.0458]], device='cuda:0')
+reward tensor([-0.0329], device='cuda:0')
+commanded_velocity tensor([-0.6034], device='cuda:0')
+joint_angle_changed tensor([[0.0544]], device='cuda:0')
+reward tensor([0.0008], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0179]], device='cuda:0')
+reward tensor([0.0017], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0381]], device='cuda:0')
+reward tensor([0.0023], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0530]], device='cuda:0')
+reward tensor([0.0031], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0704]], device='cuda:0')
+reward tensor([0.0032], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0720]], device='cuda:0')
+reward tensor([0.0035], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0793]], device='cuda:0')
+reward tensor([0.0043], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.0982]], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 10 steps/s (collection: 2.267s, learning 0.087s)
+               Value function loss: 0.0213
+                    Surrogate loss: -0.0315
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.62
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0154
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0047
+Metrics/base_velocity/error_vel_yaw: 0.0013
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 360
+                    Iteration time: 2.35s
+                        Total time: 39.37s
+                               ETA: 73792.7s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 10 steps/s (collection: 2.267s, learning 0.087s)
+               Value function loss: 0.0213
+                    Surrogate loss: -0.0315
+             Mean action noise std: 0.50
+                 Mean total reward: -0.33
+               Mean episode length: 1.62
+     Episode_Reward/action_rate_l2: -0.0001
+     Episode_Reward/track_velocity: 0.0000
+ Episode_Reward/undesired_contacts: -0.0154
+     Curriculum/command_velocity_x: 1.0000
+Metrics/base_velocity/error_vel_xy: 0.0047
+Metrics/base_velocity/error_vel_yaw: 0.0013
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 1.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 384
+                    Iteration time: 2.35s
+                        Total time: 41.73s
+                               ETA: 78205.3s
+reward tensor([0.0051], device='cuda:0')
+commanded_velocity tensor([-0.0442], device='cuda:0')
+joint_angle_changed tensor([[-0.1147]], device='cuda:0')
+reward tensor([0.0038], device='cuda:0')
+commanded_velocity tensor([-0.6974], device='cuda:0')
+joint_angle_changed tensor([[-0.0054]], device='cuda:0')
+reward tensor([0.0049], device='cuda:0')
+commanded_velocity tensor([-0.6974], device='cuda:0')
+joint_angle_changed tensor([[-0.0070]], device='cuda:0')
+reward tensor([0.0474], device='cuda:0')
+commanded_velocity tensor([0.8421], device='cuda:0')
+joint_angle_changed tensor([[0.0562]], device='cuda:0')
+reward tensor([0.0013], device='cuda:0')
+commanded_velocity tensor([0.5144], device='cuda:0')
+joint_angle_changed tensor([[0.0026]], device='cuda:0')
+reward tensor([0.], device='cuda:0')
+commanded_velocity tensor([0.], device='cuda:0')
+joint_angle_changed tensor([[0.0545]], device='cuda:0')
+reward tensor([-0.0411], device='cuda:0')
+commanded_velocity tensor([-0.3008], device='cuda:0')

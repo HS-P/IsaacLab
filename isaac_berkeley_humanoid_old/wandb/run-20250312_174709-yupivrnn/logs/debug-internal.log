@@ -1,0 +1,339 @@
+2025-03-12 17:47:10,315 INFO    MainThread:29972 [internal.py:wandb_internal():90] W&B internal server running at pid: 29972, started at: 2025-03-12 17:47:10.315337
+2025-03-12 17:47:10,316 INFO    WriterThread:29972 [datastore.py:open_for_write():75] open: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\run-yupivrnn.wandb
+2025-03-12 17:47:10,319 DEBUG   SenderThread:29972 [sender.py:send():236] send: header
+2025-03-12 17:47:10,319 DEBUG   SenderThread:29972 [sender.py:send():236] send: run
+2025-03-12 17:47:10,680 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: check_version
+2025-03-12 17:47:10,685 INFO    SenderThread:29972 [dir_watcher.py:__init__():216] watching files in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files
+2025-03-12 17:47:10,685 INFO    SenderThread:29972 [sender.py:_start_run_threads():815] run started: yupivrnn with start time 1741769229
+2025-03-12 17:47:10,685 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:10,686 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:10,686 DEBUG   SenderThread:29972 [sender.py:send_request():250] send_request: check_version
+2025-03-12 17:47:10,740 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: run_start
+2025-03-12 17:47:10,759 DEBUG   HandlerThread:29972 [meta.py:__init__():35] meta init
+2025-03-12 17:47:10,759 DEBUG   HandlerThread:29972 [meta.py:__init__():49] meta init done
+2025-03-12 17:47:10,759 DEBUG   HandlerThread:29972 [meta.py:probe():209] probe
+2025-03-12 17:47:10,782 DEBUG   HandlerThread:29972 [meta.py:_setup_git():199] setup git
+2025-03-12 17:47:10,870 DEBUG   HandlerThread:29972 [meta.py:_setup_git():206] setup git done
+2025-03-12 17:47:10,870 DEBUG   HandlerThread:29972 [meta.py:_save_pip():53] save pip
+2025-03-12 17:47:10,871 DEBUG   HandlerThread:29972 [meta.py:_save_pip():67] save pip done
+2025-03-12 17:47:10,871 DEBUG   HandlerThread:29972 [meta.py:_save_conda():74] save conda
+2025-03-12 17:47:10,874 ERROR   HandlerThread:29972 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "S:\anaconda3\envs\IsaacLab_2\lib\site-packages\wandb\sdk\internal\meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-12 17:47:10,875 DEBUG   HandlerThread:29972 [meta.py:_save_conda():84] save conda done
+2025-03-12 17:47:10,875 DEBUG   HandlerThread:29972 [meta.py:probe():247] probe done
+2025-03-12 17:47:11,043 DEBUG   SenderThread:29972 [sender.py:send():236] send: files
+2025-03-12 17:47:11,043 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2025-03-12 17:47:11,044 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 17:47:11,045 DEBUG   SenderThread:29972 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 17:47:11,385 DEBUG   SenderThread:29972 [sender.py:send():236] send: telemetry
+2025-03-12 17:47:11,696 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:11,696 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:11,697 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\conda-environment.yaml
+2025-03-12 17:47:11,697 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-metadata.json
+2025-03-12 17:47:11,697 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\requirements.txt
+2025-03-12 17:47:13,710 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:15,725 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:17,741 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:19,755 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:20,076 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:20,077 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:20,077 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:20,078 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:20,763 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:21,771 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:22,436 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:22,436 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:22,437 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:22,438 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:22,778 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:23,370 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:23,370 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:23,371 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:23,371 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:23,786 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:23,786 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:24,301 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:24,302 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:24,302 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:24,303 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:24,793 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:25,212 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:25,213 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:25,213 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:25,214 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:25,800 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:25,801 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:26,117 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:26,118 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:26,118 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:26,119 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:26,386 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 17:47:26,386 DEBUG   SenderThread:29972 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 17:47:26,807 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:27,055 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:27,056 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:27,056 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:27,057 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:27,815 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:27,816 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:27,995 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:27,996 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:27,996 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:27,997 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:28,823 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:28,943 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:28,944 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:28,944 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:28,945 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:29,830 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:29,830 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:29,900 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:29,900 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:29,901 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:29,901 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:30,837 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:30,876 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:30,877 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:30,878 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:30,878 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:31,824 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:31,825 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:31,825 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:31,826 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:31,845 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:31,845 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:32,778 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:32,779 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:32,779 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:32,780 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:32,841 INFO    Thread-17 :29972 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\AppData\Local\Temp\tmpfzzfiq70wandb\4fszp8zs-wandb-metadata.json
+2025-03-12 17:47:32,853 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:33,734 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:33,734 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:33,735 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:33,735 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:33,860 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:33,860 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:34,673 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:34,674 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:34,674 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:34,674 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:34,868 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:35,623 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:35,623 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:35,624 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:35,624 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:35,875 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:35,875 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:36,547 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:36,547 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:36,547 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:36,548 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:36,882 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:37,493 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:37,494 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:37,494 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:37,495 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:37,890 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:37,890 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:38,415 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:38,415 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:38,415 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:38,416 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:38,897 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:39,338 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:39,338 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:39,339 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:39,339 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:39,905 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:39,905 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:40,273 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:40,274 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:40,274 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:40,274 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:40,912 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:41,201 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:41,202 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:41,519 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:41,520 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:41,714 DEBUG   SenderThread:29972 [sender.py:send():236] send: stats
+2025-03-12 17:47:41,719 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 17:47:41,720 DEBUG   SenderThread:29972 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 17:47:41,920 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\config.yaml
+2025-03-12 17:47:41,920 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:41,920 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:42,147 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:42,148 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:42,148 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:42,149 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:42,927 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:43,078 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:43,079 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:43,079 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:43,080 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:43,935 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:43,935 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:43,994 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:43,995 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:43,995 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:43,997 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:44,893 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:44,894 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:44,894 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:44,895 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:44,942 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:45,788 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:45,789 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:45,789 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:45,790 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:45,950 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:45,950 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:46,704 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:46,705 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:46,705 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:46,706 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:46,957 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:47,611 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:47,612 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:47,612 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:47,613 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:47,965 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:47,965 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:48,513 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:48,513 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:48,513 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:48,514 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:48,972 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:49,419 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:49,419 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:49,420 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:49,420 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:49,980 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:49,980 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:50,311 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:50,312 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:50,312 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:50,313 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:50,987 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:51,205 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:51,205 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:51,205 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:51,206 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:51,995 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:51,995 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:52,103 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:52,104 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:52,104 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:52,104 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:52,978 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:52,978 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:52,978 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:52,979 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:53,003 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:53,862 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:53,862 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:53,863 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:53,863 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:54,010 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:54,010 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:54,751 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:54,752 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:54,752 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:54,753 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:55,017 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:55,633 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:55,633 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:55,633 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:55,634 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:56,025 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:56,025 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:56,540 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:56,541 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:56,541 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:56,542 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:57,008 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 17:47:57,009 DEBUG   SenderThread:29972 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 17:47:57,033 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:57,420 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:57,421 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:57,421 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:57,422 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:58,040 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:58,040 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:47:58,328 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:58,328 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:58,329 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:58,329 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:47:59,048 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:47:59,225 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:47:59,226 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:47:59,226 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:47:59,227 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:00,055 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:00,055 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:48:00,124 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:00,125 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:00,125 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:00,125 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:00,997 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:00,998 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:00,998 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:00,998 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:01,062 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:01,890 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:01,891 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:01,891 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:01,892 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:02,070 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:02,070 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:48:02,797 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:02,798 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:02,798 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:02,799 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:03,078 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:03,738 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:03,739 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:03,739 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:03,740 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:04,085 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:04,085 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:48:04,629 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:04,629 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:04,630 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:04,631 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:05,092 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:05,552 DEBUG   HandlerThread:29972 [handler.py:handle_request():140] handle_request: partial_history
+2025-03-12 17:48:05,552 DEBUG   SenderThread:29972 [sender.py:send():236] send: history
+2025-03-12 17:48:05,553 DEBUG   SenderThread:29972 [sender.py:send():236] send: summary
+2025-03-12 17:48:05,554 INFO    SenderThread:29972 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 17:48:06,100 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:06,101 INFO    Thread-11 :29972 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:48:07,758 WARNING MainThread:29972 [internal.py:is_dead():387] Internal process exiting, parent pid 51692 disappeared
+2025-03-12 17:48:07,758 ERROR   MainThread:29972 [internal.py:wandb_internal():149] Internal process shutdown.
+2025-03-12 17:48:08,576 INFO    WriterThread:29972 [datastore.py:close():279] close: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\run-yupivrnn.wandb
+2025-03-12 17:48:08,576 INFO    SenderThread:29972 [sender.py:finish():1114] shutting down sender
+2025-03-12 17:48:08,576 INFO    HandlerThread:29972 [handler.py:finish():806] shutting down handler
+2025-03-12 17:48:08,576 INFO    SenderThread:29972 [dir_watcher.py:finish():353] shutting down directory watcher
+2025-03-12 17:48:09,129 INFO    SenderThread:29972 [dir_watcher.py:finish():383] scan: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files
+2025-03-12 17:48:09,129 INFO    SenderThread:29972 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\conda-environment.yaml conda-environment.yaml
+2025-03-12 17:48:09,129 INFO    SenderThread:29972 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\config.yaml config.yaml
+2025-03-12 17:48:09,129 INFO    SenderThread:29972 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log output.log
+2025-03-12 17:48:09,131 INFO    SenderThread:29972 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\requirements.txt requirements.txt
+2025-03-12 17:48:09,132 INFO    SenderThread:29972 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-metadata.json wandb-metadata.json
+2025-03-12 17:48:09,133 INFO    SenderThread:29972 [dir_watcher.py:finish():397] scan save: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json wandb-summary.json
+2025-03-12 17:48:09,135 INFO    SenderThread:29972 [file_pusher.py:finish():171] shutting down file pusher
+2025-03-12 17:48:09,135 INFO    SenderThread:29972 [file_pusher.py:join():176] waiting for file pusher
+2025-03-12 17:48:30,786 INFO    Thread-20 :29972 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\requirements.txt
+2025-03-12 17:48:30,830 INFO    Thread-18 :29972 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\config.yaml
+2025-03-12 17:48:30,941 INFO    Thread-21 :29972 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\wandb-summary.json
+2025-03-12 17:48:31,098 INFO    Thread-19 :29972 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_174709-yupivrnn\files\output.log
+2025-03-12 17:48:31,662 INFO    MainThread:29972 [internal.py:handle_exit():80] Internal process exited

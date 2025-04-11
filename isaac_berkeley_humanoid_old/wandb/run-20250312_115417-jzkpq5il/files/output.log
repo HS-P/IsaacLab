@@ -1,0 +1,1110 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 1.758464 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.527033 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++--------------------------------------------+
+|            Active Command Terms            |
++-------+---------------+--------------------+
+| Index | Name          |        Type        |
++-------+---------------+--------------------+
+|   0   | base_position | UniformPoseCommand |
++-------+---------------+--------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 4)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          3 |
+|   1    | wheel_vel  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (4,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | base_position              |    (4,)    |
++------------+----------------------------+------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | scale_all_joint_armature       |
+|   4   | add_all_joint_default_pos      |
+|   5   | scale_all_joint_friction_model |
++-------+--------------------------------+
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | base_external_force_torque   |
+|   1    | reset_base                   |
+|   2    | reset_robot_joints           |
++--------+------------------------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++--------------------------------------+
+|         Active Reward Terms          |
++-------+---------------------+--------+
+| Index | Name                | Weight |
++-------+---------------------+--------+
+|   0   | action_rate_l2      |  -0.01 |
+|   1   | undesired_contacts  |  -10.0 |
+|   2   | joint_pos_pitch_exp |    1.0 |
++-------+---------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Actor MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=4, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=4, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0585], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1251], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1677], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1930], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1978], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1965], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1978], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1946], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1918], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1905], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1890], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1829], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2250], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2621], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2845], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2949], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3026], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3063], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3134], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3301], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3385], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3541], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3613], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3625], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 8 steps/s (collection: 2.593s, learning 0.142s)
+               Value function loss: 0.0072
+                    Surrogate loss: 0.1180
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24
+                    Iteration time: 2.74s
+                        Total time: 2.74s
+                               ETA: 41032.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 8 steps/s (collection: 2.593s, learning 0.142s)
+               Value function loss: 0.0072
+                    Surrogate loss: 0.1180
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 48
+                    Iteration time: 2.74s
+                        Total time: 5.47s
+                               ETA: 82064.9s
+Could not find git repository in S:\anaconda3\envs\IsaacLab_2\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-03-12_11-54-19\git\isaac_berkeley_humanoid.diff
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3740], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3776], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3746], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3798], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3878], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3932], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3928], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3988], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4039], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4097], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4156], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4188], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4225], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4270], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4349], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 14 steps/s (collection: 1.550s, learning 0.075s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0230
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 72
+                    Iteration time: 1.63s
+                        Total time: 7.10s
+                               ETA: 53220.2s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 14 steps/s (collection: 1.550s, learning 0.075s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0230
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 96
+                    Iteration time: 1.63s
+                        Total time: 8.72s
+                               ETA: 65410.6s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4334], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4350], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4353], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4308], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4315], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4355], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4349], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4331], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4332], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4342], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 15 steps/s (collection: 1.503s, learning 0.067s)
+               Value function loss: 0.0003
+                    Surrogate loss: 0.0130
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 120
+                    Iteration time: 1.57s
+                        Total time: 10.29s
+                               ETA: 51455.6s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 15 steps/s (collection: 1.503s, learning 0.067s)
+               Value function loss: 0.0003
+                    Surrogate loss: 0.0130
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 144
+                    Iteration time: 1.57s
+                        Total time: 11.86s
+                               ETA: 59307.0s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4348], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4253], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4339], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4330], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4280], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4301], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4299], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4330], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4300], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4291], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4282], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4316], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4334], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4295], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4290], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4282], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 13 steps/s (collection: 1.621s, learning 0.112s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0365
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 168
+                    Iteration time: 1.73s
+                        Total time: 13.60s
+                               ETA: 50978.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 13 steps/s (collection: 1.621s, learning 0.112s)
+               Value function loss: 0.0002
+                    Surrogate loss: -0.0365
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 192
+                    Iteration time: 1.73s
+                        Total time: 15.33s
+                               ETA: 57479.7s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4355], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4336], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4330], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4312], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4359], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4344], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4352], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4324], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4335], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4318], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4336], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4345], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4337], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4346], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 13 steps/s (collection: 1.626s, learning 0.088s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0111
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 216
+                    Iteration time: 1.71s
+                        Total time: 17.05s
+                               ETA: 51122.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 13 steps/s (collection: 1.626s, learning 0.088s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0111
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 240
+                    Iteration time: 1.71s
+                        Total time: 18.76s
+                               ETA: 56264.9s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4306], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4275], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4284], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4303], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4323], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4316], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4314], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4343], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4326], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4304], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4224], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4219], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4199], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4166], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4003], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3931], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4073], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4050], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3941], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3953], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3901], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3828], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3712], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 14 steps/s (collection: 1.572s, learning 0.066s)
+               Value function loss: 0.0004
+                    Surrogate loss: -0.0168
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 264
+                    Iteration time: 1.64s
+                        Total time: 20.40s
+                               ETA: 50980.5s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 14 steps/s (collection: 1.572s, learning 0.066s)
+               Value function loss: 0.0004
+                    Surrogate loss: -0.0168
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 288
+                    Iteration time: 1.64s
+                        Total time: 22.04s
+                               ETA: 55076.6s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3587], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3565], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3556], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3543], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3642], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3717], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3701], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3717], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3702], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3728], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3811], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3951], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4086], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4063], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4097], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4196], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4146], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4060], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4060], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4074], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4018], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4018], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4090], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4183], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 14 steps/s (collection: 1.561s, learning 0.068s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0336
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 312
+                    Iteration time: 1.63s
+                        Total time: 23.67s
+                               ETA: 50696.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 6/15000 
+                       Computation: 14 steps/s (collection: 1.561s, learning 0.068s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0336
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 336
+                    Iteration time: 1.63s
+                        Total time: 25.30s
+                               ETA: 54188.3s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4149], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4197], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4258], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4322], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4357], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4315], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4361], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4321], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4301], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4318], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4294], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4312], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4316], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4265], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4230], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4207], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4199], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4068], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4076], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4010], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3991], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 14 steps/s (collection: 1.561s, learning 0.089s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0172
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 360
+                    Iteration time: 1.65s
+                        Total time: 26.95s
+                               ETA: 50503.9s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 7/15000 
+                       Computation: 14 steps/s (collection: 1.561s, learning 0.089s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0172
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 384
+                    Iteration time: 1.65s
+                        Total time: 28.60s
+                               ETA: 53596.2s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3999], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3991], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3968], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3921], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3937], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4022], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4008], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4046], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4057], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4028], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4048], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4044], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4123], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4120], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4158], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4205], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4271], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4346], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4353], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4363], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4354], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 14 steps/s (collection: 1.567s, learning 0.072s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0352
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 408
+                    Iteration time: 1.64s
+                        Total time: 30.24s
+                               ETA: 50368.1s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 8/15000 
+                       Computation: 14 steps/s (collection: 1.567s, learning 0.072s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0352
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 432
+                    Iteration time: 1.64s
+                        Total time: 31.88s
+                               ETA: 53098.3s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4210], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4251], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4197], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4272], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4202], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4133], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4180], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4175], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4150], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4166], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4078], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4032], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4028], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4049], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4051], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4055], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4017], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4017], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4046], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.4013], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3990], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3952], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3991], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3958], device='cuda:0')
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 15 steps/s (collection: 1.513s, learning 0.064s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0162
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 456
+                    Iteration time: 1.58s
+                        Total time: 33.45s
+                               ETA: 50150.1s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                      [1m Learning iteration 9/15000 
+                       Computation: 15 steps/s (collection: 1.513s, learning 0.064s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0162
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 480
+                    Iteration time: 1.58s
+                        Total time: 35.03s
+                               ETA: 52514.9s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3991], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3902], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3897], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3786], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3634], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3569], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3536], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3542], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3569], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3597], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3665], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3668], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3658], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3621], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3602], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3604], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3536], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3508], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3456], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3351], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3291], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3299], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3327], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3367], device='cuda:0')
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 14 steps/s (collection: 1.593s, learning 0.074s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0245
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 504
+                    Iteration time: 1.67s
+                        Total time: 36.70s
+                               ETA: 50010.0s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 10/15000 
+                       Computation: 14 steps/s (collection: 1.593s, learning 0.074s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0245
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 528
+                    Iteration time: 1.67s
+                        Total time: 38.37s
+                               ETA: 52282.3s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3377], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3350], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3369], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3333], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3276], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3258], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3331], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3384], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3389], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3456], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3456], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3468], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3322], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3267], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3169], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3190], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3170], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3179], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3185], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3180], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3184], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3223], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3286], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3367], device='cuda:0')
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 14 steps/s (collection: 1.555s, learning 0.065s)
+               Value function loss: 0.0008
+                    Surrogate loss: -0.0158
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 552
+                    Iteration time: 1.62s
+                        Total time: 39.99s
+                               ETA: 49945.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 11/15000 
+                       Computation: 14 steps/s (collection: 1.555s, learning 0.065s)
+               Value function loss: 0.0008
+                    Surrogate loss: -0.0158
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 576
+                    Iteration time: 1.62s
+                        Total time: 41.61s
+                               ETA: 51969.3s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3327], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3345], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3351], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3454], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3490], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3463], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3438], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3379], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3378], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3330], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3338], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3347], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3284], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3200], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3155], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3095], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3071], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3070], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3102], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3140], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3130], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3052], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2984], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3031], device='cuda:0')
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 15 steps/s (collection: 1.512s, learning 0.062s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0312
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 600
+                    Iteration time: 1.57s
+                        Total time: 43.18s
+                               ETA: 49783.7s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 12/15000 
+                       Computation: 15 steps/s (collection: 1.512s, learning 0.062s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0312
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 624
+                    Iteration time: 1.57s
+                        Total time: 44.75s
+                               ETA: 51599.0s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3013], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3014], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3041], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3018], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2997], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2950], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2892], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2878], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2879], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2869], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2906], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2941], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2951], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2946], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2929], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2974], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3009], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3009], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3021], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3031], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3109], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3183], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3208], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3244], device='cuda:0')
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 15 steps/s (collection: 1.521s, learning 0.063s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0289
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 648
+                    Iteration time: 1.58s
+                        Total time: 46.34s
+                               ETA: 49605.8s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 13/15000 
+                       Computation: 15 steps/s (collection: 1.521s, learning 0.063s)
+               Value function loss: 0.0010
+                    Surrogate loss: -0.0289
+             Mean action noise std: 0.50
+     Episode_Reward/action_rate_l2: 0.0000
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0000
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.0000
+      Episode_Termination/time_out: 0.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 672
+                    Iteration time: 1.58s
+                        Total time: 47.92s
+                               ETA: 51301.5s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3281], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3287], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3305], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3310], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3341], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3321], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3307], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3290], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3283], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3283], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3163], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.3064], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2950], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2844], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2810], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2878], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2971], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2971], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2922], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2857], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.2775], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0200], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0571], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0797], device='cuda:0')
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 12 steps/s (collection: 1.908s, learning 0.064s)
+               Value function loss: 0.0007
+                    Surrogate loss: -0.0336
+             Mean action noise std: 0.50
+                 Mean total reward: 1.17
+               Mean episode length: 357.00
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0109
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.2793
+      Episode_Termination/time_out: 0.1667
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 696
+                    Iteration time: 1.97s
+                        Total time: 49.89s
+                               ETA: 49848.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 14/15000 
+                       Computation: 12 steps/s (collection: 1.908s, learning 0.064s)
+               Value function loss: 0.0007
+                    Surrogate loss: -0.0336
+             Mean action noise std: 0.50
+                 Mean total reward: 1.17
+               Mean episode length: 357.00
+     Episode_Reward/action_rate_l2: -0.0012
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0109
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 0.2793
+      Episode_Termination/time_out: 0.1667
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 720
+                    Iteration time: 1.97s
+                        Total time: 51.87s
+                               ETA: 51818.5s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0899], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0911], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0913], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0899], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0883], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0872], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0867], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0802], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.0738], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1038], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1436], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1680], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1849], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1900], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1918], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1939], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1929], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1938], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1923], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1901], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1931], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1995], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1982], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1950], device='cuda:0')
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 15 steps/s (collection: 1.521s, learning 0.067s)
+               Value function loss: 0.0099
+                    Surrogate loss: -0.0375
+             Mean action noise std: 0.50
+                 Mean total reward: 1.17
+               Mean episode length: 357.00
+     Episode_Reward/action_rate_l2: -0.0071
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0656
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6760
+      Episode_Termination/time_out: 1.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 744
+                    Iteration time: 1.59s
+                        Total time: 53.46s
+                               ETA: 50064.4s
+Warning: Failed to log curriculum metrics: Reward term 'track_lin_vel_x_exp' not found.
+################################################################################
+                     [1m Learning iteration 15/15000 
+                       Computation: 15 steps/s (collection: 1.521s, learning 0.067s)
+               Value function loss: 0.0099
+                    Surrogate loss: -0.0375
+             Mean action noise std: 0.50
+                 Mean total reward: 1.17
+               Mean episode length: 357.00
+     Episode_Reward/action_rate_l2: -0.0071
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: 0.0656
+Metrics/base_position/position_error: 0.0000
+Metrics/base_position/orientation_error: 1.6760
+      Episode_Termination/time_out: 1.0000
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 768
+                    Iteration time: 1.59s
+                        Total time: 55.04s
+                               ETA: 51552.1s
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1961], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1952], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1968], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1998], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1996], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1972], device='cuda:0')
+target_pitch, current_pitch tensor([0.], device='cuda:0') tensor([0.1968], device='cuda:0')

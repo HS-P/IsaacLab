@@ -1,0 +1,301 @@
+2025-03-12 15:50:28,881 INFO    MainThread:50976 [internal.py:wandb_internal():90] W&B internal server running at pid: 50976, started at: 2025-03-12 15:50:28.881621
+2025-03-12 15:50:28,882 INFO    WriterThread:50976 [datastore.py:open_for_write():75] open: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\run-oeldjkki.wandb
+2025-03-12 15:50:28,885 DEBUG   SenderThread:50976 [sender.py:send():236] send: header
+2025-03-12 15:50:28,885 DEBUG   SenderThread:50976 [sender.py:send():236] send: run
+2025-03-12 15:50:29,266 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: check_version
+2025-03-12 15:50:29,271 INFO    SenderThread:50976 [dir_watcher.py:__init__():216] watching files in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files
+2025-03-12 15:50:29,271 INFO    SenderThread:50976 [sender.py:_start_run_threads():815] run started: oeldjkki with start time 1741762228
+2025-03-12 15:50:29,271 DEBUG   SenderThread:50976 [sender.py:send():236] send: summary
+2025-03-12 15:50:29,272 INFO    SenderThread:50976 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-12 15:50:29,273 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: check_version
+2025-03-12 15:50:29,327 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: run_start
+2025-03-12 15:50:29,346 DEBUG   HandlerThread:50976 [meta.py:__init__():35] meta init
+2025-03-12 15:50:29,347 DEBUG   HandlerThread:50976 [meta.py:__init__():49] meta init done
+2025-03-12 15:50:29,347 DEBUG   HandlerThread:50976 [meta.py:probe():209] probe
+2025-03-12 15:50:29,355 DEBUG   HandlerThread:50976 [meta.py:_setup_git():199] setup git
+2025-03-12 15:50:29,442 DEBUG   HandlerThread:50976 [meta.py:_setup_git():206] setup git done
+2025-03-12 15:50:29,443 DEBUG   HandlerThread:50976 [meta.py:_save_pip():53] save pip
+2025-03-12 15:50:29,443 DEBUG   HandlerThread:50976 [meta.py:_save_pip():67] save pip done
+2025-03-12 15:50:29,443 DEBUG   HandlerThread:50976 [meta.py:_save_conda():74] save conda
+2025-03-12 15:50:29,447 ERROR   HandlerThread:50976 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "S:\anaconda3\envs\IsaacLab_2\lib\site-packages\wandb\sdk\internal\meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-12 15:50:29,447 DEBUG   HandlerThread:50976 [meta.py:_save_conda():84] save conda done
+2025-03-12 15:50:29,447 DEBUG   HandlerThread:50976 [meta.py:probe():247] probe done
+2025-03-12 15:50:29,626 DEBUG   SenderThread:50976 [sender.py:send():236] send: files
+2025-03-12 15:50:29,626 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:50:29,626 INFO    SenderThread:50976 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2025-03-12 15:50:29,627 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:50:29,942 DEBUG   SenderThread:50976 [sender.py:send():236] send: telemetry
+2025-03-12 15:50:30,284 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\wandb-summary.json
+2025-03-12 15:50:30,284 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:30,285 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\conda-environment.yaml
+2025-03-12 15:50:30,285 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\wandb-metadata.json
+2025-03-12 15:50:30,285 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\requirements.txt
+2025-03-12 15:50:32,298 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:34,313 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:36,329 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:40,358 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:42,373 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:44,389 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:44,943 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:50:44,944 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:50:46,403 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:48,418 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:50,433 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:51,283 INFO    Thread-17 :50976 [upload_job.py:push():138] Uploaded file C:\Users\Hansol\AppData\Local\Temp\tmp4myhinpuwandb\dockgkna-wandb-metadata.json
+2025-03-12 15:50:52,448 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:54,463 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:56,479 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:50:58,493 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:00,215 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:51:00,215 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:51:00,508 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\config.yaml
+2025-03-12 15:51:00,509 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:00,552 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:51:02,523 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:04,538 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:06,554 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:08,569 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:10,583 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:12,599 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:14,614 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:15,556 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:51:15,556 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:51:16,629 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:18,643 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:20,658 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:22,673 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:24,688 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:26,703 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:28,718 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:30,733 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:30,871 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:51:30,872 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:51:32,748 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:33,400 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:51:34,763 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:36,778 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:38,808 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:40,823 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:42,838 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:44,853 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:46,135 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:51:46,135 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:51:46,868 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:48,883 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:50,898 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:52,914 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:54,929 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:56,944 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:51:58,958 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:00,973 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:01,446 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:52:01,446 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:52:02,989 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:03,996 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:06,011 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:06,442 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:52:08,026 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:10,041 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:12,056 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:14,071 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:16,087 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:16,717 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:52:16,717 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:52:18,101 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:20,116 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:22,131 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:24,147 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:26,161 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:28,176 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:30,191 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:31,985 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:52:31,986 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:52:32,206 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:34,220 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:36,236 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:38,251 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:39,501 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:52:40,265 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:42,281 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:44,296 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:46,310 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:47,296 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:52:47,297 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:52:48,325 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:50,340 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:52,355 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:54,370 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:56,385 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:52:58,400 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:00,415 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:02,430 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:02,563 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:53:02,563 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:53:04,445 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:06,459 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:08,475 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:10,489 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:12,505 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:12,553 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:53:14,519 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:16,534 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:17,867 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:53:17,868 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:53:18,549 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:20,564 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:22,579 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:24,594 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:26,609 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:28,624 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:30,639 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:32,654 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:33,198 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:53:33,199 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:53:34,669 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:36,684 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:38,699 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:40,714 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:42,729 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:44,744 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:45,607 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:53:46,759 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:48,513 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:53:48,513 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:53:48,775 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:50,789 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:52,804 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:54,819 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:56,834 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:53:58,849 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:00,864 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:02,879 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:03,844 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:54:03,844 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:54:04,893 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:06,909 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:08,923 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:10,938 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:12,954 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:14,968 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:16,983 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:18,670 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:54:18,998 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:19,100 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:54:19,101 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:54:21,014 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:23,028 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:25,043 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:27,059 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:29,074 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:31,088 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:33,103 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:34,386 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:54:34,386 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:54:35,118 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:37,133 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:39,148 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:41,163 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:43,178 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:45,193 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:47,208 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:49,223 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:49,677 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:54:49,677 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:54:51,238 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:51,740 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:54:53,253 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:55,268 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:57,283 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:54:59,298 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:01,313 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:03,328 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:04,985 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:55:04,985 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:55:05,343 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:07,358 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:09,373 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:11,388 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:13,403 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:15,418 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:17,433 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:19,448 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:20,270 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:55:20,270 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:55:21,463 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:23,478 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:24,793 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:55:25,493 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:27,508 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:29,523 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:31,538 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:33,553 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:35,536 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:55:35,537 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:55:35,568 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:37,583 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:39,598 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:41,613 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:43,628 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:45,642 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:47,657 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:49,672 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:50,835 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:55:50,835 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:55:51,687 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:53,702 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:55,717 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:57,732 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:55:57,876 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:55:59,747 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:01,762 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:03,777 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:05,792 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:06,175 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:56:06,176 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:56:06,799 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:08,814 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:10,829 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:12,844 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:14,859 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:16,875 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:18,889 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:20,905 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:21,469 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:56:21,469 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:56:22,919 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:24,934 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:26,949 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:28,964 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:30,933 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:56:30,979 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:32,995 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:35,009 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:36,700 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:56:36,701 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:56:37,024 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:39,039 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:41,054 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:43,069 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:45,084 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:47,099 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:49,114 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:51,129 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:51,966 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:56:51,966 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:56:53,144 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:56:55,171 INFO    Thread-11 :50976 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250312_155028-oeldjkki\files\output.log
+2025-03-12 15:57:04,029 DEBUG   SenderThread:50976 [sender.py:send():236] send: stats
+2025-03-12 15:57:07,249 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:57:07,249 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status
+2025-03-12 15:57:22,505 DEBUG   HandlerThread:50976 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-12 15:57:22,506 DEBUG   SenderThread:50976 [sender.py:send_request():250] send_request: stop_status

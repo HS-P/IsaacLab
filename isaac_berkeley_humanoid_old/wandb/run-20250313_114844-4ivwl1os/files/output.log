@@ -1,0 +1,32 @@
+[INFO] Logging experiment in directory: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+Traceback (most recent call last):
+  File "c:/users/hansol/isaaclab/source/isaaclab/isaaclab/assets/asset_base.py", line 94, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "c:/users/hansol/isaaclab/source/isaaclab/isaaclab/assets/asset_base.py", line 265, in _initialize_callback
+    self._initialize_impl()
+  File "c:/users/hansol/isaaclab/source/isaaclab/isaaclab/assets/articulation/articulation.py", line 1132, in _initialize_impl
+    self._process_cfg()
+  File "c:/users/hansol/isaaclab/source/isaaclab/isaaclab/assets/articulation/articulation.py", line 1259, in _process_cfg
+    indices_list, _, values_list = string_utils.resolve_matching_names_values(
+  File "c:/users/hansol/isaaclab/source/isaaclab/isaaclab/utils/string.py", line 364, in resolve_matching_names_values
+    raise ValueError(
+ValueError: Not all regular expressions are matched! Please check that the regular expressions are correct:
+	supporter_link: []
+	base: ['base']
+	upper_leg: ['upper_leg']
+	lower_leg: ['lower_leg']
+	passive_link: ['passive_link']
+Available strings: ['base', 'passive_link', 'upper_leg', 'lower_leg', 'wheel']
+[INFO]: Time taken for scene creation : 1.939964 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 8192
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True

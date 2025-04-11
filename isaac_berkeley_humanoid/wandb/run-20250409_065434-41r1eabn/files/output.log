@@ -1,0 +1,242 @@
+[INFO] Logging experiment in directory: C:\Users\shawn\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 5.810006 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 8192
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 112.940415 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++--------------------------------------------+
+|            Active Command Terms            |
++-------+---------------+--------------------+
+| Index | Name          |        Type        |
++-------+---------------+--------------------+
+|   0   | base_position | UniformPoseCommand |
++-------+---------------+--------------------+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++----------------------------------------+
+| Active Event Terms in Mode: 'startup'  |
++-------+--------------------------------+
+| Index | Name                           |
++-------+--------------------------------+
+|   0   | physics_material               |
+|   1   | scale_all_link_masses          |
+|   2   | add_base_mass                  |
+|   3   | add_all_joint_default_pos      |
+|   4   | scale_all_joint_friction_model |
++-------+--------------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++---------+---------------------------+
+|  Index  | Name                      |
++---------+---------------------------+
+|    0    | reset_base                |
+|    1    | reset_robot_joints        |
++---------+---------------------------+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 1)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_pos  |          1 |
++--------+------------+------------+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (2,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | base_position              |    (1,)    |
+|     1      | actions                    |    (1,)    |
++------------+----------------------------+------------+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+[INFO] Reward Manager:  <RewardManager> contains 3 active terms.
++--------------------------------------+
+|         Active Reward Terms          |
++-------+---------------------+--------+
+| Index | Name                | Weight |
++-------+---------------------+--------+
+|   0   | action_rate_l2      |  -0.01 |
+|   1   | undesired_contacts  |  -10.0 |
+|   2   | joint_pos_pitch_exp |    1.0 |
++-------+---------------------+--------+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Actor MLP: Sequential(
+  (0): Linear(in_features=2, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=2, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Setting seed: 42
+################################################################################
+                      [1m Learning iteration 0/15000 
+                       Computation: 11254 steps/s (collection: 16.945s, learning 0.524s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0136
+               Mean surrogate loss: 0.0124
+                 Mean entropy loss: 0.7305
+                       Mean reward: -0.02
+               Mean episode length: 18.94
+     Episode_Reward/action_rate_l2: -0.0001
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: -0.0005
+Metrics/base_position/position_error: 0.0318
+Metrics/base_position/orientation_error: 2.0027
+      Episode_Termination/time_out: 8.2083
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 196608
+                    Iteration time: 17.47s
+                        Total time: 17.47s
+                               ETA: 262039.3s
+Could not find git repository in C:\Users\shawn\anaconda3\envs\IsaacLab\lib\site-packages\rsl_rl\__init__.py. Skipping.
+Storing git diff for 'isaac_berkeley_humanoid' in: C:\Users\shawn\IsaacLab\isaac_berkeley_humanoid\logs\rsl_rl\berkeley_humanoid_flat\2025-04-09_06-54-38\git\isaac_berkeley_humanoid.diff
+################################################################################
+                      [1m Learning iteration 1/15000 
+                       Computation: 15746 steps/s (collection: 12.318s, learning 0.167s)
+             Mean action noise std: 0.50
+          Mean value_function loss: 0.0019
+               Mean surrogate loss: -0.0018
+                 Mean entropy loss: 0.7289
+                       Mean reward: -0.05
+               Mean episode length: 42.45
+     Episode_Reward/action_rate_l2: -0.0002
+ Episode_Reward/undesired_contacts: -0.0001
+Episode_Reward/joint_pos_pitch_exp: -0.0016
+Metrics/base_position/position_error: 0.0332
+Metrics/base_position/orientation_error: 2.0638
+      Episode_Termination/time_out: 7.2083
+  Episode_Termination/base_contact: 0.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 393216
+                    Iteration time: 12.49s
+                        Total time: 29.95s
+                               ETA: 224646.3s
+################################################################################
+                      [1m Learning iteration 2/15000 
+                       Computation: 16274 steps/s (collection: 11.905s, learning 0.175s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0005
+               Mean surrogate loss: -0.0030
+                 Mean entropy loss: 0.7332
+                       Mean reward: -0.08
+               Mean episode length: 67.08
+     Episode_Reward/action_rate_l2: -0.0003
+ Episode_Reward/undesired_contacts: -0.0001
+Episode_Reward/joint_pos_pitch_exp: -0.0031
+Metrics/base_position/position_error: 0.0332
+Metrics/base_position/orientation_error: 2.0637
+      Episode_Termination/time_out: 9.2083
+  Episode_Termination/base_contact: 0.1667
+--------------------------------------------------------------------------------
+                   Total timesteps: 589824
+                    Iteration time: 12.08s
+                        Total time: 42.04s
+                               ETA: 210148.8s
+################################################################################
+                      [1m Learning iteration 3/15000 
+                       Computation: 16897 steps/s (collection: 11.465s, learning 0.170s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0001
+               Mean surrogate loss: -0.0076
+                 Mean entropy loss: 0.7157
+                       Mean reward: -0.10
+               Mean episode length: 90.43
+     Episode_Reward/action_rate_l2: -0.0004
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: -0.0042
+Metrics/base_position/position_error: 0.0331
+Metrics/base_position/orientation_error: 2.0641
+      Episode_Termination/time_out: 8.2917
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 786432
+                    Iteration time: 11.64s
+                        Total time: 53.67s
+                               ETA: 201224.0s
+################################################################################
+                      [1m Learning iteration 4/15000 
+                       Computation: 16965 steps/s (collection: 11.421s, learning 0.168s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0001
+               Mean surrogate loss: -0.0076
+                 Mean entropy loss: 0.7093
+                       Mean reward: -0.13
+               Mean episode length: 113.76
+     Episode_Reward/action_rate_l2: -0.0005
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: -0.0056
+Metrics/base_position/position_error: 0.0331
+Metrics/base_position/orientation_error: 2.0641
+      Episode_Termination/time_out: 8.0833
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 983040
+                    Iteration time: 11.59s
+                        Total time: 65.26s
+                               ETA: 195726.0s
+################################################################################
+                      [1m Learning iteration 5/15000 
+                       Computation: 17042 steps/s (collection: 11.366s, learning 0.170s)
+             Mean action noise std: 0.49
+          Mean value_function loss: 0.0001
+               Mean surrogate loss: -0.0068
+                 Mean entropy loss: 0.7087
+                       Mean reward: -0.16
+               Mean episode length: 138.66
+     Episode_Reward/action_rate_l2: -0.0007
+ Episode_Reward/undesired_contacts: 0.0000
+Episode_Reward/joint_pos_pitch_exp: -0.0068
+Metrics/base_position/position_error: 0.0331
+Metrics/base_position/orientation_error: 2.0650
+      Episode_Termination/time_out: 8.6667
+  Episode_Termination/base_contact: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1179648
+                    Iteration time: 11.54s
+                        Total time: 76.80s

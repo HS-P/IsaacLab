@@ -1,0 +1,45 @@
+2025-03-11 21:03:46,672 INFO    MainThread:44324 [internal.py:wandb_internal():90] W&B internal server running at pid: 44324, started at: 2025-03-11 21:03:46.671523
+2025-03-11 21:03:46,673 INFO    WriterThread:44324 [datastore.py:open_for_write():75] open: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\run-j80fpzfn.wandb
+2025-03-11 21:03:46,677 DEBUG   SenderThread:44324 [sender.py:send():236] send: header
+2025-03-11 21:03:46,677 DEBUG   SenderThread:44324 [sender.py:send():236] send: run
+2025-03-11 21:03:47,196 DEBUG   HandlerThread:44324 [handler.py:handle_request():140] handle_request: check_version
+2025-03-11 21:03:47,201 INFO    SenderThread:44324 [dir_watcher.py:__init__():216] watching files in: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files
+2025-03-11 21:03:47,201 INFO    SenderThread:44324 [sender.py:_start_run_threads():815] run started: j80fpzfn with start time 1741694625
+2025-03-11 21:03:47,201 DEBUG   SenderThread:44324 [sender.py:send():236] send: summary
+2025-03-11 21:03:47,201 INFO    SenderThread:44324 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-03-11 21:03:47,201 DEBUG   SenderThread:44324 [sender.py:send_request():250] send_request: check_version
+2025-03-11 21:03:47,267 DEBUG   HandlerThread:44324 [handler.py:handle_request():140] handle_request: run_start
+2025-03-11 21:03:47,290 DEBUG   HandlerThread:44324 [meta.py:__init__():35] meta init
+2025-03-11 21:03:47,290 DEBUG   HandlerThread:44324 [meta.py:__init__():49] meta init done
+2025-03-11 21:03:47,290 DEBUG   HandlerThread:44324 [meta.py:probe():209] probe
+2025-03-11 21:03:47,297 DEBUG   HandlerThread:44324 [meta.py:_setup_git():199] setup git
+2025-03-11 21:03:47,382 DEBUG   HandlerThread:44324 [meta.py:_setup_git():206] setup git done
+2025-03-11 21:03:47,382 DEBUG   HandlerThread:44324 [meta.py:_save_pip():53] save pip
+2025-03-11 21:03:47,383 DEBUG   HandlerThread:44324 [meta.py:_save_pip():67] save pip done
+2025-03-11 21:03:47,383 DEBUG   HandlerThread:44324 [meta.py:_save_conda():74] save conda
+2025-03-11 21:03:47,386 ERROR   HandlerThread:44324 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "S:\anaconda3\envs\IsaacLab_2\lib\site-packages\wandb\sdk\internal\meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "S:\anaconda3\envs\IsaacLab_2\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2025-03-11 21:03:47,387 DEBUG   HandlerThread:44324 [meta.py:_save_conda():84] save conda done
+2025-03-11 21:03:47,387 DEBUG   HandlerThread:44324 [meta.py:probe():247] probe done
+2025-03-11 21:03:47,580 DEBUG   SenderThread:44324 [sender.py:send():236] send: files
+2025-03-11 21:03:47,580 INFO    SenderThread:44324 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2025-03-11 21:03:47,580 DEBUG   HandlerThread:44324 [handler.py:handle_request():140] handle_request: stop_status
+2025-03-11 21:03:47,581 DEBUG   SenderThread:44324 [sender.py:send_request():250] send_request: stop_status
+2025-03-11 21:03:47,898 DEBUG   SenderThread:44324 [sender.py:send():236] send: telemetry
+2025-03-11 21:03:48,212 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\requirements.txt
+2025-03-11 21:03:48,212 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\wandb-metadata.json
+2025-03-11 21:03:48,212 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\conda-environment.yaml
+2025-03-11 21:03:48,213 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\output.log
+2025-03-11 21:03:48,213 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\wandb-summary.json
+2025-03-11 21:03:50,225 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\output.log
+2025-03-11 21:03:52,240 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\output.log
+2025-03-11 21:03:54,255 INFO    Thread-11 :44324 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\Hansol\IsaacLab\isaac_berkeley_humanoid\wandb\run-20250311_210345-j80fpzfn\files\output.log

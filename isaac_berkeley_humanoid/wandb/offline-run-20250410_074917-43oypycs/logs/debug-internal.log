@@ -1,0 +1,30 @@
+2025-04-10 07:49:18,554 INFO    MainThread:21412 [internal.py:wandb_internal():90] W&B internal server running at pid: 21412, started at: 2025-04-10 07:49:18.553658
+2025-04-10 07:49:18,555 INFO    WriterThread:21412 [datastore.py:open_for_write():75] open: C:\Users\rnjsg\IsaacLab\isaac_berkeley_humanoid\wandb\offline-run-20250410_074917-43oypycs\run-43oypycs.wandb
+2025-04-10 07:49:18,555 DEBUG   HandlerThread:21412 [handler.py:handle_request():140] handle_request: run_start
+2025-04-10 07:49:18,571 DEBUG   HandlerThread:21412 [meta.py:__init__():35] meta init
+2025-04-10 07:49:18,571 DEBUG   HandlerThread:21412 [meta.py:__init__():49] meta init done
+2025-04-10 07:49:18,571 DEBUG   HandlerThread:21412 [meta.py:probe():209] probe
+2025-04-10 07:49:18,579 DEBUG   HandlerThread:21412 [meta.py:_setup_git():199] setup git
+2025-04-10 07:49:18,618 DEBUG   HandlerThread:21412 [meta.py:_setup_git():206] setup git done
+2025-04-10 07:49:18,618 DEBUG   HandlerThread:21412 [meta.py:_save_pip():53] save pip
+2025-04-10 07:49:18,618 DEBUG   HandlerThread:21412 [meta.py:_save_pip():67] save pip done
+2025-04-10 07:49:18,618 DEBUG   HandlerThread:21412 [meta.py:_save_conda():74] save conda
+2025-04-10 07:49:18,620 ERROR   HandlerThread:21412 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "C:\Users\rnjsg\anaconda3\envs\env_isaaclab\lib\site-packages\wandb\sdk\internal\meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "C:\Users\rnjsg\anaconda3\envs\env_isaaclab\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\rnjsg\anaconda3\envs\env_isaaclab\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\rnjsg\anaconda3\envs\env_isaaclab\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-04-10 07:49:18,621 DEBUG   HandlerThread:21412 [meta.py:_save_conda():84] save conda done
+2025-04-10 07:49:18,621 DEBUG   HandlerThread:21412 [meta.py:probe():247] probe done
+2025-04-10 07:49:27,646 WARNING MainThread:21412 [internal.py:is_dead():387] Internal process exiting, parent pid 21776 disappeared
+2025-04-10 07:49:27,646 ERROR   MainThread:21412 [internal.py:wandb_internal():149] Internal process shutdown.
+2025-04-10 07:49:27,863 INFO    WriterThread:21412 [datastore.py:close():279] close: C:\Users\rnjsg\IsaacLab\isaac_berkeley_humanoid\wandb\offline-run-20250410_074917-43oypycs\run-43oypycs.wandb
+2025-04-10 07:49:27,863 INFO    HandlerThread:21412 [handler.py:finish():806] shutting down handler
+2025-04-10 07:49:28,660 INFO    SenderThread:21412 [sender.py:finish():1114] shutting down sender
+2025-04-10 07:49:28,660 INFO    MainThread:21412 [internal.py:handle_exit():80] Internal process exited
